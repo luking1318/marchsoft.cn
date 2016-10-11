@@ -191,6 +191,7 @@ H1 a {
         </ul>
         
       </div>
+<<<<<<< HEAD
        <h1 class="type"><a href="javascript:void(0)">奖项管理</a></h1>
       <div class="content">
         <table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -206,6 +207,8 @@ H1 a {
         </ul>
         
       </div>
+=======
+>>>>>>> 1bcaebc50d03947fbd846bcb030bbecc7f7fa589
     </div>
         <h1 class="type"><a href="__APP__/Photo/index" target="main">相册管理</a></h1>
       <div class="content">

@@ -13,6 +13,7 @@ class PrizeAction extends Action{
 	public function ff(){
 		$this->display();
 	}
+
 	public function prize(){
 		$news = M('prize_don');
 		import("ORG.Util.Page");
@@ -31,31 +32,12 @@ class PrizeAction extends Action{
 			->limit($page->firstRow.",".$page->listRows)
 			->order("don_time DESC")
 			->select();
-		// var_dump($news_list);
 		$this->assign("page",$show);
 		$this->assign("list",$news_list);
-		// if(isset($_GET['android'])=='1'){
-		// 	$news_count = count($news_list);
-		// 	for($i = 0 ; $i < $news_count ; $i++){
-		// 		echo $news_list[$i]['idmarch_news'];
-		// 		echo '-<>-';
-				
-		// 		echo $news_list[$i]['news_title'];
-		// 		echo '-<>-';
-				
-		// 		echo $news_list[$i]['news_content'];
-		// 		echo '-<>-';
-				
-		// 		echo $news_list[$i]['news_date'];
-		// 		echo '-<>-';
-				
-		// 		echo $news_list[$i]['news_num'];
-				
-		// 		echo '-<br>-';
-		// 	}
-		// }else
-			$this->display('prize');
+
+		$this->display('prize');
 	}
+
 
 }
 
