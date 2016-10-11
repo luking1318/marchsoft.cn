@@ -1,0 +1,76 @@
+<include file="./March/Common/html/head.html" />
+</center>
+<link href="__ROOT__/March/Common/css/prize/prize.css" rel="stylesheet">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="conbody">
+	<div class="conmain">
+		<div class="rightcon">
+		<div class="logo">
+			<div class="title">
+				<h3>三月软件</h3>
+			</div>
+			<img title="三月软件"  src="__ROOT__/March/Common/img/prize/logo.png">
+			<h1>三月软件工作室</h1>
+		</div>
+		<div class="erwei">
+			<div class="title">
+				<h3>捐赠我们</h3>
+			</div>
+			<img title="支付宝二维码"  src="__ROOT__/March/Common/img/prize/erwei.jpg">
+			<h3>手机支付宝扫描二维码支付</h3>
+			<h4>&nbsp;您的帮助是对我们最大的支持和动力！</h4>
+		</div>
+		<div class="zeng">
+			<div class="title">
+				<h3>捐赠墙</h3>
+			</div>
+			<if condition="!$clist">
+			<div class="zenglist">暂无</div>
+			</if>
+			<foreach name="clist" item="vo">
+				<div class="zenglist"><{$vo['don_name']}>： <{$vo['don_mark']}></div>
+			</foreach>
+		</div>
+		</div>
+
+
+		<div class="leftcon">
+			<div class="t1 pri">
+				<h4>卓越奖学金</h4>
+				<img src="__ROOT__/March/Common/img/prize/2.jpg">
+				<p>卓越奖学金每年定额发放给1名学生，标准为每人每年5000元。奖励对象面向河南科技学院全日制本科所有在校生，计算机专业实力过硬，软件编程能力优秀，行业技术视野开阔，具备优越的项目开发及管理能力者。<br><a target="_blank" href="http://xxgcxy.hist.edu.cn/info/1100/2978.htm">申报详情</a></p>
+			</div>
+			<div class="t1 pri">
+				<h4>新锐奖学金</h4>
+				<img src="__ROOT__/March/Common/img/prize/1.jpg">
+				<p>新锐奖学金每年定额发放给3名学生，标准为每人每年1000元。奖励对象面向河南科技学院全日制本科大学一年级在校生，计算机专业兴趣浓厚，软件编程能力突出，对行业技术敏感，具备一定的项目开发及管理实战经验者。</p>
+			</div>
+
+			<div class="t1 don">
+				<h4>卓越奖学金获得者</h4>
+				<div class="none">
+					<h2>暂无</h2>
+				</div>
+			</div>
+			<div class="t1 don">
+				<h4>新锐奖学金获得者</h4>
+				<div class="none">
+					<h2>暂无</h2>
+				</div>
+				
+			</div>
+
+		</div>
+		<div class="clear"> </div>
+		
+
+	</div>
+
+</div>
+<input type="hidden" id="rot" value="__ROOT__/" />
+<include file="./March/Common/html/foot.html" />
+
+<script src="__ROOT__/March/Common/js/jquery-1.4.3.min.js" style="text/javascript"></script> 
+<script src="__ROOT__/March/Common/js/prize/Scholarship.js" style="text/javascript"></script> 
+</BODY>
+</HTML>

@@ -1,0 +1,28 @@
+<include file="./OA/Tpl/header.html"/>
+
+<div id="content">
+	<include file="./OA/Tpl/thing.html"/>
+	<div style="border:1px solid red;margin:20px 20px 0px 220px;">
+		<div><{$list.module_name}></div>
+		<div>
+			<if condition="$list.module_id eq 007">
+				<div><a href="__URL__/notice">通知公告</a></div>
+				<div><a href="__URL__/lecture">讲课资料</a></div>
+				<div><a href="__URL__/blog">笔记统计</a></div>
+				<div><a href="__URL__/news/type/3">大事记管理</a></div>
+				<div><a href="__URL__/news/type/1">新闻管理</a></div>
+			<elseif condition="$list.module_id eq 001"/>
+				<div><a href="__URL__/notice">通知公告</a></div>
+				<div><a href="__URL__/lecture">讲课资料</a></div>
+			<elseif condition="$list.module_id eq 002"/>
+				<div><a href="__URL__/notice">通知公告</a></div>
+				<div><a href="__URL__/blog">笔记统计</a></div>
+			<elseif condition="$list.module_id eq 006"/>
+				<div><a href="__URL__/notice">通知公告</a></div>
+				<div><a href="__URL__/news/type/3">大事记管理</a></div>
+				<div><a href="__URL__/news/type/1">新闻管理</a></div>
+			</if>
+		</div>
+	</div>
+</div>
+<include file="./OA/Tpl/fooder.html"/>

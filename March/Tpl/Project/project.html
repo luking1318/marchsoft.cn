@@ -1,0 +1,72 @@
+<include file="./March/Common/html/head.html" /><div class="web">
+
+<head>  
+	<link href="__ROOT__/March/Common/css/project/project.css" rel="stylesheet">
+</head>
+		
+		<div id="con_name">
+			 <div id="nameimg"></div>
+		</div>
+		<span id='a00'></span>
+        <div class="content">
+            
+            <div class="left">
+			   <div id="list_up" class="listitem"></div>
+			   <a href="#a00" style="color:#3C3C3C; text-decoration:none;">
+			   	<div id="firstitem" class="listitem"  >项目展示</div>
+			   </a>
+			     <div class="listitem_line"></div>
+			   <volist name="list" id="vo">
+					<a href="#a<{$vo['idmarch_project']}>" style="color:#3C3C3C; text-decoration:none;">
+					<div class="listitem"><{$vo['project_title']}></div>
+					</a>
+					<div class="listitem_line"></div>
+			   </volist>
+			   
+			   <div id="list_down"></div>
+			
+			
+
+            </div>
+			
+            <div class="right">
+                 
+			     <volist name="list" id="vo">
+					<div class="pro">
+						<span class="proImg"><a href="javascript:void(0);" class="thumb">
+							<img src="<{$vo['project_img']}>" width="300" height="210" alt="图像" class="cover" /></a>
+						</span>
+						<span class="proInfo">
+							<span class="proDesc">
+							</span>
+							<span class="prodetail">
+								<span class="sp">【名称】： <a href="javascript:void(0);" style=""><{$vo['project_title']}></a></span> 
+								<span class="sp">【类型】：<{$vo['project_type']}></span> 
+								<span  class="sp">【公司】：<{$vo['project_company']}></span>
+								<span class="sp">【查看】：<a href="javascript:void(0);" class="lk">演示地址</a>&nbsp;&nbsp;
+									<label class="proUser">账户名:<{$vo['project_user']}> 密码：<{$vo['project_pwd']}></label>&nbsp; 
+								</span>
+							</span>
+						</span>
+						
+						<span id='a<{$vo['idmarch_project']}>'></span>
+                  </div> 
+			      <hr  />
+				</volist>
+			              
+           
+            </div>
+        </div>
+       
+       <div style="clear:both"></div>
+    </div>
+	   
+       
+    
+    
+    
+<include file="./March/Common/html/foot.html" />
+<script src="__ROOT__/March/Common/js/knowledge/knowledge.js" style="text/javascript"></script> 
+<script src="__ROOT__/March/Common/js/project/project.js" style="text/javascript"></script> 
+</BODY>
+</HTML>

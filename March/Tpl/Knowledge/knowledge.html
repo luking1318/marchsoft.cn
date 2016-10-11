@@ -1,0 +1,47 @@
+<include file="./March/Common/html/head.html" />
+</center>
+
+  <link href="__ROOT__/March/Common/css/knowledge/knowledge.css" rel="stylesheet">
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div id="blog">
+	<div id="center">
+		<div id="top">
+			<ul>
+				<li><a href="__URL__/blog">成员博客</a></li>
+				<li><a href="__URL__/knowledge" class="active">知识库</a></li>
+			</ul>
+			<div id="namesearch">
+				<input type="text" id="searchcon" class="input-medium search-query" style="height:30px; width:250px;" />
+				<button type="submit" class="btn" style="height:30px;" id="btnsearch">搜索</button>
+			</div>
+		</div>
+		<div id="content">
+			<div id="con_left">
+			   <div id="list_up" class="listitem"></div>
+			   <a href="__URL__/klist?sort=0000000000" style="color:#3C3C3C; text-decoration:none;" target="inner"><div id="firstitem" class="listitem">全部分类</div> </a>  
+			   <div class="listitem_line"></div>
+			   
+			   <volist name="sort" id="vo">
+			   		<a href="__URL__/klist?sort=<{$vo['idmarch_sort']}>" style="color:#3C3C3C; text-decoration:none;" target="inner">
+					<div class="listitem"><{$vo['sort_name']}></div>
+					</a>
+			        <div class="listitem_line"></div>
+			   </volist>
+			   
+			   <div id="list_down"></div>
+			   
+			</div>
+			<div id="con_right">
+			   <iframe allowtransparency="yes" src="__URL__/klist?sort=0000000000" id="inner" name="inner" frameborder="0" width="690" scrolling="no" onload="autoHeight();"></iframe>
+			</div>  
+
+			<div style="clear:both;"></div>
+		</div>
+	</div>
+</div>
+
+<input type="hidden" id="rot" value="__ROOT__/" />
+<include file="./March/Common/html/foot.html" />
+<script src="__ROOT__/March/Common/js/knowledge/knowledge.js" style="text/javascript"></script> 
+</BODY>
+</HTML>

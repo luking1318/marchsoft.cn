@@ -1,0 +1,163 @@
+@CHARSET "UTF-8";
+body
+{
+    background:url("../../img/knowledge/bg.png") repeat-x;
+    font-size:13px;
+    margin:0px auto;
+    padding:0px;
+    color:#888888;
+}
+.conbody{
+	background:#e7e7e4;
+	width: 100%;
+	min-width: 1002px;
+	padding-top: 50px;
+}
+.conmain{
+	padding-right: 10px;
+	background-color: white;
+	border: 2px solid #cccccc;
+	width: 1002px;
+	margin: 0 auto;
+	border-radius: 10px;
+	padding: 30px 20px 0 20px;
+	/*overflow: hidden;*/
+}
+.leftcon{
+	margin: 0;
+	width: 700px;
+}
+.rightcon{
+	color: #535353;
+	float: right;
+	width: 280px;
+}
+/*right*/
+.rightcon .logo{
+	margin-bottom: 20px;
+	width: 100%;
+	padding-bottom: 26px;
+	border: 1px solid #D4D4D4;
+	text-align: center;
+}
+ .logo img{
+ 	margin-top: 10px;
+ 	width: 170px;
+ 	margin-bottom: 20px;
+ }
+
+ .rightcon .erwei{
+ 	border: 1px solid #D4D4D4;
+ 	width: 100%;
+ 	text-align: center;
+ 	padding-bottom: 20px;
+ 	margin-bottom: 26px;
+ }
+ .erwei img{
+ 	margin-top: 10px;
+ 	width: 210px;
+ 	margin-bottom: 10px;
+ }
+ .erwei h4{
+ 	color: #5195C3;
+ }
+.title{
+	text-align: left;
+ 	height: 34px;
+ 	width: 100%;
+ 	border-bottom: 1px solid #D4D4D4;
+    	background-color: #FBFBFB;
+ }
+ .title h3{
+  	margin-top: 10px;
+  	margin-left: 10px;
+  }
+.zeng {
+	border: 1px solid #D4D4D4;
+ 	width: 100%;
+ 	min-height: 200px;
+ 	padding-bottom: 20px;
+ 	margin-bottom: 20px;
+}
+.zeng .title{
+	margin-bottom: 8px;
+}
+.zeng .zenglist{
+	font-size: 16px;
+	font-family: "Century Gothic","Microsoft yahei";
+    	color: #323232;
+	margin: 0 10px 6px;
+    	padding-bottom: 6px;
+    	line-height: 1.8;
+    	border-bottom: 1px dashed #D4D4D4;
+    	overflow: hidden;
+    	text-overflow: ellipsis;
+    	white-space: nowrap;
+}
+
+
+/*left*/
+.t1{
+	width: 100%;
+	border: 1px solid #cccccc;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	padding: 30px 0;
+}
+.pri{
+	position: relative;
+}
+.pri img{
+	margin-left: 64px;
+	width: 200px;
+}
+.pri p{
+	width: 270px;
+	position: absolute;
+	line-height: 25px;
+	letter-spacing: 1px;
+	font-size: 16px;
+	top: 77px;
+	right: 63px;
+}
+.pri h4{
+	position: absolute;
+	top: 24px;
+	right: 65px;
+	margin: 0;
+	padding: 10 30;
+	display: inline-block;
+	text-align: center;
+	border-radius: 30px;
+	color: white;
+	letter-spacing: 2px;
+	background: #1289c8;
+}
+
+.don h4{
+	width: 200px;
+	margin: 0 0 0 30px;
+	margin-bottom: 10px;
+	background: #1289c8;
+	padding: 10px;
+	text-align: center;
+	border-radius: 30px;
+	color: white;
+	letter-spacing: 2px;
+}
+.don .none{
+	padding-top: 20px;
+	text-align: center;
+	width: 80%;
+	margin: 0 auto;
+	height: 70px;
+	border-bottom: 1px dashed #8BC34A;
+}
+
+.tit h4{
+	margin: 0;
+}
+
+.clear{
+	clear: both;
+}

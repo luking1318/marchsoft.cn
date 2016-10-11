@@ -1,0 +1,99 @@
+<include file="./OA/Tpl/header.html"/>
+<script src="__ROOT__/OA/Common/js/thing/news.js"></script>
+
+<div id="content">
+	<if condition="$_SESSION['login']">
+		<include file="./OA/Tpl/manager_person.html"/>
+	<else/>
+		<include file="./OA/Tpl/member_person.html"/>
+	</if>
+	<img class="adorn_top" src="__ROOT__/OA/Common/img/adorn_top.png" /><!-- 装饰 -->
+	<div class="thing_add_del">	<!-- 1代表新闻3代表大事件 -->
+		<a href="__URL__/add_edit_news/type/<{$type}>" class="add">
+			<if condition="$type eq 1">
+				<span>新增新闻</span>
+				<else/>
+				<span>新增大事记</span>
+			</if>
+		</a>
+		<a name="del_all" href="javascript:void(0)" class="del">
+			<span>删除</span>
+		</a>
+		<if condition="$stick_manage == 1"><!-- 进入置顶管理页面 -->
+			<a name="cancel_stick_all" href="javascript:void(0)" class="stick">
+				<span>取消置顶</span>
+			</a>
+		<else/>
+			<if condition="$type eq 1">		<!-- 只有新闻才有置顶管理 -->
+				<a href="__URL__/news/type/<{$type}>/stick_manage/1" class="stick">
+					<span>置顶管理</span>
+				</a>
+			</if>
+		</if>
+	</div>
+	<div class="thing_table thing_news">
+		<if condition="$stick_manage == 1"><!-- 进入置顶管理页面 -->
+			<div class="title"><a href="__URL__/news/type/<{$type}>">返回>></a>置顶管理</div>
+		<else/>
+			<div class="thing_top">
+			</div>
+		</if>
+		<table>
+			<tr>
+				<th width="8%"><input name="all" type="checkbox"></th>
+				<th width="38%">标题</th>
+				<th width="14%">发布人</th>
+				<th width="22%">发布时间</th>
+				<th width="18%">操作</th>
+			</tr>
+			<foreach name="list" item="val">
+				<tr>
+					<td><input name="check" type="checkbox" value="<{$val.idmarch_news}>"></td>
+					<td class="red"><{$val.news_title}></td>
+					<td><{$val.news_publisher}></td>
+					<td><?php echo substr($val["news_date"],0,10);?></td>
+					<td>
+						<!-- 进入置顶管理页面 -->
+						<if condition="$stick_manage == 1">
+							<a class="img_stick" name="cancel_stick" href="javascript:void(0)" value="<{$val.idmarch_news}>">
+								<img title="取消置顶" src="__ROOT__/OA/Common/img/cancel_stick.png"/>
+							</a>
+							<a class="img_up" name="up_move" href="javascript:void(0)" value="<{$val.idmarch_news}>">
+								<img title="上移" src="__ROOT__/OA/Common/img/up_move.png"/>
+							</a>
+							<a class="img_down" name="down_move" href="javascript:void(0)" value="<{$val.idmarch_news}>">
+								<img title="下移" src="__ROOT__/OA/Common/img/down_move.png"/>
+							</a>
+						<else/>
+							<a class="img_show" target="_new" href="__ROOT__/index.php/News/show/nid/<{$val.idmarch_news}>">
+								<img src="__ROOT__/OA/Common/img/img_show.png"/>
+							</a>
+							<a class="img_edit" href="__URL__/add_edit_news/id/<{$val.idmarch_news}>/type/<{$type}>">
+								<img src="__ROOT__/OA/Common/img/img_edit.png"/>
+							</a>
+							<a class="img_del" name="del" href="javascript:void(0)" value="<{$val.idmarch_news}>">
+								<img src="__ROOT__/OA/Common/img/img_del.png"/>
+							</a>
+							<if condition="$type == 1"><!-- 只有新闻才有置顶 -->
+								<if condition="$val.news_stick == 0">
+									<a class="img_stick" name="stick" href="javascript:void(0)" value="<{$val.idmarch_news}>">
+										<img title="置顶" src="__ROOT__/OA/Common/img/stick.png"/>
+									</a>
+								<else/>
+									<a class="img_stick" name="cancel_stick" href="javascript:void(0)" value="<{$val.idmarch_news}>">
+										<img title="取消置顶" src="__ROOT__/OA/Common/img/cancel_stick.png"/>
+									</a>
+								</if>
+							</if>
+						</if>
+					</td>
+				</tr>
+			</foreach>
+		</table>
+		<div id="thing_page"><{$page}></div>
+		<div style="clear:both"></div>
+	</div>
+	<div style="clear:both"></div>
+</div>
+
+<include file="./OA/Tpl/fooder.html"/>

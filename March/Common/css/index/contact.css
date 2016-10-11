@@ -1,0 +1,10 @@
+@CHARSET "UTF-8";
+body{background:url("../../img/news/bg.png") repeat-x #F5F5F7;}
+
+#b_tl{text-align:left;margin-top:20px;padding-left:40px;font-size:18px;color:#0A1A1D;
+font-weight:bold;padding-bottom:10px;font-family:"Arail"}
+
+.head_down{width:943px; height:5px; background:url("../../img/introduce/dot.png") repeat-x;margin-bottom:20px}
+
+.c_tl{font-weight:bold;color:#3E3F41;font-size:15px;font-family:Arail;margin-top:20px;color:#042943}
+.c_con{padding:10px}

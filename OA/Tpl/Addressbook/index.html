@@ -1,0 +1,48 @@
+<include file="./OA/Tpl/header.html"/>
+<script>
+	$(function(){
+		$("#" + $('#level').val()).addClass("active");	//改变选中年级的样式
+	});
+</script>
+<div id="address">
+	<ul class="nav nav-tabs">
+	    <foreach name="nav" item="val">
+	    	<li id="lv<{$val['level']}>">
+	    		<a href="__URL__/index/level/<{$val['level']}>"><?php echo substr($val['level'],2)."级";?></a><!-- 把2012级改成12级 -->
+	    		<if condition="($val.count gt 0) and ($val.one eq 1)">	<!-- 最低年级未读的样式 -->
+					<div id="count"><img src="__ROOT__/OA/Common/img/count.png" /><span><{$val["count"]}></span></div>
+				<elseif condition="$val.count gt 0" />		<!-- 除最低年级以外未读的样式 -->
+					<img id="no_count" src="__ROOT__/OA/Common/img/no_count.png" />
+				</if>
+	    	</li>
+	    </foreach>
+	</ul>
+	<div class="border_right">
+		<div class="table_top"></div>
+		<table>
+			<tr class="first">
+				<th width="21%">姓名</th>
+				<th width="14%">院系</th>
+				<th width="14%">班级</th>
+				<th width="14%">电话</th>
+				<th width="14%">QQ</th>
+				<th width="21%">个人博客</th>
+			</tr>
+			<volist name="list" id="val">
+				<tr>
+					<td><img src="__ROOT__/Common/img/photo/photo/s_<{$val['avator']|default='fengmian.jpg'}>"><{$val['user_name']}></td>
+					<td><{$val['department']}></td>
+					<td><{$val['class']}></td>
+					<td><{$val['user_phone']}></td>
+					<td><{$val['QQ']}></td>
+					<td><a target="_new" href="<{$val['blog']}>"><{$val['blog']}></a></td>
+				</tr>
+			</volist>
+		</table>
+		<div id="page"><{$page}></div>
+		<div style="clear:both"></div>
+	</div>
+</div>
+<input type="hidden" id="level" value="lv<{$level}>">	<!-- 用于存储选中的年级 -->
+
+<include file="./OA/Tpl/fooder.html"/>

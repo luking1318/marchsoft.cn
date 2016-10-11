@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE>小组OA</TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+  <link href="__ROOT__/Common/css/bootstrap.css" rel="stylesheet">
+  <script type="text/javascript" src="__ROOT__/Common/js/jquery.js"></script>
+  <script charset="utf-8" src="__ROOT__/Common/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		.well_1{width:90%;}
+		.span10_2{float:left;width:75%;margin-left:0px;}
+		.span2_1{width:25%;}
+		.span2_2{float:left;width:18%;}
+		.well_2{width:100%}
+		.span10_1{float:left;}
+		.div_ri_top_1{line-height:40px;}
+		.div_ri_top_2{margin-top:10px;}
+	</style>
+  
+ </HEAD>
+
+ <BODY>
+ 
+	<div class="navbar">
+	  <div class="navbar-inner">
+		<div class="container">
+			<a class="brand" href="http://www.marchsoft.cn" target="_blank">
+			 Marchsoft
+			</a>	
+		  <ul class="nav">
+			  <li class="active" style="float:left;line-height:40px;">
+				<a href="__APP__/Personal" target="main">个人中心</a>
+			  </li>
+			  <li style="float:left;line-height:40px;margin-left:20px;"><a href="__ROOT__/admin.php/News/newslist/type/2" target="main">通知公告</a></li>
+			</ul>
+			<div id="div_ri_top" style="float:right;">
+			    <ul class="nav nav-pills">
+				  <li class="dropdown" id="menutest1">
+				    <a class="dropdown-toggle" data-toggle="dropdown" href="#menutest1">
+				      <i class="icon-user icon-white" style="margin-right:15px"></i>
+									<{$Think.session.user_login}>
+				      <b class="caret"></b>
+				    </a>
+				    <ul class="dropdown-menu" id="menutest1">
+				      <li><a href="__APP__/Personal" target="main"><i class="icon-home"></i>&nbsp;个人中心</a></li>
+				      <li><a href="#" onclick="javascript:window.opener=null;window.open('','_self'); window.close();"><i class="icon-folder-close"></i>&nbsp;退出系统</a></li>
+					  <!--
+				      <li><a href="javascript:window.open('http://www.marchsoft.cn/admin.php')"><i class="icon-share-alt"></i>&nbsp;后台管理端</a></li>
+						-->
+					</ul>
+				  </li>
+				</ul>
+			</div>
+			
+		</div>
+	  </div>
+	</div>
+ 
+	<div class="container-fluid" >
+	  <div class="row-fluid">
+		<div class="span2" id="span2">
+		<div class="well" id="well">
+		  <!--Sidebar content-->
+		  <ul class="nav nav-list">
+			<li class="nav-header">
+				<img class="table table-bordered" style="width:100%;height:150px; margin-bottom:10px;border:2px solid #ccc;" src="__ROOT__/Common/img/photo/photo/m_<{$photo|default='fengmian.jpg'}>">
+			</li>
+			
+			<li class="active">
+				<a href="__APP__/Personal" target="main"><i class="icon-home"></i> 个人中心</a>
+			</li>
+			<!-- <li class="nav-header">
+				Library
+			</li> -->
+			<li>
+				<a href="__APP__/Editphoto" target="main"><i class="icon-picture"></i> 编辑头像</a>
+			</li>
+			<li>
+				<a href="__APP__/Editdata" target="main"><i class="icon-list-alt"></i> 修改资料</a>
+			</li>
+			<li>
+				<a href="__APP__/Editpwd" target="main"><i class="icon-lock"></i> 修改密码</a>
+			</li>
+			<li>
+				<a href="__APP__/Course" target="main"><i class="icon-calendar"></i> 课表管理</a>
+			</li>
+			
+			<li class="divider"></li>
+			<li>
+				<a href="__ROOT__/admin.php/News/newslist/type/2" target="main"><i class="icon-volume-up"></i> 通知公告</a>
+			</li>
+			<li>
+				<a href="__ROOT__/admin.php/News/newslist/type/1" target="main"><i class="icon-comment"></i> 小组新闻</a>
+			</li>
+			<li>
+				<a href="__ROOT__/admin.php/News/newslist/type/3" target="main"><i class="icon-flag"></i> 大事记</a>
+			</li>
+			<li class="divider"></li>
+			<li>
+				<a href="__APP__/Blog/blog/type/1" target="main"><i class="icon-list"></i> 博客管理</a>
+			</li>
+			<li>
+				<a href="__APP__/Addressbook" target="main"><i class="icon-user"></i> 通讯录</a>
+			</li>
+			<li class="divider"></li>
+			<li>
+				<a href="__APP__/Blog/blog/type/0" target="main"><i class="icon-list-alt"></i> 笔记</a>
+			</li>
+			<li>
+				<a href="__APP__/Lecture" target="main"><i class="icon-film"></i> 讲课</a>
+			</li>
+			<!--<li>
+				<a href="#"><i class="icon-folder-open"></i> 便签</a>
+			</li>
+			<li>
+				<a href="#"><i class="icon-asterisk"></i> 活动</a>
+			</li>-->
+		</ul>
+		</div>
+		</div>
+		<div class="span10" id="span10">
+		  <!--Body content-->
+		  <iframe id="iframe"  width="100%" name="main" frameborder=0 scrolling=no height="100%" src="__APP__/Personal" onload="autoHeight()">
+		  </iframe>
+		  <script>
+		  		function autoHeight(){
+					var iframe = document.getElementById("iframe");
+					if(iframe.Document){//ie自有属性
+						iframe.style.height = iframe.Document.documentElement.scrollHeight+50;
+					}else if(iframe.contentDocument){//ie,firefox,chrome,opera,safari
+						iframe.height = iframe.contentDocument.body.offsetHeight+50 ;
+					}
+				}
+		  </script>
+			
+		  <script type="text/javascript">
+		  //控制兼容性
+			$(function(){
+				if(document.all){
+					$("#well").addClass("well_2");
+					$("#span2").addClass("span2_2");
+					$("#span10").addClass("span10_2");
+					$("#div_ri_top").addClass("div_ri_top_2");
+				}else{
+					$("#well").addClass("well_1");
+					$("#span2").addClass("span2_1");
+					$("#span10").addClass("span10_1");
+					$("#div_ri_top").addClass("div_ri_top_1");
+				}
+			});
+		</script>
+		</div>
+	  </div>
+	</div>
+ </BODY>
+</HTML>

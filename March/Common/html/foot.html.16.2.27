@@ -1,0 +1,15 @@
+	</div>
+	 </center>
+
+ <div id='footTop'>
+	  <div id="foot">
+		<div style="padding-top:50px;text-align:center;color:#389CBE">
+			CopyRight &copy; 三月软件工作室&nbsp;&nbsp;河南伽马信息技术有限公司&nbsp;&nbsp;
+			<a style = "color:#389CBE" href="http://www.miitbeian.gov.cn/" target="_blank">豫ICP备14025783号</a>
+		</div>
+	  </div>
+  </div>
+  <script src="__ROOT__/Common/js/jquery.js" style="text/javascript"></script>
+  <script src="__ROOT__/Common/js/bootstrap-modal.js" style="text/javascript"></script>
+  <script src="__ROOT__/March/Common/js/common.js" style="text/javascript"></script>
+  <script src="__ROOT__/March/Common/js/login.js" style="text/javascript"></script>

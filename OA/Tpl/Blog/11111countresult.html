@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="__ROOT__/Common/css/bootstrap.css">
+	<script type="text/javascript" src="__ROOT__/Common/js/jquery.js"></script>
+	<script type="text/javascript" src="__ROOT__/OA/Common/js/bootstrap-tab.js"></script>
+</head>
+<body>
+	<table class="table table-bordered" style="width:400px;">
+	      <tr>
+		  	<td colspan="2" align="center" style="margin-left:50px;">
+				<h3 style="margin-left:70px;">笔记统计结果</h3>
+			</td>
+		  </tr>
+		  <tr>
+		  	 <th width="50%">姓名</th>
+			 <th >数量</th>
+		  </tr>
+		  <volist name="result" id="vo">
+	      <tr>
+			<td><{$vo["user_name"]}></td>
+			<td><{$vo["count(*)"]}></td>
+		 </tr>
+		 </volist>
+		 
+		 <tr>
+		 	<td colspan="2">
+				<input  class="btn btn-primary" type="button"  style="width:50px; margin-left:20px; margin-top:5px;"
+			    value="返回" onClick="window.location.href='__URL__/myblog/type/0'"/>
+			</td>
+		 </tr>
+			  			
+	</table>	
+</body>
+</html>

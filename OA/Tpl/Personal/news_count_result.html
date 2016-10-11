@@ -1,0 +1,36 @@
+<include file="./OA/Tpl/header.html"/>
+
+<div id="content">
+	<if condition="$_SESSION['login']">
+		<include file="./OA/Tpl/manager_person.html"/>
+	<else/>
+		<include file="./OA/Tpl/member_person.html"/>
+	</if>
+	
+	<img class="adorn_top" src="__ROOT__/OA/Common/img/adorn_top.png"/>
+	<div class="countblog">
+		<table>
+			<tr>
+			  	<td class="title" colspan="2">
+					笔记统计结果
+				</td>
+			</tr>
+			<tr>
+				<th width="50%">姓名</th>
+				<th width="50%">数量</th>
+			</tr>
+			<foreach name="list" item="val">
+				<tr>
+					<td><{$val.username}></td>
+					<td class="red"><{$val.amount}></td>
+				</tr>
+			</foreach>
+		</table>
+		<input type="button" class="button button_one" onClick="window.location.href='__URL__/blog'" value="返回">
+		<div id="thing_page"><{$page}></div>
+		<div style="clear:both"></div>
+	</div>
+	<div style="clear:both"></div>
+</div>
+
+<include file="./OA/Tpl/fooder.html"/>

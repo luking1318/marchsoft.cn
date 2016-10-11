@@ -1,0 +1,41 @@
+<include file="./OA/Tpl/header.html"/>
+<script src="__ROOT__/Admin/Common/js/news/newslist.js"></script>
+<div id="news">
+	<table>
+    	<tr>
+    		<th width="40%">标题</th>
+    		<th width="10%">发布人</th>
+    		<th width="20%">发布时间</th>
+			<if condition="($_SESSION['login'] eq '006') OR ($_SESSION['login'] eq '007')">
+				<th width="6%">编辑</th>
+    		    <th width="6%">删除</th>
+			</if>
+    		<th width="6%">查看</th>
+    	</tr>
+	    <volist name="list" id="vo">
+		    <tr>
+				<td><{$vo['news_title']}></td>
+				<td><{$vo['news_publisher']}></td>
+				<td><{$vo['news_date']}></td>
+				
+				<if condition="($_SESSION['login'] eq '006') OR ($_SESSION['login'] eq '007')">
+					<td><a href="__URL__/edit/id/<{$vo['idmarch_news']}>">编辑</a></td>
+				    <td><a href="__URL__/del/id/<{$vo['idmarch_news']}>/type/<{$vo['news_type']}>">删除</a></td>
+			    </if>
+				
+				<td>
+					<a target="_black" href="__ROOT__/index.php/News/show/nid/<{$vo['idmarch_news']}>">查看</a>
+				</td>		
+			</tr>
+	    </volist>
+		<tr>
+			<if condition="($_SESSION['login'] eq '006') OR ($_SESSION['login'] eq '007')">
+			  	<td colspan="6">
+				<input class="btn btn-primary" type="button" value="添加" onclick="window.location.href ='__URL__/addnews/addtype/<{$vo['news_type']}>'" style="margin-left:10px;" />
+				<span id="selectnull" style="color:red; margin-left:10px; visibility:hidden;">(请选择要删除的项.)</span>
+			   </td>
+			</if>
+		</tr>
+	</table>
+	<div class="page"><{$page}></div>
+</div>

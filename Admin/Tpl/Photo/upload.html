@@ -1,0 +1,72 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="__ROOT__/Admin/Common/css/Photo/pho.css">
+<link rel="stylesheet" type="text/css" href="__ROOT__/Common/css/bootstrap.css">
+<link href="uploadify.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="__ROOT__/Common/upload/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="__ROOT__/Common/upload/swfobject.js"></script>
+<script type="text/javascript" src="__ROOT__/Common/upload/jquery.uploadify.v2.1.4.min.js"></script>
+<script type="text/javascript">
+	
+				$(function() {
+					if($("#select").val()==null){
+						alert("呵呵！您还没有相册呢！");
+						history.go(-1);
+					}else{
+						path=$('#url').val()+"/upload/pid/"+$("#select").val();  //设置路径
+						$("#select").live("change",function(){
+							path=$('#url').val()+"/upload/pid/"+$("#select").val();
+							$('#file_upload').uploadifySettings('script',path); //设置上传路径
+						});
+					}
+					
+					
+				$('#file_upload').uploadify({
+  'uploader'       : $('#urlR').val()+'/Common/upload/uploadify.swf',
+  'script'         : path,
+  'cancelImg'      : $('#urlR').val()+'/Common/upload/cancel.png',
+  'folder'         : $('#urlR').val()+'/Common/img/photo',
+  'multi'          : true,
+  'auto'           : true,
+  'fileExt'        : '*.jpg;*.gif;*.png',
+  'fileDesc'       : 'Image Files (.JPG, .GIF, .PNG)',
+  'queueID'        : 'custom-queue',
+  'simUploadLimit' : 3,
+  'removeCompleted': false,
+  'onSelectOnce'   : function(event,data) {
+      $('#status-message').text(data.filesSelected + ' files have been added to the queue.');
+    },
+  'onAllComplete'  : function(event,data) {
+      $('#status-message').text(data.filesUploaded + ' files uploaded, ' + data.errors + ' errors.');
+    }
+});				});
+				</script>
+</head>
+<body>	
+	<input type="hidden" value="__URL__" id="url">
+	<input type="hidden" value="__ROOT__" id="urlR">
+	<div id="div_bo">
+		<center>
+			<h1>相册管理</h1>
+		<div id=div_cen class="table-bordered">
+			<div id="div_top" class="table-bordered">
+				<a class="btn btn-primary" id="btn" href="__URL__/index">返回相册</a>
+			</div>
+		</div><br>
+		<font color="#FA1703";>(上传图片大小在2M之内)</font>&nbsp;&nbsp;&nbsp;
+		<font>请选择相册：</font>
+		<select id="select">
+			<volist name="list" id="vo">
+				<option value="<{$vo['idmarch_photo']}>"><{$vo['photo_name']}></option>
+			</volist>
+		</select>
+	    <input id="file_upload" name="file_upload" type="file" >
+	    <div id="status-message"></div>
+	    <div id="custom-queue"></div>
+	    </center>
+   </div>
+   
+   
+</body>
+</html>

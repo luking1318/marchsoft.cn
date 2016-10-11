@@ -1,0 +1,12 @@
+<div class="left">
+	<if condition="$type eq 0">
+		<a href="__URL__/myblog/type/0"><div id="b_myblog" class="left_img"><img src="__ROOT__/OA/Common/img/b_myblog.png"/><br/>笔记列表</div></a>
+		<a href="__URL__/add_edit/type/0"><div id="b_addblog" class="left_img"><img src="__ROOT__/OA/Common/img/b_addblog.png"/><br/>新增笔记</div></a>
+		<a href="__URL__/blog/type/0"><div id="p_photo" class="left_img"><img src="__ROOT__/OA/Common/img/p_photo.png"/><br/>成员笔记</div></a>
+		<a href="__URL__/countblog"><div id="b_countblog" class="left_img"><img src="__ROOT__/OA/Common/img/b_countblog.png"/><br/>笔记统计</div></a>
+	<else />
+		<a href="__URL__/myblog/type/1"><div id="b_myblog" class="left_img"><img src="__ROOT__/OA/Common/img/b_myblog.png"/><br/>博客列表</div></a>
+		<a href="__URL__/add_edit/type/1"><div id="b_addblog" class="left_img"><img src="__ROOT__/OA/Common/img/b_addblog.png"/><br/>新增博客</div></a>
+		<a target="_new" href="__ROOT__/index.php/Knowledge/knowledge"><div id="p_photo" class="left_img"><img src="__ROOT__/OA/Common/img/p_photo.png"/><br/>成员博客</div></a>
+	</if>
+</div>

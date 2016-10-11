@@ -1,0 +1,37 @@
+#div_cen{
+	width:710px; margin:0 auto;}
+#table{
+	width:730px; margin-top:20px;}
+#tr td{
+	line-height:50px;}	
+#thead{
+	background:#F5F5F5;}
+caption{
+	padding-bottom:10px;}
+#div_add{
+	width:430px;display:none;position:absolute;Z-index:10000;background:#F5F5F5;border:1px solid #ccc;}
+#btn_add{
+	margin-top:10px;}
+#close{
+	width:430px;height:30px;background:#ccc;border:1px solid #ccc;}
+#strong{
+	padding-left:40%;margin-top:5px;float:left;}
+.dropdown-menu{
+	position:absolute;Z-index:100000;}
+#btn_clo{
+	float:left;margin-left:160px;width:18px;height:17px;margin-top:8px;background:url("../../../../Admin/Common/images/user/close1.png");}
+#btn_clo:hover{
+	background:url("../../../../Admin/Common/images/user/close.png");}
+.input-xlarge{
+	width:160px;}
+#center{
+	margin-top:20px;margin-left:0px;}
+#sub{
+	margin-left:40%;}
+.label1,.font{
+	margin-left:20px;}
+.help-block{
+	margin-left:25%;padding-bottom:10px;}
+#img_photo{
+	width:60px;height:60px;}
+	

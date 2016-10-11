@@ -1,0 +1,119 @@
+#course{
+	width:1060px;
+	height:1000px;
+	background-image:url(../../img/course/bg1.jpg);
+	margin:0px auto;
+}
+#content_top{
+	position:absolute;
+   background-image:url(../../img/course/banner.png);
+   background-repeat:no-repeat;
+   margin-top: 30px;
+   margin-left: 450px;
+	width:152px;
+	height:49px;
+}
+#content_bottom{
+   position:absolute;
+   background-image:url(../../img/course/down-bg.jpg);
+   margin-top: 79px;
+   width:1060px;
+   height:772px;
+}
+#bottom_s1{
+   position:relative;
+   background-image:url(../../img/course/ww.jpg);
+   margin-top: 0px;
+   background-repeat:none;
+   width:1060px;
+   height:82px;
+}
+#bottom_s2{
+  
+   background-color: #ffffff;
+   margin-top: 0px;
+   margin-left: 1px;
+   width:1058px;
+   height:675px;
+}
+#bottom_s3{
+  
+   background-color: #ffffff;
+   
+   margin-left: 23px;
+   width:1018px;
+   height:538px;
+}
+ #bottom_s4{
+   position:absolute;
+   background-image:url(../../img/course/1.jpg);
+   margin-top: 17px;
+   margin-left: 51px;
+   text-align:center;
+   width:98px;
+   height:44px;
+}
+#bottom_s5{
+   float:left;
+   margin-top:18px;
+   margin-left:150px;
+   width:850px;
+   height:42px;
+}
+#bottom_s6{
+   position:absolute;
+   margin-top:18px;
+   margin-left:1001px;
+   text-align:center;
+   width:35px;
+   height:42px;
+}
+#xing_ming{
+   color:#9E9303;
+   margin-top:15px;
+}
+#bottom_s2 table{
+   border-collapse:collapse;
+   border:1px solid #E0E0E0;
+}
+ td{
+   border:1px solid #E0E0E0;
+   width:188px;
+   height:106px;
+   text-align: center;
+   font-size: 15px;
+}
+.wu_bie{
+   font-weight: 600;
+   width:65px;
+}
+#bottom_s2 table td.xingqi{
+   height:52px;
+   font-weight: 600;
+   background-image:url(../../img/course/TAB-BG.jpg);
+}
+#xingqi{
+   width:65px;
+   background-image:url(../../img/course/TAB-BG.jpg);
+}
+#xuan{
+   margin-top:15px;
+}
+#seardh{
+   float:left;
+   margin-top:5px;
+   margin-left:5px;
+}
+#seardh_shu{
+   float:left;
+   margin-top:13px;
+   margin-left:15px;
+}
+#bottom_s5 #myULTags{
+   border:0px solid;
+   width:830px;
+   height:32px;
+}
+#rgbs{
+  box-shadow:0 1px 1px rgba(0, 0, 0, 0.275) inset, 0 0 8px rgba(255, 0, 0, 1);
+}

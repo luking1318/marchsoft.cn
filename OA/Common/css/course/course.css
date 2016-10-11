@@ -1,0 +1,16 @@
+#div_body{
+	margin-top:0px;margin-left:200px;}
+.th_day{
+	width:20%;}
+.inptut1{
+	width:160px;display:none;}
+#div_input{
+	float:right;margin-right:50px;}
+#table1{
+	width:95%;}
+#table1 td:hover,#table2 td:hover{
+	background-color:#ccc;}
+#table1 tr:hover{
+	background-color:#424242;}
+.tr_title{
+	background-color:#FDFCCD}

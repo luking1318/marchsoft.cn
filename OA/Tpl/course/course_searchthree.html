@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+         <title>课表eeeee</title>
+         <meta http-equiv="Content-type" content="text/html;charset=utf-8">
+          <script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
+    </head>
+        <body>
+        <div style="background-color:#ffffff;border:0px solid #cccccc;position:absolute; border-radius: 3px;top:1px; left: 1px; width:870px;">
+          <table>
+          <volist name="lis" id="vos">
+             <tr>
+             <td class="names" style="border-bottom:0px solid #aaaaaa;width:560px;height:30px;text-align: left;"><{$vos["user_name"]}></td>
+             </tr> 
+          </volist>
+          </table>
+        </div>
+      </body>
+      <script>
+        $(document).ready(function(){
+            $(".names").live('mouseover',function(){
+               $(this).css("background-color","#EBEBEB");
+               $(this).css("box-shadow","0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6)");
+                 
+            });
+            $(".names").live('mouseout',function(){
+                 $(this).css("background-color","#ffffff");
+                 $(this).css("box-shadow","");
+             });
+          });
+      </script>
+  </html>

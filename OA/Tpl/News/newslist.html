@@ -1,0 +1,47 @@
+<include file="./OA/Tpl/header.html"/>
+<script>
+$(function(){
+	/*找到最大div的高度*/
+	var maxHeight = $("div[class='text']:first").outerHeight();/*设第一个div的高度为最大*/
+	$("div[class='text']").each(function(){
+		if($(this).outerHeight() > maxHeight){
+			maxHeight = $(this).outerHeight();
+		}
+	});
+	$("div[class='user_info']").outerHeight(maxHeight);
+	/*把每个div的高度和最大的div高度一样*/
+
+	$("div[class='content']").mouseover(function(){
+		$(this).addClass("selected");
+		$(this).find("p").addClass("selected");
+	});
+	$("div[class='content']").mouseout(function(){
+		$(this).removeClass("selected");
+		$(this).find("p").removeClass("selected");
+	});
+});
+</script>
+
+<div id="news">
+	<foreach name="list" item="val">
+		<a href="__ROOT__/index.php/News/show/nid/<{$val.idmarch_news}>" target="_new">
+			<div class="content">
+				<div class="text">
+					<p><{$val.news_title}></p>
+					<{$val.news_content}>
+				</div>
+				<div class="user_info">
+					<div class="photo">
+						<img src="__ROOT__/Common/img/photo/photo/s_<{$val.avator|default='fengmian.jpg'}>"/>
+					</div>
+					<p class="name"><{$val.news_publisher}></p>
+					<p class="date"><?php echo substr($val["news_date"],0,10) ?></p>
+				</div>
+				
+			</div>
+		</a>
+	</foreach><div style="clear:both;"></div>
+	<div id="page"><{$page}></div>
+</div>
+
+<include file="./OA/Tpl/fooder.html"/>

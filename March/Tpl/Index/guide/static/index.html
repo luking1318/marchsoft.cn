@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>首页</title>
+	<link rel="stylesheet" href="/March/Tpl/Index/guide/static/index.css">
+	<script type="text/javascript" src="/March/Tpl/Index/guide/static/index.js"></script>
+	<script type="text/javascript" src="/March/Tpl/Index/guide/static/jquery-1.12.3.min.js"></script>
+</head>
+<body>
+	<div class="home">
+		<img src="/March/Tpl/Index/guide/static/image/1920.jpg" alt="" class="background">
+		<!-- <img src="image/light.png" alt="" class="light">		 -->
+		<a href="index"><img src="/March/Tpl/Index/guide/static/image/sdsdsd.png" alt="" id="enterlab"></a>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+try{
+    if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+    	$('.background').attr('src',"/March/Tpl/Index/guide/static/image/1366.jpg");
+    	$('#enterlab').addClass('enterphone');
+    }else{
+       $('#enterlab').addClass('enterwindow');
+    }
+}catch(e){}
+
+</script>

@@ -1,0 +1,2 @@
+<?php
+return array ( 0 => 'iduser_info', 1 => 'user_phone', 2 => 'user_sex', 3 => 'QQ', 4 => 'blog', 5 => 'describe', 6 => 'department', 7 => 'class', 8 => 'avator', 9 => 'level', '_autoinc' => true, '_pk' => 'iduser_info', ); ?>

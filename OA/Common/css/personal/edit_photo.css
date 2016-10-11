@@ -1,0 +1,17 @@
+@CHARSET "UTF-8";
+#div_body{
+	margin-left:30px;margin-top:30px;}
+#div_edit_pho{
+	margin-top:40px;}
+#div_img{
+	float:left;width:201px;height:201px;}
+#image_edit{
+	width:200px;height:200px;}
+#div_explain{
+	float:left; margin-left:40px;}
+#div_btn{
+	margin-top:20px;}
+#input2{
+	margin-left:20px;}
+#input1,#input4{
+	display:none; }

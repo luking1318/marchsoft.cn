@@ -1,0 +1,41 @@
+<include file="./OA/Tpl/header.html"/>
+<include file="./OA/Tpl/ueditor.html"/>
+<script src="__ROOT__/OA/Common/js/thing/news.js"></script>
+
+<div id="content">
+	<if condition="$_SESSION['login']">
+		<include file="./OA/Tpl/manager_person.html"/>
+	<else/>
+		<include file="./OA/Tpl/member_person.html"/>
+	</if>
+	<div class="right add_news">
+		<div class="title">
+			<a href="__URL__/news/type/<{$type}>">返回>></a>
+			<if condition="($type eq 1) and ($list.idmarch_news eq 0)">
+				新增新闻
+			<elseif condition="($type eq 1) and ($list.idmarch_news neq 0)"/>
+				编辑新闻
+			<elseif condition="($type eq 3) and ($list.idmarch_news eq 0)"/>
+				新增大事件
+			<elseif condition="($type eq 3) and ($list.idmarch_news neq 0)"/>
+				编辑大事件
+			</if>
+		</div>
+		<input type="hidden" name="idmarch_news" value="<{$list.idmarch_news}>">
+		<input type="hidden" name="type" value="<{$type}>">
+		<div class="row">
+			置顶：<input class="checkbox" type="checkbox" name="news_stick" value="<{$list.news_stick}>" <if condition="$list.news_stick gt 0">checked</if>>
+		</div>
+		<div class="row">
+			标题：<input type="text" name="title" value="<{$list.news_title}>">
+		</div>
+		<div class="textarea">
+			内容：<div><textarea id="myEditor" name="content" style="width:100%;height:400px"><{$list.news_content}></textarea></div>
+		</div>
+		<input type="button" name="add_edit" class="button button_one" value="确定">
+		<input type="button" value="取消" class="button button_two" onClick="location.href='__URL__/news/type/<{$type}>'">
+	</div>
+	<div style="clear:both"></div>
+</div>
+
+<include file="./OA/Tpl/fooder.html"/>

@@ -1,0 +1,43 @@
+<include file="./OA/Tpl/header.html"/>
+<include file="./OA/Tpl/ueditor.html"/>
+<script src="__ROOT__/OA/Common/js/blog.js"></script>
+
+<div id="content">
+	<include file="./OA/Tpl/blog_left.html"/>
+
+	<div class="right add_edit_blog">
+			<div class="rows">
+				标&nbsp;题：<input name="title" type="text" class="text" value="<{$list['article_title']}>"/>
+			</div>
+			<input type="hidden" name="type" value="<{$type}>"/>
+			<input type="hidden" name="id" value="<{$id}>"/>
+			<div class="rows">
+				分&nbsp;类：<select name="sort">
+						    	<volist name="sort" id="vo">
+							 		<option <?php if($list['article_sort'] == $vo['idmarch_sort']) echo "selected"?> value="<{$vo['idmarch_sort']}>"><{$vo['sort_name']}></option>
+								</volist>
+							</select>
+			</div>
+			<div class="rows">
+				标&nbsp;签：<ul id="myULTags">
+								<if condition="$id eq 0">
+									<li>C</li>
+									<li>C++</li>
+									<li>PHP</li>
+								<else/>
+									<volist name="tags" id="vo">
+										<li><{$vo}></li>
+									</volist>
+								</if>
+							</ul>
+			</div>
+			<div class="rows">
+				内&nbsp;容：<div class="textarea"><textarea id="myEditor" name="content" style="width:100%;height:400px"><{$list.article_content}></textarea></div>
+			</div>
+			<input class="button button_one" type="button" value="提 交" name="add_edit">
+			<input class="button button_two" type="button" value="返 回" onClick="window.location.href='__URL__/myblog/type/<{$type}>'"/>
+	</div>
+	<div style="clear:both"></div>
+</div>	
+
+<include file="./OA/Tpl/fooder.html"/>

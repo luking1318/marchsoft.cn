@@ -1,0 +1,30 @@
+<include file="./OA/Tpl/header.html"/>
+<script src="__ROOT__/OA/Common/js/thing/blog.js"></script>
+
+<div id="content">
+	<include file="./OA/Tpl/thing.html"/>
+	<div style="margin:20px 20px 0px 220px;">
+		<input type="button" name="del_all" value="删除"><a href="__URL__/count_blog">统计笔记</a>
+		<table>
+			<tr>
+				<th><input type="checkbox" name="all"></th>
+				<th>开始时间</th>
+				<th>结束时间</th>
+				<th>操作</th>
+			</tr>
+			<foreach name="list" item="val">
+				<tr>
+					<td><input type="checkbox" name="check" value="<{$val.result_id}>"></td>
+					<td><{$val.starttime}></td>
+					<td><{$val.endtime}></td>
+					<td>
+						<a href="__URL__/news_count_result/id/<{$val.result_id}>">查看</a>
+						<a name="del" value="<{$val.result_id}>">删除</a>
+					</td>
+				</tr>
+			</foreach>
+		</table>
+		<div id="page"><{$page}></div>
+		<div style="clear:both"></div>
+	</div>
+</div>

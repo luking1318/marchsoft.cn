@@ -1,0 +1,33 @@
+<include file="./March/Common/html/head.html" />
+<!--新闻列表页面-->
+<head>
+	<link href="__ROOT__/March/Common/css/prize/sprize.css" rel="stylesheet">
+</head>
+
+	<div id="nlist">
+		<div class="ndiv">
+			<div class="ti" align="left">
+				<h2 >捐赠列表</h2>
+			</div>
+			<div class="ti" align="right">
+				<a href="">我要捐赠</a>
+			</div>
+		</div>
+		<table id="tb_list">
+			<volist name="list" id="ls">
+				<tr>
+				<td class="don">￥<{$ls['don_num']}></td>
+				<td><{$ls['don_name']}></td>
+				<td><{$ls['don_mark']}></td>
+				<td align="right"><?php echo substr($ls["don_time"],0,10);?></td>
+				</tr>
+			</volist>
+			<tr>
+			<td colspan="4" class="last">
+			<div id="page"><{$page}></div></td>
+			</tr>
+		</table>
+	</div>
+	
+</center>
+<include file="./March/Common/html/foot.html" />

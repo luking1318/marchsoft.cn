@@ -1,0 +1,89 @@
+<include file="./OA/Tpl/header.html"/>
+<script src="__ROOT__/OA/Common/js/thing.js"></script>
+
+<div id="content">
+	<if condition="$_SESSION['login']">
+		<include file="./OA/Tpl/manager_person.html"/>
+	<else/>
+		<include file="./OA/Tpl/member_person.html"/>
+	</if>
+	<div class="right thing">
+		<div class="thing_title"><{$list.module_name}></div>
+		<div class="thing_one">
+			<if condition="$list.module_id eq 007">
+				<a href="__URL__/notice">
+					<div class="thing_border">
+						<div><img src="__ROOT__/OA/Common/img/thing_notice.png"><br>通知公告</div>
+					</div>
+				</a>
+				<a href="__URL__/lecture">
+					<div class="thing_border">
+						<div><img src="__ROOT__/OA/Common/img/thing_lecture.png"><br>讲课资料</div>
+					</div>
+				</a>
+				<a href="__URL__/blog">
+					<div class="thing_border">
+						<div><img src="__ROOT__/OA/Common/img/thing_blog.png"><br>笔记统计</div>
+					</div>
+				</a>
+				<a href="__URL__/news/type/3">
+					<div class="thing_border">
+						<div><img src="__ROOT__/OA/Common/img/thing_news.png"><br>大事记管理</div>
+					</div>
+				</a>
+				<a href="__URL__/news/type/1">
+					<div class="thing_border">
+						<div><img src="__ROOT__/OA/Common/img/thing_news1.png"><br>新闻管理</div>
+					</div>
+				</a>
+			<elseif condition="$list.module_id eq 001"/>
+				<a href="__URL__/notice">
+					<div class="thing_border">
+						<div><img src="__ROOT__/OA/Common/img/thing_notice.png"><br>通知公告</div>
+					</div>
+				</a>
+				<a href="__URL__/lecture">
+					<div class="thing_border">
+						<div><img src="__ROOT__/OA/Common/img/thing_lecture.png"><br>讲课资料</div>
+					</div>
+				</a>
+			<elseif condition="$list.module_id eq 002"/>
+				<a href="__URL__/notice">
+					<div class="thing_border">
+						<div><img src="__ROOT__/OA/Common/img/thing_notice.png"><br>通知公告</div>
+					</div>
+				</a>
+				<a href="__URL__/blog">
+					<div class="thing_border">
+						<div><img src="__ROOT__/OA/Common/img/thing_blog.png"><br>笔记统计</div>
+					</div>
+				</a>
+			<elseif condition="$list.module_id eq 006"/>
+				<a href="__URL__/notice">
+					<div class="thing_border">
+						<div><img src="__ROOT__/OA/Common/img/thing_notice.png"><br>通知公告</div>
+					</div>
+				</a>
+				<a href="__URL__/news/type/3">
+					<div class="thing_border">
+						<div><img src="__ROOT__/OA/Common/img/thing_news.png"><br>大事记管理</div>
+					</div>
+				</a>
+				<a href="__URL__/news/type/1">
+					<div class="thing_border">
+						<div><img src="__ROOT__/OA/Common/img/thing_news1.png"><br>新闻管理</div>
+					</div>
+				</a>
+				<!-- 其他管理员进入只有“通知公告” -->
+			<elseif condition="$list.module_id neq 0" />
+				<a href="__URL__/notice">
+					<div class="thing_border">
+						<div><img src="__ROOT__/OA/Common/img/thing_notice.png"><br>通知公告</div>
+					</div>
+				</a>
+			</if>
+		</div>
+	</div>
+	<div style="clear:both"></div>
+</div>
+<include file="./OA/Tpl/fooder.html"/>

@@ -1,0 +1,26 @@
+<include file="./OA/Tpl/header.html"/>
+<include file="./OA/Tpl/ueditor.html"/>
+<script src="__ROOT__/OA/Common/js/thing/news.js"></script>
+
+<div id="content">
+	<include file="./OA/Tpl/thing.html"/>
+	<div style="margin:20px 20px 0px 220px;">
+		<div>
+			<a href="__URL__/news/type/<{$type}>">返回</a>
+			<if condition="($type eq 1) and ($list.idmarch_news eq 0)">
+				新增笔记
+			<elseif condition="($type eq 1) and ($list.idmarch_news neq 0)"/>
+				编辑笔记
+			<elseif condition="($type eq 3) and ($list.idmarch_news eq 0)"/>
+				新增大事件
+			<elseif condition="($type eq 3) and ($list.idmarch_news neq 0)"/>
+				编辑大事件
+			</if>
+		</div>
+		<input type="hidden" name="idmarch_news" value="<{$list.idmarch_news}>">
+		<input type="hidden" name="type" value="<{$type}>">
+		标题：<input type="text" name="title" value="<{$list.news_title}>">
+		<textarea name="content"><{$list.news_content}></textarea>
+		<input type="button" name="add_edit" value="确定"><input type="button" value="取消">
+	</div>
+</div>

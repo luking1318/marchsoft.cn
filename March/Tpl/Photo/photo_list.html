@@ -1,0 +1,33 @@
+<include file="./March/Common/html/head.html" />
+<head>
+	<link rel="stylesheet" type="text/css" href="__ROOT__/March/Common/css/photo/index.css">
+</head>
+<div id="div_center">
+	<div id="div_pont"></div> 
+ 	<div id="div_photo">
+ 		<div id="div_return"><a id="a_return" href="__URL__/index"></a></div><div style="clear:both;"></div>
+			<iframe allowtransparency=yes  width=100% height=710px scrolling=no id="iframe"  
+				src="__URL__/show_photo/id/<{$idmarch}>" frameborder=0 name="windows"></iframe>
+				
+		<!-- Duoshuo Comment BEGIN -->
+			<div style="margin-top:20px;
+			background:white;border:1px solid #B8B9B9;padding:20px;width:910px" class="ds-thread" data-thread-key="" 
+			data-title="" data-author-key="" data-url=""></div>
+		
+			<script type="text/javascript">
+			var duoshuoQuery = {short_name:"marchsoft"};
+			(function() {
+				var ds = document.createElement('script');
+				ds.type = 'text/javascript';ds.async = true;
+				ds.src = 'http://static.duoshuo.com/embed.js';
+				ds.charset = 'UTF-8';
+				(document.getElementsByTagName('head')[0] 
+				|| document.getElementsByTagName('body')[0]).appendChild(ds);
+			})();
+			</script>
+		<!-- Duoshuo Comment END -->
+ 	</div>
+</div>
+<include file="./March/Common/html/foot.html" />
+</body>
+</html>

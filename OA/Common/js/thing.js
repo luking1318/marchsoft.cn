@@ -1,0 +1,10 @@
+$(function(){
+	$(".thing_border").mouseover(function(){
+		$(this).addClass("selected");
+		$(this).find("div").addClass("selected");
+	});
+	$(".thing_border").mouseout(function(){
+		$(this).removeClass("selected");
+		$(this).find("div").removeClass("selected");
+	});
+});

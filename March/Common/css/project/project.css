@@ -1,0 +1,532 @@
+@CHARSET "UTF-8";
+body
+{
+    background:url("../../img/project/bg.png") repeat-x;
+    background-color:#F7F7F7;
+    font-size:13px;
+    margin:0px auto;
+    padding:0px;
+   
+}
+body,.right a
+{
+    color:#888888;
+}
+.web
+{
+	width:920px;
+    margin:auto;  
+    margin-top:10px;
+    
+
+    
+}
+#con_name{
+	height:50px;
+	width:945px;
+	margin-top:10px;
+	
+	text-align:left;
+}
+
+#nameimg{
+	width:200px;
+	height:44px;
+    background:url("../../img/project/con_name.png");
+	float:left;
+	margin-left:10px;
+}
+
+
+.content
+{
+	width:960px;
+    float:left;
+    display:block;  
+    background-color:#ffffff;
+	
+}
+
+.left
+{
+    float:left;
+    margin-top:8px;
+    margin-bottom:8px;
+    width:228px;
+    height:610px;
+    text-align:left;
+	margin-left:2px;
+	
+}
+
+#list_up{
+	height:2px;
+	width:225px;
+	margin-top:10px;
+	background:url("../../img/knowledge/b-line.png") no-repeat;	
+	overflow:hidden;
+	
+}
+#list_down{
+	height:1px;
+	width:225px;
+	background:url("../../img/knowledge/l-line.png") no-repeat;
+	overflow:hidden;
+}
+
+.listitem{
+	height:35px;
+	width:225px;
+	background:url("../../img/knowledge/noselected.png") no-repeat;
+	overflow:hidden;
+	line-height:35px;
+	font-size:14px;
+	text-align:left;
+	padding-left:25px;
+	color:#3C3C3C£»
+}
+.listitem_line{
+	width:225px;
+	height:1px;
+	float:left;
+	background:url("../../img/knowledge/l-line.png") no-repeat;
+	overflow:hidden;
+}
+.select{
+	height:35px;
+	width:225px;
+	float:left;
+	color:#1C90D6;
+	background:url("../../img/knowledge/selected.png") no-repeat;
+	overflow:hidden;
+}
+.noselect{
+	height:35px;
+	width:225px;
+	float:left;
+	color:#3C3C3C;
+	background:url("../../img/knowledge/noselected.png") no-repeat;
+	overflow:hidden;
+}
+
+.left ul{
+    font-size: 14px;
+    list-style: none outside none;
+    display: block;
+    margin: 0;
+    padding: 0;
+    line-height:2.0em;
+    margin-top:8px;
+}
+.left ul li
+{
+	height:2.2em;
+    display: block;
+    font-weight:bold;
+    padding-left: 8px;
+    vertical-align: top;
+    
+}
+.left ul li a
+{
+font-size:14px;
+padding-left: 16px;color: #666;text-decoration:none; 
+background: url("../../img/project/tree_closed.gif") no-repeat scroll 0 center transparent;
+}
+.left ul li a:hover{color:#0077cc;text-decoration:underline;}
+.left ul li a:actived{color:#0077cc;text-decoration:underline;}
+.utitle {
+    background: url("../../img/project/csdnindex_pic11.gif") repeat-x scroll 0 0 transparent;
+    border-bottom: 1px solid #CCCCCC;
+    color: #666;
+    font-size: 15px;
+    font-weight: bold;
+    height: 21px;
+    margin-bottom: 5px;
+    padding-left: 16px;
+    padding-top: 5px;
+}
+.right
+{
+    float:right;
+    padding:8px 0px 8px 0px;
+    margin-right:8px;
+    width:702px;
+	
+}
+
+.right a
+{ 
+    text-decoration:none;   
+}
+
+.right a:hover
+{ 
+    text-decoration: underline;
+}
+
+.header
+{
+    height: 80px;
+}
+
+hr
+{
+	border-top:1px dashed #cccccc;
+	float:left; 
+	width:700px;
+	margin-left:2px;
+	padding:0px;
+	margin:6px 2px 6px 0px;
+}
+.content,.header,.foot,.hnec,.proImg Img,#header_logo
+{
+    border:1px solid #cccccc; 
+    
+    background:#f9f9f9 #eaeaea repeat scroll 0% 0% ;
+    background-clip: border-box;
+    background-origin: padding-box;
+    background-size: auto auto;
+    box-shadow: 0pt 2px 3px rgba(0, 0, 0, 0.3);
+    border-top-left-radius: 0pt;
+    border-top-right-radius: 0pt;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px; 
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.foot,.header,.proImg Img
+{
+    box-shadow: 0pt 2px 3px rgba(0, 0, 0, 0.3);
+    border-top-left-radius: 4pt;
+    border-top-right-radius: 4pt;
+}
+
+.proInfo
+{
+    border-top-left-radius: 0pt;
+    border-bottom-left-radius: 0px; 
+}
+
+
+.pro
+{
+border:1px solid #ffffff; 
+ 	background-color: transparent;
+     background-image: url("../../img/project/pro_bg.gif");
+    background-repeat: repeat-x;
+    background-attachment: scroll;
+    width:684px;
+    height:212px;
+    display:block;
+    float:left;
+    margin:0 0 0 0 ;
+    padding:8px 8px 8px 8px;
+	text-align:left;
+    
+
+}
+.pro:hover
+{
+    -moz-border-radius: 4px 4px 4px 4px;
+    border:1px solid #cccccc; 
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px; 
+    border-top-left-radius: 4pt;
+    border-top-right-radius: 4pt;
+    box-shadow: 0pt 2px 3px rgba(0, 0, 0, 0.3);
+	background-image: none;
+	background-color:#ffffff;
+	
+}
+.proInfo
+{
+    width:362px;
+    height:209px;
+    float:left;
+    margin-left:0px;
+    padding-top:1px;
+    padding-left:12px;
+    display:block;
+    overflow:hidden;
+    /*border-left:1px solid #cccccc; */
+}
+
+.proImg img
+{
+    width:300px;
+    height:422px;
+    display:block;
+    float:left; 
+    border: 1px solid #ffffff;
+}
+.thumb{display:block;float:left;width:300px;border:0px solid #ffffff;height:210px;overflow:hidden;position:relative;}
+.cover
+{
+    position:absolute;
+     top:0;
+     left:0;
+}
+
+.lk
+{
+    text-decoration: underline;
+}
+.proLink
+{
+    background-color: transparent;
+    background-image: url("http://csdnimg.cn/www/images/csdnindex_pic11.gif");
+    background-repeat: repeat-x;
+    background-attachment: scroll;
+    background-position: 0% 0%;
+    height: 24px;
+    float: left;
+    margin-left: 0px;
+    font-size: 15px;
+    position: relative;
+    clear: both;
+    width: 100%;
+    font-weight: bold;
+    display:block;
+    margin:auto;
+    /*text-align: center;
+    border:1px solid #e5e5e5; */
+}
+.proLink
+{
+    border-bottom:1px solid #e5e5e5; 
+    height:24px;
+}
+.proUser
+{
+    font-size:13px;
+    font-weight:normal;
+    font-style:italic;
+
+}
+
+.proUser a
+{
+    text-decoration: none;
+    color: #015fb6;
+}
+.proUser a:hover
+{
+    text-decoration:underline;
+}
+.proLink a
+{  
+    margin:auto;
+    margin-top:2px;
+    display:block;
+    text-decoration: none;
+    color: #015fb6;
+    overflow:hidden;
+
+}
+.proLink a:hover
+{
+    text-decoration: underline;
+}
+
+.prodetail
+{
+    margin-top:3px;
+    width:360px;
+    float:left;
+    height:80px;
+}
+
+.proDesc
+{
+    height:80px;
+    overflow:hidden;
+}
+.memo
+{
+     display:block;
+     float:left;
+     margin-left:40px;
+     margin-top:8px;
+     font-size:16px;
+     font-style:italic;
+     color:#333333;  
+     height:22px;
+}
+.hnec
+{
+     background: transparent url("http://images.apple.com/global/elements/breadory/breadcrumb_bg.png") repeat-x scroll;
+     height: 35px;
+     margin-top:8px;
+     margin-bottom:8px;
+     
+}
+
+.loginInfo
+{
+     color:Red;
+     font-size:16px;    
+}
+.foot
+{
+    
+    display:block;
+    margin:auto;
+    text-align:center;
+    height:30px;
+    margin-bottom:6px;
+    font-size:11px;
+    margin-top:12px; 
+    
+}
+.foot label
+{
+    display:block;
+    font-size:13px;
+    margin:auto;
+    margin-top:8px;
+   
+}
+.foot a
+{
+    text-decoration:none;
+}
+.foot a:hover
+{
+    text-decoration:underline;
+}
+.proType
+{
+    float:left;
+    display:block;
+    margin-top:3px;
+}
+.prodetail span
+{
+    font-size:13px;
+    font-weight:normal;
+    display:block;
+    margin-top:3px;
+
+}
+
+.joi
+{
+    background-color: #417596;
+    -moz-border-radius: 4px 4px 4px 4px;
+    border: 1px solid black;
+    color: white;
+    font-size: 10pt;
+    font-weight: bold;
+    padding: 0.3em 1.5em;
+    width:100px;
+    margin-top:5px;
+}
+.join:hover
+{
+     cursor: pointer;
+     background-color: #294b60;   
+     background-color: #417596;
+
+}
+div.topbar ul.secondary-nav {
+    margin-right: -48px;
+    float: right;
+    margin: 0 -10px 0 0;
+}
+div.topbar ul {
+    display: block;
+    
+}
+ul {
+    list-style: none outside none;
+}
+div.topbar ul li {
+    display: block;
+    float: left;
+    font-size: 14px;
+    position: relative;
+    
+}
+div.topbar ul li a {
+    color: #FFFFFF;
+    display: block;
+    float: none;
+    line-height: 19px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+div#top-stuff
+{
+    position:fixed;
+    top:0;
+    right:0;
+    left:0;
+    z-index:1000;
+    text-align:left;
+}
+
+div#corpBar {
+    background-color: #00A0D1;
+    background-image: -moz-linear-gradient(#00A0D1, #008DB8);
+}
+
+div#top-stuff div.fixed-container,div#top-stuff div.topbar-container
+{
+    width:auto;
+    max-width:1000px;
+    min-width:880px;
+    margin:0 auto;
+    padding:0 40px;
+}
+
+div.topbar
+{
+    color: #FFFFFF;
+    width:100%;
+    height:40px;
+    color:#fff;
+    font:13px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    -moz-box-shadow:0 1px 3px rgba(0,0,0,.25),inset 0 -1px 0 rgba(0,0,0,.1);
+    -webkit-box-shadow:0 1px 3px rgba(0,0,0,.25),inset 0 -1px 0 rgba(0,0,0,.1);
+}
+
+div.topbar a
+{
+    text-shadow:0 -1px 0 rgba(0,0,0,.3);
+}
+
+div#corpBar a#logo1 {
+    background-image: url("../../img/project/marchsoft_logo_header.png");
+}
+
+div.topbar a#logo1 {
+    background: url("../../img/project/twitter_logo_right.png") no-repeat scroll 0 9px transparent;
+    display: block;
+    float: left;
+    height: 40px;
+    margin: 0 5px 0 0;
+    text-indent: -999em;
+    width: 150px;
+}
+
+
+div#top-stuff div#corpBar div.fixed-container,div#top-stuff div#corpBar div.topbar-container {
+    max-width: 910px;
+    min-width: 680px;
+    padding: 0;
+    width: 768px;
+}
+
+
+div#top-stuff {
+    left: 0;
+    position: fixed;
+    right: 0;
+    text-align: left;
+    top: 0;
+    z-index: 1000;
+}

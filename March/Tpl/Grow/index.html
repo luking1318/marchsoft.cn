@@ -1,0 +1,144 @@
+<include file="./March/Common/html/head.html" />
+<style>  
+    #centerOne{
+    	 background:url("__ROOT__/March/Common/img/grow/bg_show.png");
+    }
+    #centerTwo{
+    	background:url("__ROOT__/March/Common/img/grow/bg.png");
+    	
+    }
+	body{
+		padding:0px;margin:0px;
+       background:url("__ROOT__/March/Common/img/index/bg.png");
+       background:url("__ROOT__/March/Common/img/grow/bg.png");
+      
+      
+    }
+    #line{
+    	position: relative;
+    	top: 0px;
+    	left: 30px;
+    	width: 6px;
+    	height: 600px;
+    }
+    .divs,.divs1{
+    	width:281px;margin-right:10px;margin-top:25px;
+    }
+    .divs1,.divs{
+    	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    }
+     .divs2{
+     	margin-top:10px;
+     	padding-left:20px;
+     	padding-top:10px;
+     	float:left;
+     	font-size:18px;
+     	color:#333333;
+     }
+     #foot{background:url("__ROOT__/March/Common/img/index/foot1.png");height:73px;}
+</style>
+<script>
+   function ReSizePic(ThisPic){
+		    var RePicWidth = 270; //这里修改为您想显示的宽度值
+		    var TrueWidth = ThisPic.width;    //图片实际宽度
+		    var TrueHeight = ThisPic.height;  //图片实际高度
+		    var Multiple = TrueWidth / RePicWidth;  //图片缩小(放大)的倍数
+		    ThisPic.width = RePicWidth;  //图片显示的可视宽度
+		    ThisPic.height = TrueHeight / Multiple;  //图片显示的可视高度
+		    
+}
+</script>
+
+	
+<input type="hidden" class="nav" value="0">
+</center>
+	<center id='centerTwo' >
+	<div id='divBody' style="margin-left: 160px;width:auto;height: 900px;">
+	    <div id='divleft12' style="margin-top:37px;padding-right: 0px;float:left;width:50px;height:600px;">
+	    	 <div id='line' 
+	    	 style="background-image:url('__ROOT__/March/Common/img/grow/13.png')">
+		    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+		    <volist name="list2" id="vo">
+		    	<div class='year' style='top:-600px;'onclick=tiaozhuan("<{$vo['num']}>","<{$vo['str']}>")><a href="#<{$vo['str']}>" ><{$vo['str']}></a><img src='__ROOT__/March/Common/img/grow/14.png' /></div>
+		    </volist>
+	    </div>
+
+	    <div  style='float:left;width:960px; height:300px;'>
+			<div id='divbg' style="margin-top:40px;margin-left:0px;margin-bottom:1px;height:49px;width:956;
+			background-image: url('__ROOT__/March/Common/img/grow/12.png')">
+				<div class='float_left'  style='float:left;'>
+		          <div class='float'>
+			          <ul id="main_box"> 
+							<li class="select_box"> 
+							<span style="margin-top:5px;">2013年</span>&nbsp<img id="ims" src="__ROOT__/March/Common/img/grow/sanjiao1.png">
+							<ul class="son_ul" style="height:80px;border:1px solid #A7C1C8;background:#FAFAFB; filter: alpha(opacity=90); opacity: 0.6;border-radius:3px;scrollbar-highlight-color: #666;"> 
+							<volist name="list2" id="vo">
+						    	<li class="lis1"><a href=""style="border:0px solid"><{$vo['str']}>年</a></li>
+						    </volist>
+							</ul> 
+							</li> 
+						</ul>
+                  </div>
+				 <div class='float'>
+					<ul id='mouth'>
+                      <li class='mouse_y'>
+                          <span style="margin-top:10px;"><{$arr2}>月</span>&nbsp<img id="ims1" src="__ROOT__/March/Common/img/grow/sanjiao1.png">
+                          <ul id="uls"style="border:1px solid #A7C1C8;background:#FAFAFB; filter: alpha(opacity=70); opacity: 0.7;border-radius:3px;scrollbar-highlight-color: #666;">
+                             <li class ="lis"style="background-color:#FAFAFB"><a style="border:0px solid"href="">01月</a></li>
+                             <li class ="lis"style="background-color:#FAFAFB"><a style="border:0px solid"href="">02月</a></li>
+                             <li class ="lis"style="background-color:#FAFAFB"><a style="border:0px solid"href="">03月</a></li>
+                             <li class ="lis"style="background-color:#FAFAFB"><a style="border:0px solid"href="">04月</a></li>
+                             <li class ="lis"style="background-color:#FAFAFB"><a style="border:0px solid"href="">05月</a></li>
+                             <li class ="lis"style="background-color:#FAFAFB"><a style="border:0px solid"href="">06月</a></li>
+                             <li class ="lis"style="background-color:#FAFAFB"><a style="border:0px solid"href="">07月</a></li>
+                             <li class ="lis"style="background-color:#FAFAFB"><a style="border:0px solid"href="">08月</a></li>
+                             <li class ="lis"style="background-color:#FAFAFB"><a style="border:0px solid"href="">09月</a></li>
+                             <li class ="lis"style="background-color:#FAFAFB"><a style="border:0px solid"href="">10月</a></li>
+                             <li class ="lis"style="background-color:#FAFAFB"><a style="border:0px solid"href="">11月</a></li>
+                             <li class ="lis"style="background-color:#FAFAFB"><a style="border:0px solid"href="">12月</a></li>
+                          </ul> 
+                      </li>
+
+					</ul> 
+		         </div>
+	           </div>
+	           
+			</div>
+			<div id='container' style="margin-left:20px;height:auto;">
+	          <span id="waterFallColumn_0" class="column" style="margin-left:5px;width:300px;"><{$arr[0]}><{$arr[3]}></span> 
+	          <span id="waterFallColumn_1" class="column" style="margin-left:5px;width:300px;"><{$arr[1]}><{$arr[4]}></span>
+	          <span id="waterFallColumn_2" class="column" style="margin-left:5px;width:300px;"><{$arr[2]}><{$arr[5]}></span> 
+	          <span id="waterFallDetect" class="column" style="width:300px;"></span>
+	          <div style="height:200px;"></div>
+			</div>
+
+	    </div>
+
+	</div>
+	<input type="hidden"id="hidden0"value="__ROOT__">
+	<input type="hidden"id="hidden1"value=<{$arr1}>>
+	<input type="hidden"id="hidden2"value=<{$arr2}>>
+	<input type="hidden"id="hidden3"value=<{$list3[0]['count(*)']}>>
+	<input type="hidden"id="hidden4"value=<{$Think.session.sum}>>
+	</div>
+	 </center>
+
+ <div id='footTop'>
+	 <div  style='width:auto;height:200px;background-image: url("__ROOT__/March/Common/img/grow/last.png")'>
+	 </div>
+	   <div id="foot">
+		<div style="padding-top:30px;text-align:center;color:#389CBE">
+			CopyRight &copy; 三月软件工作室
+		</div>
+	  </div> 
+  </div>
+  <script src="__ROOT__/Common/js/jquery.js" style="text/javascript"></script>
+  <script src="__ROOT__/Common/js/bootstrap-modal.js" style="text/javascript"></script>
+  <script src="__ROOT__/March/Common/js/common.js" style="text/javascript"></script>
+  <script src="__ROOT__/March/Common/js/login.js" style="text/javascript"></script>
+
+<load href="__ROOT__/March/Common/css/Grow/index.css" />
+<script src="__ROOT__/March/Common/js/grow.js" style="text/javascript"></script>
+
+ </BODY>
+</HTML>

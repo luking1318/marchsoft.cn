@@ -1,0 +1,23 @@
+<include file="./March/Common/html/head.html" />
+<head>
+	<link rel="stylesheet" type="text/css" href="__ROOT__/March/Common/css/photo/index.css">
+</head>
+<div id="div_center">
+		<div id="div_pont"></div> 
+		<div id="div_font_tit"><font id="font_fon"><big><b></b></big></font></div><div style="clear:both;"></div>
+		<div id="div_line"></div>
+	 	<div id="div_photo">
+	 		<volist name="list" id="vo">
+	 				<div class="alert alert-info" id="div_frame">
+						<a href="__URL__/photo_list/idmarch_photo/<{$vo['idmarch_photo']}>">
+							<img class="table-bordered" src="__ROOT__/Common/img/photo/s_<{$vo['photo_src']|default='fengmian.jpg'}>"><br></a>
+						<font class="font_name"><b><{$vo['photo_name']}></b></font>
+	 				</div>
+	 			
+	 		</volist>
+	 	</div>
+	 	<div style="clear:both"></div>
+</div>
+<include file="./March/Common/html/foot.html" />
+</body>
+</html>

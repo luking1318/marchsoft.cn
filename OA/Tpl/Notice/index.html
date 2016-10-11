@@ -1,0 +1,41 @@
+<include file="./OA/Tpl/header.html"/>
+<script src="__ROOT__/OA/Common/js/notice.js"></script> 
+<div id="notice">
+	<ul class="nav nav-tabs">
+		<foreach name="arr" item="val">
+			<li id="<{$val['date']}>">
+				<a href="__URL__/index/date/<{$val['date']}>"><{$val["wed"]}></a>
+				<if condition="($val.count gt 0) and ($val.today eq 1)">	<!-- 今天未读的样式 -->
+					<div id="count"><img src="__ROOT__/OA/Common/img/count.png" /><span><{$val["count"]}></span></div>
+				<elseif condition="$val.count gt 0" />		<!-- 除今天以外未读的样式 -->
+					<img id="no_count" src="__ROOT__/OA/Common/img/no_count.png" />
+				</if>
+			</li>
+    	</foreach>
+	</ul>
+	<div class="border_right">
+		<div class="one">
+			<div class="month"><?php echo substr($date,5,2); ?>月</div>
+			<div class="day"><?php echo substr($date,8,2); ?></div>
+			<div class="wed"><{$weekend}></div>
+		</div>
+		<foreach name="list" item="val">
+			<div class="content">
+				<div class="notice_text"><{$val['news_content']}></div>
+				<switch name="val.active_type">
+					<case value="001"><img src="__ROOT__/OA/Common/img/notice_course.png"/></case>
+					<case value="002"><img src="__ROOT__/OA/Common/img/notice_blog.png"/></case>
+					<case value="003"><img src="__ROOT__/OA/Common/img/notice_note.png"/></case>
+					<case value="004"><img src="__ROOT__/OA/Common/img/notice_active.png"/></case>
+					<case value="005"><img src="__ROOT__/OA/Common/img/notice_health.png"/></case>
+					<case value="006"><img src="__ROOT__/OA/Common/img/notice_info.png"/></case>
+					<case value="007"><img src="__ROOT__/OA/Common/img/notice_web.png"/></case>
+				</switch>
+				<div class="time"><?php echo substr($val['news_date'],5,2);?>月<?php echo substr($val['news_date'],8,2);?>日<?php echo substr($val['news_date'],10,6);?></div>		<!-- 把10-26 改成10月26日 -->
+			</div>
+		</foreach>
+		<div style="clear:both"></div>
+	</div>
+	<div id="test"></div>
+</div>
+<include file="./OA/Tpl/fooder.html"/>

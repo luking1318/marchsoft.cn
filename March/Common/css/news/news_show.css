@@ -1,0 +1,5 @@
+body{background:url("../../img/news/bg_show.png") repeat-x}
+#news{padding-top:20px;width:1002px;}
+#n_tl{height:43px;background:url("../../img/news/n_tl.png") no-repeat;text-align:left;
+font-weight:bold;font-family:"ºÚÌå";color:white;font-size:17px;padding-left:60px;line-height:47px}
+#n_con{background:white;min-height:500px;border:1px solid #B8B9B9;padding:30px;text-align:left;margin-bottom:20px}

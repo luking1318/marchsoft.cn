@@ -1,0 +1,12 @@
+@CHARSET "UTF-8";
+body{padding:0px;margin:0px auto;
+	background:url("../../img/introduce/bg.png") repeat-x; background-color:#F7F7F7;}
+a{ text-decoration:none;}
+a:hover{ text-decoration:none;}
+#intro_top{width:943px;height:265px; background-image:url("../../img/introduce/introtop.png"); margin-top:3px;}
+#intro_name{ height:50px; margin-top:10px; float:left; margin-left:25px; }
+#nameimg{ width:200px; height:50px; background-image:url("../../img/introduce/introteacher.png");}
+#intro_con{ height:auto; margin-top:10px; margin-left:30px;}
+#con_left{ height:auto; width:570px; font-size:13px;  margin-top:10px;  line-height:20px; }
+#con_right{ height:294px; width:354px; background-image:url("../../img/introduce/teacherimg.png"); margin-top:10px; }
+#intro_link{ width:540px; height:40px; float:left; margin-top:220px; margin-left:5px;}

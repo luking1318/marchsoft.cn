@@ -1,0 +1,48 @@
+@CHARSET "UTF-8";
+body
+{
+    background:url("../../img/knowledge/bg.png") repeat-x;
+    font-size:13px;
+    margin:0px auto;
+    padding:0px;
+    /*background:#D2E4F2;*/
+}
+.time {
+	width: 100%;
+}
+.l{
+	margin-top: -150px;
+	/*margin-left: 430px;*/
+}
+.p{
+	margin-top: -200px;
+	/*margin-left: 450px;*/
+}
+.prize {
+	/*position:absolute;*/
+	width: 150px;
+	margin-top: 50px;
+	/*margin-left: 0;*/
+	/*z-index: 999px;*/
+}
+.b1 {
+	position:absolute;
+	margin-top: -130px;
+	margin-left: -110px;
+	z-index: -1;
+}
+.b2{
+	position:absolute;
+	margin-top: 130px;
+	margin-left: -710px;
+	z-index: -1;
+}
+.content {
+	width: 250px;
+	margin-left: 200px;
+	letter-spacing:2px;
+
+}
+.c{
+	display: inline-block;
+}

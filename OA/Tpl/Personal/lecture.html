@@ -1,0 +1,55 @@
+<include file="./OA/Tpl/header.html"/>
+<script src="__ROOT__/OA/Common/js/thing/lecture.js"></script>
+
+<div id="content">
+	<if condition="$_SESSION['login']">
+		<include file="./OA/Tpl/manager_person.html"/>
+	<else/>
+		<include file="./OA/Tpl/member_person.html"/>
+	</if>
+	<div class="thing_add_del">
+		<a href="__URL__/add_edit_lecture" class="add"><span>上传讲课</span></a>
+		<a name="del_all" href="javascript:void(0)" class="del"><span>删除</span></a>
+	</div>
+	<div class="thing_table thing_lecture">
+		<div class="thing_top">
+		</div>
+		<table>
+			<tr>
+				<th width="5%"><input type="checkbox" name="all"></th>
+				<th width="20%">讲课主题</th>
+				<th width="12%">讲课人</th>
+				<th width="24%">内容摘要</th>
+				<th width="14%">讲课类型</th>
+				<th width="14%">时间</th>
+				<th width="11%">操作</th>
+			</tr>
+			<foreach name="list" item="val">
+				<tr>
+					<td><input type="checkbox" name="check" value="<{$val.idmarch_lecture}>"></td>
+					<td class="red"><{$val.lecture_theme}></td>
+					<td><{$val.lecture_user}></td>
+					<td><{$val.lecture_content}></td>
+					<td><{$val.sort_name}></td>
+					<td><{$val.lecture_date}></td>
+					<td>
+						<a class="img_show" target="_news" href="__ROOT__/index.php/Lecture/index">
+							<img src="__ROOT__/OA/Common/img/img_show.png"/>
+						</a>
+						<a class="img_edit" href="__URL__/add_edit_lecture/id/<{$val.idmarch_lecture}>">
+							<img src="__ROOT__/OA/Common/img/img_edit.png"/>
+						</a>
+						<a class="img_del" name="del" href="javascript:void(0)" value="<{$val.idmarch_lecture}>">
+							<img src="__ROOT__/OA/Common/img/img_del.png"/>
+						</a>
+					</td>
+				</tr>
+			</foreach>
+		</table>
+		<div id="page"><{$page}></div>
+		<div style="clear:both"></div>
+	</div>
+	<div style="clear:both"></div>
+</div>
+
+<include file="./OA/Tpl/fooder.html"/>

@@ -1,0 +1,88 @@
+    <include file="./March/Common/html/head.html" />
+   <head>  
+		<link href="__ROOT__/March/Common/css/introduce/introstuent.css" rel="stylesheet">
+
+	</head>   
+    
+   <div id="intro_top">
+     <span id="top"></span>
+	 <div id="intro_link">
+	 	<table  width="540px;" cellpadding="0" cellspacing="0" style="font-size:14px; color:#186BA9;">
+			<tr align="center" height="40px;">
+				<td ><a href="__URL__/introteam">团队简介</a></td>
+				<td><a href="__URL__/introteacher">老师简介</a></td>
+				<td><a href="__URL__/introstudent">毕业生简介</a></td>
+			</tr>
+		</table>
+	 </div>
+	</div>
+	<div id="intro_name">
+		<div id="name_up">
+			<div id="studentlevel">
+				<div id="level_up">
+					<div id="sixlevel" >
+						<div id="firstlevel" style="width:16px; height:16px;" class="selectlevel"></div>
+					</div>
+					<volist name="arrlevel" id="vo">
+						<div class="nextlevel">
+						   <a href="#to<{$vo}>"><div style="width:16px; height:16px; float:right" class="selectlevel"></div><a>
+					    </div>
+					</volist>
+				</div>
+				<div id="level_down">
+					<div id="levelname">2003级</div>
+					<volist name="arrlevel" id="vo">
+						<div class="nextname"><{$vo}>级</div>
+					</volist>
+				</div>
+			</div>
+		</div>
+		<div id="name_down"></div>
+	</div>
+	<div id="studentcon">
+	  <volist name="arrlevel1" id="vo">
+	     <span id="to<{$vo}>"></span>
+		 <div class="listitem">
+			<div class="item_head">   
+				<div class="head_up">
+					<div class="level"><{$vo}>级</div>
+					<a href="#top"><div class="toup"></div></a>
+				</div>
+				<div class="head_down"></div>
+			</div>
+			<div class="item_con">
+				<table class="table table-bordered"  width="800" cellpadding="0" cellspacing="0" border="1" style=" font-size:13px;">
+					<volist name="result" id="vo1">
+					    <if condition="$vo1['level'] eq $vo">
+						 <tr height="130px">
+							<td width="115px" valign="top">
+								<div class="studentimg">
+									<if condition="$vo1['avator'] eq '' ">
+									     <img  style="height:86px; width:100px; margin-top:14px; margin-left:7px;" src="__ROOT__/Common/img/photo/photo/m_fengmian.jpg"  />
+									</if>
+									<if condition="$vo1['avator'] neq '' ">
+			                            <img  style="height:86px; width:100px; margin-top:14px; margin-left:7px;" src="__ROOT__/Common/img/photo/photo/m_<{$vo1['avator']}>"  />
+									</if>
+									
+								</div>
+							</td>
+							<td valign="top">
+								<div class="studentname"><{$vo1['user_name']}></div>
+								<div class="studentintro"> <{$vo1['describe']}></div>
+							</td>
+						 </tr>
+						</if>
+					</volist>
+				</table>
+			</div>
+		</div>
+		
+	</volist>
+		
+	
+		
+</div>
+<include file="./March/Common/html/foot.html" />
+<script src="__ROOT__/March/Common/js/introduce/introduce.js" style="text/javascript"></script> 
+</BODY>
+</HTML>

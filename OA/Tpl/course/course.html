@@ -1,0 +1,76 @@
+<!--Tags 插件引用的文件-->
+<link rel="stylesheet" type="text/css" href="__ROOT__/OA/Common/Tags/css/master.css">
+<link rel="stylesheet" type="text/css" href="__ROOT__/OA/Common/Tags/css/jquery.tagit.css">
+<link rel="stylesheet" type="text/css" href="__ROOT__/OA/Common/Tags/css/tagit.ui-zendesk.css">
+<script src="__ROOT__/OA/Common/Tags/js/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="__ROOT__/OA/Common/Tags/js/tag-it.js"></script>
+<script src="__ROOT__/OA/Common/Tags/js/tag.js"></script>
+
+<script src="__ROOT__/OA/Common/js/home_course.js"></script>
+
+<div id="home_course">
+    <div id="content_bottom">
+        <div id="bottom_s1">
+            <div id="name">姓名：</div>
+            <div id="bottom_s5">
+                <div id="wrapper">
+                    <ul id="myULTags">
+                        <li id="nae"class="namm"><{$name}></li>
+                    </ul>
+                    <input type="hidden" id="tags" name="tags"value=""/>
+                </div>
+            </div>
+            <div id="bottom_s6"><a href="javascript:void(0);"><div id="xuan"><img src="__ROOT__/OA/Common/img/course/down.png"></div></a>
+            </div>
+            <div style="clear:both"></div>
+        </div> 
+
+        <div id="bottom_s3">
+            <table>
+                <tr class="first">
+                    <th class="first"></th><th>星期一</th><th>星期二</th><th>星期三</th><th>星期四</th><th>星期五</th>
+                </tr>
+                <tr>
+                    <td class="first">第<br>一<br>节</td>
+                    <td><{$one[0][0]}></td>
+                    <td><{$one[0][1]}></td>
+                    <td><{$one[0][2]}></td>
+                    <td><{$one[0][3]}></td>
+                    <td><{$one[0][4]}></td>
+                </tr>
+                <tr>
+                    <td class="first">第<br>二<br>节</td>
+                    <td><{$one[1][0]}></td>
+                    <td><{$one[1][1]}></td>
+                    <td><{$one[1][2]}></td>
+                    <td><{$one[1][3]}></td>
+                    <td><{$one[1][4]}></td>
+                </tr>
+                <tr>
+                    <td class="first">第<br>三<br>节</td>
+                    <td><{$one[2][0]}></td>
+                    <td><{$one[2][1]}></td>
+                    <td><{$one[2][2]}></td>
+                    <td><{$one[2][3]}></td>
+                    <td><{$one[2][4]}></td>
+                </tr>
+                <tr>
+                    <td class="first">第<br>四<br>节</td>
+                    <td><{$one[3][0]}></td>
+                    <td><{$one[3][1]}></td>
+                    <td><{$one[3][2]}></td>
+                    <td><{$one[3][3]}></td>
+                    <td><{$one[3][4]}></td>
+                </tr>
+                 <tr>
+                    <td class="first">第<br>五<br>节</td>
+                    <td><{$one[4][0]}></td>
+                    <td><{$one[4][1]}></td>
+                    <td><{$one[4][2]}></td>
+                    <td><{$one[4][3]}></td>
+                    <td><{$one[4][4]}></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

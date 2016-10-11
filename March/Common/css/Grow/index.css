@@ -1,0 +1,135 @@
+
+    .year{
+    	margin-top: 15px;
+    	font-size: 17px;
+    	width: 80px;
+        position: relative;
+        left:-4px;
+    }
+    .year img{
+    	 position: relative;
+    	 z-index: 50px;
+    }
+    .mouse_y{
+    	position: relative;
+		left:0px;
+		margin-top:-4px;
+		width: 64px;
+		height:34px;
+    }
+	.column {
+		display: inline-block;
+		vertical-align: top;
+	}
+	.pic_a {
+		display: block;
+		padding: 0px;
+		margin-bottom: 10px;
+		border: 1px solid #CDD5DA;
+		background-color: #fff;
+		text-decoration: none;
+		
+	}
+	a:hover{
+		border: 1px solid #74C1E9;
+		text-decoration: none;
+		color: #4184B4;
+		
+	}
+	#login a:hover{
+		border: 0px solid #74C1E9;
+		text-decoration: none;
+	}
+	.pic_a img {
+		display: block;
+		padding: 5px;
+		border: 0;
+		
+		vertical-align: bottom;
+	}
+	.pic_a strong {
+		color: #333;
+	}	
+	#footTop{
+		position: relative;
+	}  
+
+    .change{
+    	cursor: pointer;
+    }
+
+    .float{
+    	float: left;
+    }
+
+	/*定义导航样式*/
+	.select_box{
+		position: relative;
+		left: 27px;
+		top: 6px;
+		width: 96px;
+		height:35px;
+	}
+	ul{
+		list-style: none;
+	}
+
+	ul span {
+		list-style: none;
+		font-size: 16px;
+		color: #000;
+		line-height: 33px;
+	}  
+	li span{
+		color:white;
+	}
+	#ims{
+		margin-top:-2px;
+	}
+	#ims1{
+		margin-top:-2px;
+	}
+	.son_ul{
+		position: absolute;
+        font-size: 14px;
+        top:37px;
+		left: -25px;
+		width: 90px;
+	}   
+	.lis1{
+		border-radius: 5px;
+		padding-top:4px;
+		padding-bottom:4px;
+		width:70px;
+	}
+	.lis{
+		border-radius: 5px;
+		padding-top:4px;
+		padding-bottom:4px;
+		width:43px;
+	}
+	#mouth{
+		position: relative;
+		left:10px;
+		top:10px;
+		width: 50px;
+	} 
+	#mouth li ul{
+		position: absolute;
+		top: 25px;
+		left: -20px;
+		line-height: 23px;
+		font-size: 14px;
+		width: 50px;
+	}
+	.spanTop{
+		font-size: 29px;
+		font-weight: bold;
+		color: red;
+	}
+	#divTop12{
+		position: fixed;
+		margin-left: 340px;
+		margin-top: -200px;
+	}
+	

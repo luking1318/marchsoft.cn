@@ -1,0 +1,21 @@
+<link rel="stylesheet" type="text/css" href="__ROOT__/Common/js/kindeditor/themes/default/default.css" />
+<link rel="stylesheet" type="text/css" href="__ROOT__/Common/js/kindeditor/plugins/code/prettify.css" />
+<script charset="utf-8" src="__ROOT__/Common/js/kindeditor/kindeditor.js"></script>
+<script charset="utf-8" src="__ROOT__/Common/js/kindeditor/lang/zh_CN.js"></script>
+<script charset="utf-8" src="__ROOT__/Common/js/kindeditor/plugins/code/prettify.js"></script>
+<script charset="utf-8" src="__ROOT__/Common/js/kindeditor/add_notice.js"></script>
+
+<include file="./OA/Tpl/header.html"/>
+<script src="__ROOT__/OA/Common/js/thing/notice.js"></script>
+
+<div id="content">
+	<include file="./OA/Tpl/thing.html"/>
+	<div style="margin:20px 20px 0px 220px">
+		<a href="__URL__/notice">返回</a>新建通知公告<br>
+		<input type="hidden" value="<{$list.idmarch_news}>" name="idmarch_news"><!-- 存储通知公告的idmarch_news,存在说明编辑通知公告，不存在添加通知公告 -->
+		通知内容：<textarea style="width:500px;" name="content"><{$list.news_content}></textarea>
+		执行时间：<input type="text" name="date" value="<{$list.news_date}>" class="Wdate" readonly="true" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',minDate:'%y-%M-%d'})"/><br>
+		<input type="button" value="确定" name="add_edit_notice"><input type="button" value="取消">
+
+	</div>
+</div>

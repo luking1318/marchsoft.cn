@@ -1,0 +1,15 @@
+<div id="alert" >
+    <div  class=" alert message fade in hide">
+        <a class="dismiss close" data-dismiss="alert">¡Á</a>
+        <label><php> echo $msg;$msg=null;</php></label>
+    </div>
+</div>
+<notempty name="msg">
+<literal>
+	<script type="text/javascript">
+		$(function(){
+			$(".alert").show();
+		})
+	</script>
+</literal>
+</notempty>
