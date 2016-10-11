@@ -6,7 +6,7 @@ return array(
 	'DB_HOST'=>'localhost',
 	// 'DB_HOST'=>'114.215.155.69',
 	'DB_NAME'=>'marchsoftv2',
-	'DB_USER'=>'root',
+	'DB_USER'=>'1111',
 
 	'DB_PORT'=>3306,
 	'DB_PREFIX'=>'march_',
