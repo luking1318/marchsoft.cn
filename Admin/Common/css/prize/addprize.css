@@ -1,0 +1,36 @@
+@CHARSET "UTF-8";
+ body
+	  {
+		padding-top:0px;
+		padding-left:30px;
+		font-size:13px;
+	  }
+      #con{
+		  width:800px;
+		  margin:0px auto;	 
+	  }
+      #left{
+
+		  float:left;
+		  margin-left:10px;
+	  }
+
+	  #title{
+	      margin-top:8px;
+		  margin-bottom:8px;
+		  float:left;
+		  margin-left:10px;
+	  }
+	  #tishi{
+		 font-size:12px;
+		 color:#FF0000;
+		 width:120px;
+		 float:left;
+	  }
+	  .connull{
+	  	width:100px;
+		height:30px;
+		color:red;
+		margin-left:10px;
+		border:1px solid red;
+	  }

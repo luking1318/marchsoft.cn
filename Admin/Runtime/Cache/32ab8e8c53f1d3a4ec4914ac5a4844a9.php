@@ -191,6 +191,24 @@ H1 a {
         </ul>
         
       </div>
+<<<<<<< HEAD
+       <h1 class="type"><a href="javascript:void(0)">奖项管理</a></h1>
+      <div class="content">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td><img src="__ROOT__/Admin/Common/images/login/menu_topline.gif" width="182" height="5" /></td>
+          </tr>
+        </table>
+        <ul class="MM">
+		  <li><a href="__APP__/Prize/prizelist" target="main">奖项列表</a></li>
+         		 <li><a href="__APP__/Prize/addprize" target="main">奖项添加</a></li>
+         		 <li><a href="__APP__/Don/donlist" target="main">捐献列表</a></li>
+         		 <li><a href="__APP__/Don/adddon" target="main">捐献添加</a></li>
+        </ul>
+        
+      </div>
+=======
+>>>>>>> 1bcaebc50d03947fbd846bcb030bbecc7f7fa589
     </div>
         <h1 class="type"><a href="__APP__/Photo/index" target="main">相册管理</a></h1>
       <div class="content">

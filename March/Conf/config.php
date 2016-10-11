@@ -4,9 +4,11 @@ return array(
 	'DB_TYPE'=>'mysql',
 	'DB_HOST'=>'localhost',
 	// 'DB_HOST'=>'114.215.155.69',
-        'DB_NAME'=>'marchsoftv2',
-        'DB_USER'=>'root',
-        'DB_PWD'=>'1111',
+
+ 	'DB_NAME'=>'marchsoftv2',
+	'DB_USER'=>'root',
+	'DB_PWD'=>'root',
+
 	'DB_PORT'=>'3306',
 	'DB_PREFIX'=>'march_',
 	'APP_DEBUG'=>true,
