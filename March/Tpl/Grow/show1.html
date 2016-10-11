@@ -1,0 +1,56 @@
+<include file="./March/Common/html/head.html" />
+</div>
+<!--新闻内容页面-->
+<head>
+	<link href="__ROOT__/March/Common/css/news/news_show.css" rel="stylesheet">
+</head>
+<script>
+</script>
+<div id="bk_r">
+	<div id="news">
+		<!--新闻标题-->
+		<div id="n_tl"><{$result[0]['Title']}></div>
+		<div id="n_con">
+			<div style="margin:10px 20px">
+			【发布时间:<{$result[0]['Jtime']}>&nbsp;&nbsp;
+			  发布人:<{$result[0]['user_name']}>&nbsp;&nbsp;
+			  浏览次数：<{$result[0]['Num']}>
+			 】
+			</div>
+
+			<if condition="$result[0]['Img'] eq 1 ">
+			</if>
+			<{$result[0]['Jcontent']}>
+		</div>
+		
+		<!-- Duoshuo Comment BEGIN -->
+			<div style="background:white;border:1px solid #B8B9B9;padding:20px;" class="ds-thread" data-thread-key="" 
+			data-title="" data-author-key="" data-url=""></div>
+		
+			<script type="text/javascript">
+			var duoshuoQuery = {short_name:"marchsoft"};
+			(function() {
+				var ds = document.createElement('script');
+				ds.type = 'text/javascript';ds.async = true;
+				ds.src = 'http://static.duoshuo.com/embed.js';
+				ds.charset = 'UTF-8';
+				(document.getElementsByTagName('head')[0] 
+				|| document.getElementsByTagName('body')[0]).appendChild(ds);
+			})();
+			</script>
+		<!-- Duoshuo Comment END -->
+		
+		<div style="clear:both"></div>
+	</div>
+	
+	<div style="clear:both"></div>
+</div>
+<!-- Baidu Button BEGIN -->
+<script type="text/javascript" id="bdshare_js" data="type=slide&amp;img=6&amp;pos=right&amp;uid=6487646" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000);
+</script>
+<!-- Baidu Button END -->
+
+<include file="./March/Common/html/foot.html" />

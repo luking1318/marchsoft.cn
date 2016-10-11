@@ -1,0 +1,2 @@
+<?php
+return array ( 0 => 'article_id', 1 => 'user_phone', 2 => 'article_title', 3 => 'article_time', 4 => 'article_content', 5 => 'article_type', 6 => 'article_sort', 7 => 'article_tags', 8 => 'article_num', '_autoinc' => true, '_pk' => 'article_id', ); ?>

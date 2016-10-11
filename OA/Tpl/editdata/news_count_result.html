@@ -1,0 +1,19 @@
+<include file="./OA/Tpl/header.html"/>
+
+<div id="content">
+	<include file="./OA/Tpl/thing.html"/>
+	<div style="margin:20px 20px 0px 220px;">
+		<table>
+			<tr><th>姓名</th><th>数量</th></tr>
+			<foreach name="list" item="val">
+				<tr>
+					<td><{$val.username}></td>
+					<td><{$val.amount}></td>
+				</tr>
+			</foreach>
+			<a href="__URL__/blog">返回</a>
+		</table>
+	</div>
+</div>
+
+<include file="./OA/Tpl/fooder.html"/>

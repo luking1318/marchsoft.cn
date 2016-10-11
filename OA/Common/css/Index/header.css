@@ -1,0 +1,995 @@
+
+/*----------导航条----------*/
+*{
+	padding:0px;
+	margin:0px;
+	/*border:1px solid black;*/
+}
+body{
+	min-width: 1340px;
+}
+a{
+	color:rgb(85,165,213);
+	cursor:pointer;
+}
+a:hover{
+	text-decoration:none;
+}
+input,select,textarea{
+	border-radius: 0px;
+	margin-bottom: 0px;
+}
+textarea{
+	margin:0px;
+}
+input.button{	/*所有按钮样式*/
+	width:63px;
+	height:27px;
+	color:white;
+	letter-spacing: 5px;
+	background:url('../../img/button.png') no-repeat;
+	border:none;
+}
+input.button:hover{
+	background:url('../../img/button_point.png') no-repeat;
+}
+input.l_button{	/*所有按钮样式*/
+	width:92px;
+	height:26px;
+	color:white;
+	background:url('../../img/l_button.png') no-repeat;
+	border:none;
+}
+input.l_button:hover{
+	background:url('../../img/l_button_point.png') no-repeat;
+}
+a.l_button{	/*所有按钮样式*/
+	width:92px;
+	line-height:26px;
+	text-align: center;
+	color:white;
+	display:inline-block;
+	background:url('../../img/l_button.png') no-repeat;
+	border:none;
+}
+/*查看、编辑、删除、置顶、上移、下移按钮的样式*/
+a.img_show,a.img_edit,a.img_del,a.img_stick,a.img_up,a.img_down{
+	margin-right:10px;
+}
+
+input.back{	/*文本框中内容输入错误的样式*/
+	background-color:rgb(255,231,231);
+}
+#head{
+	height:44px;
+	background: url("../../img/head.png") repeat-x;
+}
+#head ul{
+	float:right;
+	line-height: 44px;
+	margin-right:20px;
+}
+#head li{
+	display:inline;
+}
+#head img{
+	margin-left: 20px;
+}
+#head a{
+	color:black;
+	font-size: 1em;
+	text-decoration: none;
+}
+#head a:hover{
+	color:rgb(252,150,18);
+}
+
+#oa{
+	margin:44px 25px 0px 20px;
+	font-size: 36px;
+	font-family: "calibri";
+	color:rgb(230,230,230);
+	float:left;
+	letter-spacing:1px;
+}
+#navigation{
+	background: url("../../img/nav.png") repeat-x;
+	height:106px;
+	width:100%;
+}
+#navigation .navbar{
+	margin-bottom: 0px;
+}
+#navigation li{
+	width:95px;
+	text-align: center;
+}
+#navigation li a{
+	padding:48px 0px 18px 0px;
+	font-size: 16px;
+	font-weight: bold;
+	color: white;
+}
+#navigation a:hover{
+	color: rgb(153,209,242);
+}
+#navigation li img.nav_left{	/*选中导航的样式*/
+	float:left;
+	margin-left: -6px;
+}
+#navigation li img.nav_right{	/*选中导航的样式*/
+	float:right;
+	margin-right: -6px;
+}
+#navigation a.nav_point{		/*选中导航的样式*/
+	color: black;
+	background-color: white;
+	border-radius: 0 0 7px 7px;
+	-webkit-box-shadow: 0px 1px 1px rgb(28,229,247);
+	border-top: none;
+}
+#navigation .search{
+	float:right;
+	margin:35px 20px 0px 0px;
+}
+#navigation .search img{
+	height:25px;
+}
+#navigation .search input{
+	background-color:rgb(28,51,74);
+	border:1px solid rgb(28,51,74);
+	color:white;
+	height:15px;
+	width:180px;
+	margin-top: 5px;
+}
+/*----------------首页-----------------------*/
+#home{
+	margin:30px 20px;
+	min-height: 670px;
+}
+#home #left{
+	position: absolute;
+}
+#home #left .h_left_img{	/*首页中左侧每个小div*/
+	width:150px;
+	height:150px;
+	text-align: center;
+	margin-bottom: 15px;
+	border:1px solid #d9d7d7;
+}
+#home #left .h_left_img img{	/*首页中左侧的图片*/
+	margin: 30px auto 10px;
+}
+				/*每个页面左侧带图标的div改变样式*/
+#home #left div.left_img_point,#content .left div.left_img_point{
+	color:#52a4d4;
+	border:1px solid #52a4d4;
+	background-color:#f7f3f3; 
+}
+
+/*-----------------------每个页面的内容-----------------------------*/
+#content{
+	margin:30px 20px;
+}
+#content .left{		/*页面左侧待图标的div宽度*/
+	float:left;
+	width:11.8%;
+}
+#content .left a{
+	color:black;
+}
+#content .left .left_img{	/*每个页面的左侧带图标的div*/
+	width:125px;
+	height:100px;
+	text-align: center;
+	float: left;
+	margin:0px 0px 20px 10px;
+	border:1px solid #d9d7d7;
+}
+#content .left .left_img img{
+	margin:15px auto 10px;
+}
+#content .right{
+	float:left;
+	width:86%;
+	margin-left:2%;
+	border:1px solid rgb(217,215,215);
+	background-color: rgb(247,243,243);
+}
+
+/*--------------新增笔记---------------*/
+#content .add_edit_blog .rows{
+	margin:20px 0px 0px 20px;
+}
+#content .add_edit_blog .rows #myULTags{
+	margin:-20px 0px 0px 45px;
+	width:600px;
+	background-color: white;
+	height:28px;
+}
+#content .add_edit_blog .rows .textarea{
+	margin:-20px 40px 20px 45px;
+}
+#content .add_edit_blog .button_one{
+	margin-left:65px;
+	margin-right: 20px;
+	margin-bottom: 30px;
+}
+#content .add_edit_blog .button_two{
+	margin-bottom: 30px;
+}
+
+/*-------笔记统计，统计信息、事务管理中的统计笔记信息----------*/
+#content .countblog{
+	float:left;
+	width:700px;
+	margin-left: 2%;
+}
+#content .countblog table{
+	background-color: #f7f3f3;
+}
+#content .countblog table th{
+	padding-left: 15px;
+	border:1px solid #cccccc;
+}
+#content .countblog table td{
+	padding-left:15px;
+	border:1px solid #dfdddd;
+	word-wrap: break-word;		/*课表内容过长自动换行*/
+	word-break:break-all;
+}
+#content .countblog table td.title{
+	height:40px;
+	text-align: center;
+	background:url("../../img/countblog.png") repeat-x;
+}
+#content .countblog table td.red{
+	color:#ff9907;
+}
+#content .countblog .button_one{
+	margin-top:25px;
+}
+
+/*------大事件-----*/
+#news{
+	margin-top:25px;
+}
+#news div.content{
+	width:45.8%;
+	margin:0px 2% 30px 2%;
+	float:left;
+	border:1px solid #d0cccc;
+	/*filter:progid:DXImageTransform.Microsoft.Shadow(color=#cdc9c9,direction=145,strength=3);/*ie*/
+	/*-moz-box-shadow: 3px 3px 3px #cdc9c9;/*firefox*/
+	/*-webkit-box-shadow: 3px 3px 3px #cdc9c9;/*safari或chrome*/
+	/*-webkit-box-shadow: 3px 3px 3px #cdc9c9;/*safari或chrome*/
+	box-shadow:5px 5px 5px #cdc9c9;/*opera或ie9*/
+}
+#news div.selected{		/*鼠标移动到一个div上的效果*/
+	box-shadow:5px 5px 5px #4987c5;/*opera或ie9*/
+}
+#news div.content .text{	/*每个大事记左侧宽度80%*/
+	float:left;
+	width:74%;
+	color:#aeaeae;
+	min-height: 90px;
+	padding:10px 3% 30px;
+}
+#news div.content .text p{	/*大事记标题*/
+	font-size: 22px;
+	font-family: "微软雅黑";
+	font-weight: bold;
+	color:#252424;
+	letter-spacing: 2px;
+	margin-bottom: 20px;
+}
+#news div.content .text p.selected{
+	color:#4987c5;
+}
+#news div.content .user_info{	/*每个大事记右侧宽度19.8%*/
+	padding-top:10px;
+	padding-left:6%;
+	float:right;
+	width:13.8%;
+	border-left: 1px solid #d0cccc;
+	background-color: #f7f7f7;
+}
+#news div.content .user_info .photo{/*大事记中的头像*/
+	width:50px;
+	height:50px;
+	margin-bottom: 15px;
+}
+#news div.content .user_info .name{
+	color:#357ba4;
+	margin-bottom:0px;
+}
+#news div.content .user_info .date{
+	color:#6c6c6c;
+}
+
+/*-----------------------通知公告、通讯录---------------------*/ 
+#home_notice{			/*首页中的通知公告*/
+	height:330px;
+	margin-left:180px;
+}
+#notice,#address{
+	margin:30px 20px;
+}
+#notice,#home_notice,#address{
+	background-color: rgb(247,243,243);
+	border:1px solid rgb(217,215,215);
+	border-top:none;
+	border-right:none;
+}
+#notice .border_right,#home_notice .border_right,#address .border_right{
+	border-right:1px solid rgb(217,215,215);
+	width:100%;
+	height:100%;
+}
+#notice li,#home_notice li,#address li{
+	border-right:1px solid rgb(217,215,215);
+	border-top:1px solid rgb(217,215,215);
+	text-align: center;
+	width:95px;
+	font-size: 12px;
+}
+#notice ul,#home_notice ul,#address ul{
+	background-color:white;
+}
+#notice> .nav > .active > a,		/*通讯录和通知公告中选中导航的样式*/
+#notice> .nav > .active > a:hover,
+#home_notice> .nav > .active > a,
+#home_notice> .nav > .active > a:hover,
+#address> .nav > .active > a,
+#address> .nav > .active > a:hover{
+	background-color:rgb(247,243,243);
+	color:rgb(3,138,219);
+	border:1px solid rgb(247,243,243);
+	border-bottom-color: transparent;
+}
+#notice> .nav > li > a,		/*通讯录和通知公告中没有选中导航的样式*/
+#notice> .nav > li > a:hover,
+#home_notice> .nav > li > a,
+#home_notice> .nav > li > a:hover,
+#address> .nav > li > a,
+#address> .nav > li > a:hover{
+	height:30px;
+	line-height: 30px;
+	padding:0px;
+}
+.nav,ul{	/*通知公告和通讯录中ul和li的样式*/
+	margin:0px;
+}
+.nav-tabs > li > a{	/*显示星期的样式*/
+	margin-right:0px;
+	color:black;
+}
+#home_notice div#count,#notice div#count,#address div#count{		/*未读信息的样式*/
+	float:right;
+	margin:-30px 5px;
+	font-weight: bold;
+	color:white;
+}
+#home_notice div#count span,#notice div#count span,#address div#count span{
+	width:20px;
+	display:inline-block;
+	margin-left: -20px;
+}
+/*除最低年级之外或除今天之外未读信息的样式*/
+#home_notice img#no_count,#notice img#no_count,#address img#no_count{	
+	float:right;
+	margin:-25px 15px;
+}
+#notice .one,#home_notice .one{
+	width:60px;
+	height:220px;
+	margin:50px 20px 20px 20px;
+	float:left;
+	color:rgb(86,88,90);
+}
+#home_notice .one .month,#home_notice .one .wed,#notice .one .month,#notice .one .wed{
+	font-size:16px;
+	font-weight: 700;
+}
+#notice .one .day,#home_notice .one .day{
+	font-size:45px;
+	margin:15px 0px 15px 5px;
+	font-weight: normal;
+	color:rgb(252,153,24);
+}
+#notice .content,#home_notice .content{
+	width:180px;
+	height:140px;
+	margin:20px;
+	padding:30px;
+	float:left;
+	border:1px solid rgb(217,215,215);
+	background-color: white;
+}
+#notice .content .notice_text,#home_notice .content .notice_text{
+	height:4.5em;
+	line-height: 1.5em;
+	word-wrap: break-word;
+	word-break:break-all;
+}
+#notice .content img,#home_notice .content img{
+	margin-top:20px;
+}
+#notice .content .time,#home_notice .content .time{
+	float:right;
+	color:rgb(252,153,24);
+	margin-top: 50px;
+	margin-right: 15px;
+}
+
+/*--------------笔记、博客、通讯录中表格的样式---------------*/
+#content .right table,#content .countblog table{	
+	text-align: left;
+	width:100%;
+}
+#content .right table tr:hover,#content .countblog table tr:hover{
+	background-color:#e6e2e2;
+}
+#content .right th,#content .countblog th{
+	background-color: rgb(234,254,253);
+	height:32px;
+	border-bottom:1px solid rgb(217,215,215);
+	font-size: 13px;
+}
+#content .right th.first_end{
+	width:20px;
+}
+#content .right table td,#content .countblog table td{
+	text-align: left;
+	height:45px;
+	border-bottom:1px solid rgb(217,215,215);
+	word-wrap: break-word;		/*课表内容过长自动换行*/
+	word-break:break-all;
+}
+#content .right table td.first_end{
+	border-bottom: none;
+}
+#address div.table_top{	/*通讯录中表格上面的div*/
+	height:25px;
+}
+#address table{
+	margin:0px 30px;
+	width:96%;
+	text-align: left;
+}
+#address table tr.first{
+	height:30px;
+	border:1px solid #cccccc;
+	background-color: #eafefd;
+}
+#address table th{
+	padding-left: 15px;
+}
+#address table td{
+	height:105px;
+	padding-left: 15px;
+	border-bottom:1px solid #cccccc;
+	word-wrap: break-word;	/*内容过多自动换行*/
+	word-break:break-all;
+}
+#address table td img{
+	margin-right:8px;
+}
+
+/*----------------------------个人中心-----------------*/
+/*事务管理*/
+#content .thing{
+	height:500px;
+	background-color: white;
+	border:none;
+	border-bottom: 1px dashed #9fe8f7;
+	background:url("../../img/adorn_bottom.png") no-repeat;	/*下装饰*/
+	background-position: right bottom;
+}
+#content .thing_title{
+	font-weight: bold;
+	line-height:35px;
+	padding-left: 30px;
+	border:1px solid #cccccc;
+	background-color: #eafefd;
+}
+#content .thing_one{	/*事物管理第一个页面的几个div*/
+	width:800px;
+}
+#content .thing_border{
+	float:left;
+	text-align: center;
+	color:#696868;
+	font-size: 15px;
+	margin:15px 30px;
+	border-radius:5px;
+	border:1px solid #cccccc;
+}
+#content .thing_border.selected{
+	border:1px solid #528fcc;
+}
+#content .thing_border>div{
+	width:160px;
+	height:140px;
+	border-radius: 5px;
+	border:2px solid white;
+	background-color: #f7f3f3;
+}
+#content .thing_border>div.selected{
+	background-color: #c1dff1;
+	color:#3a75b0;
+}
+#content .thing_border>div img{
+	margin:40px auto 10px;
+}
+
+/*事务管理中表格左边的包含添加、删除按钮的div,以及新闻置顶的div*/
+#content .thing_add_del{
+	float:left;
+	width:5.5%;
+}
+#content .thing_add_del .stick{
+	float:right;
+	width:58px;
+	height:72px;
+	display: block;
+	color:#656464;
+	margin-top: -15px;
+	background: url("../../img/thing_stick.png") no-repeat;
+}
+#content .thing_add_del .stick:hover{
+	color:#2590cf;
+	background: url("../../img/thing_stick_point.png") no-repeat;
+}
+#content .thing_add_del .del{
+	float:right;
+	width:47px;
+	height:82px;
+	display: block;
+	color:#656464;
+	margin-top: -150px;
+	background: url("../../img/thing_del.png") no-repeat;
+}
+#content .thing_add_del .del:hover{
+	color:#2590cf;
+	background: url("../../img/thing_del_point.png") no-repeat;
+}
+#content .thing_add_del .add{
+	float:right;
+	width:52px;
+	height:94px;
+	display: block;
+	color:#656464;
+	margin-top: 80px;
+	background: url("../../img/thing_add.png") no-repeat;
+}
+#content .thing_add_del .add:hover{
+	color:#2590cf;
+	background: url("../../img/thing_add_point.png") no-repeat;
+}
+#content .thing_add_del .add span,#content .thing_add_del .del span,#content .thing_add_del .stick span{
+	float:right;
+	display:block;
+	width:30px;
+	margin-top: 30px;
+}
+#content .thing_add_del .stick span{
+	margin-top: 15px;
+	margin-right: 5px;
+}
+
+#content .thing_notice{	/*事物管理-通知公告*/
+	float:left;
+	width:82.5%;
+}
+#content .thing_lecture{/*事物管理-讲课资料*/
+	float:left;
+	width:82.5%;
+}
+#content .thing_blog{/*事物管理-笔记统计*/
+	float:left;
+	width:570px;
+}
+#content .thing_news{/*事物管理-新闻和大事记管理*/
+	float:left;
+	width:700px;
+}
+/*事物管理-通知公告、讲课资料、笔记统计、大事记管理、新闻管理中的表格样式*/
+#content .thing_table .thing_top{
+	height:40px;
+	border:1px solid #ccc;
+	border-bottom: none;
+	background:url("../../img/thing_top.png") repeat-x;
+}
+#content .thing_table table{
+	width:100%;
+	text-align: left;
+	background-color: #f7f3f3;
+}
+#content .thing_table table tr:hover{
+	background-color:#eafefd; 
+}
+#content .thing_table table th{
+	height:30px;
+	padding-left: 15px;
+	border:1px solid #cccccc;
+	background-color: #eafefd;
+}
+#content .thing_table table td{
+	height:70px;
+	padding-left: 15px;
+	border:1px solid #ccc;
+	word-wrap: break-word;		/*课表内容过长自动换行*/
+	word-break:break-all;
+}
+#content .thing_notice table td{
+	height:100px;
+}
+#content .thing_table table td.red{
+	color:#ff9907;
+}
+
+/*事物管理-新建通知公告*/
+#content .add_notice,#content .add_lecture{
+	min-height:500px;
+	background: url("../../img/adorn_bottom.png") no-repeat;
+	background-position:right bottom;
+	background-color:#f7f3f3;
+}
+#content .add_notice .title,#content .add_lecture .title,#content .add_news .title,#content .thing_countblog .title{
+	font-weight: bold;
+	line-height:35px;
+	padding-left: 15px;
+	border-bottom:1px solid #cccccc;
+	background-color: #eafefd;
+}
+#content .add_notice .title a,#content .add_lecture .title a,#content .add_news .title a,#content .thing_countblog .title a{
+	font-weight: normal;	/*返回标签的样式*/
+}
+#content .add_notice .textarea{
+	margin:20px;
+}
+#content .add_notice .textarea>div{		/*编辑器外面的div*/
+	margin:-20px 0px 0px 65px;
+}
+#content .add_notice .textarea>div>textarea{
+	width:400px;
+	height:150px;
+}
+#content .add_notice .date{
+	margin:20px;
+}
+#content .add_notice .date>input{
+	width:402px;
+	height:30px;
+	background-color: white;
+}
+#content .add_notice .button_one{
+	margin-left:83px;
+	margin-right:35px;
+	margin-bottom: 30px;
+}
+#content .add_notice .button_two{
+	margin-bottom: 30px;
+}
+
+/*事物管理-新建讲课资料*/
+#content .add_lecture .row,#content .add_lecture .textarea{
+	margin:20px 0px 0px 20px;
+}
+#content .add_lecture span.row_title{
+	display:inline-block;
+	width:65px;
+	text-align: right;
+}
+#content .add_lecture .row #lecture_img{	/*讲课图片*/
+	width:388px;
+	height:144px;
+	padding:5px;
+	margin:-20px 0px 0px 65px;
+	border:1px solid #ccc;
+	background-color: white;
+}
+#content .add_lecture .row #lecture_img img{	/*讲课图片左浮动*/
+	float:left;
+	cursor:pointer;
+}
+#content .add_lecture .row #lecture_img .edit_img{
+	width:144px;
+	height:144px;
+}
+#content #upload_lecture_img{	/*选择新增图像显示的div*/
+	border:5px solid #E3E3E3;
+	position:fixed;
+	top:100px;
+	left:500px;
+	z-index:100;
+	display:none;
+}
+#content .add_lecture .row>input,#content .add_lecture .row>select{
+	width:400px;
+	height:25px;
+	padding:0px 5px;
+}
+#content .add_lecture .textarea textarea{
+	width:400px;
+	height:160px;
+	padding:0px 5px;
+	resize:none;
+}
+#content .add_lecture .button_one{
+	margin:10px 35px 20px 84px;
+}
+#content .add_lecture .button_two{
+	margin:10px 0px 20px 0px;
+}
+/*事物管理-新增新闻*/
+#content .add_news .row{
+	margin:20px 0px 0px 40px;
+}
+#content .add_news .row>input{
+	width:450px;
+}
+#content .add_news .row .checkbox{		/*置顶*/
+	width:auto;
+}		
+#content .add_news .textarea{
+	margin:10px 0px 25px 40px;
+}
+#content .add_news .textarea>div{
+	margin:-20px 60px 0px 40px;
+}
+#content .add_news .textarea textarea{
+	height:480px;
+}
+#content .add_news .button_one{
+	margin-left:80px;
+	margin-right: 20px;
+	margin-bottom: 30px;
+}
+#content .add_news .button_two{
+	margin-bottom: 30px;
+}
+#content .thing_news .title{/*置顶管理中返回按钮*/
+	font-weight: bold;
+	line-height:35px;
+	padding-left: 15px;
+	background-color: #eafefd;
+	border:1px solid #ccc;
+	border-bottom: none;
+}
+/*事物管理-统计笔记*/
+#content .thing_countblog{
+	float:left;
+	width:450px;
+	height:260px;
+	margin-left: 2%;
+	background-color: #f7f3f3;
+	border:1px solid #cccccc;
+}
+#content .thing_countblog .starttime{
+	margin:50px 0px 0px 60px;
+}
+#content .thing_countblog .starttime input{
+	background-color: white;
+}
+#content .thing_countblog .endtime{
+	margin:10px 0px 20px 60px;
+}
+#content .thing_countblog .endtime input{
+	background-color: white;
+}
+#content .thing_countblog .button_one{
+	margin-left:195px;
+	margin-right:20px;
+}
+
+/*个人资料*/
+#content .p_data .rows{
+	margin:20px 0px 0px 20px;
+}
+#content .p_data .rows .title{
+	display:inline-block;
+	width:70px;
+	margin-right:10px;
+	text-align: right;
+}
+#content .p_data .rows textarea{
+	height:180px;
+	width:510px;
+	resize:none;
+}
+#content .p_data .button_one{
+	margin:25px 0px 25px 100px;  
+}
+
+/*课表管理*/
+#content #course{
+	float:left;
+	width:86%;
+	margin-left: 2%;
+}
+#content #course table{
+	width:100%;
+}
+#content #course table tr.first,#home_course table tr.first{
+	border:1px solid #e1dddd;
+}
+#content #course table th,#home_course table th{
+	width:19.2%;
+	height: 45px;
+	letter-spacing: 10px;
+	font-weight:normal;
+	background-color: #f0f7fb;
+}
+#content #course table th.first,#home_course table th.first{
+	width:4%;
+}
+#content #course table td,#home_course table td{		
+	height:95px;
+	text-align: center;
+	border:1px solid #e1dddd;
+	word-wrap: break-word;		/*课表内容过长自动换行*/
+	word-break:break-all;
+}
+#content #course table td:hover,#home_course table td:hover{
+	background-color:#e6e2e2;
+}
+#content #course table td.first:hover,#home_course table td.first:hover{
+	background-color: white;
+}
+#content #course .button_one,#content #course .button_two{
+	float:right;
+	margin:15px 0px 0px 15px;
+}
+/*首页中的课表*/
+#home_course{			
+	margin-left: 180px;
+	margin-top: 35px;
+	background-color: #f7f3f3;
+	border:1px solid #d9d7d7;
+}
+#home_course #bottom_s1{		/*首页课表显示姓名的div*/
+	margin:10px 0px 0px 20px;
+}
+#home_course #name{
+	float:left;
+	line-height: 35px;
+	font-size: 15px;
+}
+#home_course #bottom_s5{
+	float:left;
+}
+#home_course #bottom_s6{
+	float:left;
+	margin-left: -15px;
+}
+#home_course table{
+	margin:35px 25px;
+	width:95%;
+	background-color: white;
+}
+
+/*修改密码*/
+#content .adorn_top{		/*修改密码、新闻管理、笔记统计上面的装饰图片*/
+	float:right;
+	margin-top:-30px;
+}
+#content .password{
+	width:534px;
+	height:320px;
+	float:left;
+	margin:70px auto 0px 15%;
+	background:url("../../img/password.png") no-repeat;
+}
+#content .password .title{
+	font-family:"黑体";
+	text-align:center;
+	font-size: 30px;
+	color:#4987c5;
+	font-weight: bold;
+	line-height: 80px;
+}
+#content .password .content{
+	margin-left:80px;
+	margin-top: 10px;
+}
+#content .password .content .row{
+	margin:0px;
+	line-height:50px;
+}
+#content .password label{
+	width:70px;
+	line-height:35px;
+	display: inline-block;
+	text-align: center;
+	background-color:#f7f3f3;
+	border:1px solid #ccc;
+	border-right: none;
+}
+#content .password label.back{		/*选中文本框，前面的标签样式*/
+	background-color:#c6c4c4;
+}
+#content .password input.text{
+	width:300px;
+	height:27px;
+	margin-bottom:2px;
+}
+#content .password input.pwd_button{
+	float:right;
+	margin: 30px 70px;
+	background:url("../../img/button_point.png") no-repeat;
+}
+
+/*修改头像*/
+#content .photo{
+	width:590px;
+	height:265px;
+	float:left;
+	margin:80px 0px 0px 15%;
+	border-radius: 5px;
+	border:1px solid #d2d0d0;
+	background-color: #f7f3f3;
+}
+#content .photo .img{
+	width:200px;
+	height:200px;
+	float:left;
+	margin-top:30px;
+	margin-left:40px;
+	border:1px solid #d2d0d0;
+}
+#content .photo .text{
+	width:300px;
+	height:200px;
+	float:left;
+	margin-top:30px;
+	margin-left:15px;
+}
+#content .photo .text .inner_text{
+	line-height:25px;
+	padding:15px 0px 20px 15px;
+	border:2px dashed #908e8e;
+	border-radius: 3px;
+}
+#content .photo .text .button_one,#content .photo .text .button_two{
+	float:left;
+	margin-top:45px;
+}
+#content .photo .text .button_one{
+	margin-right:35px;
+}
+
+/*---------------页码的样式----------------*/
+#page{
+	float:right;
+	font-size: 10px;
+	padding: 35px 30px 15px;
+	font-size:13px;
+}
+#thing_page{
+	float:right;
+	font-size: 10px;
+	padding: 35px 10px 15px;
+	font-size:13px;
+}
+span.current{		/*当前页码的样式*/
+	width:15px;
+	height:15px;
+	background-color: rgb(251,178,2);
+	display:inline-block;
+	text-align: center;
+}
+
+/*-----------------脚注----------------*/
+#fooder{
+	background-color:rgb(32,56,89);
+	height:100px;
+	color:white;
+	text-align: center;
+	line-height: 100px;
+	font-size: 15px;
+	margin-top: 100px;
+	clear:both;
+}

@@ -1,0 +1,36 @@
+
+#intro_top{padding-top:40px;}
+.intro_item{float:left;width:300px;padding-left:20px;
+background:top right url("../../img/index/t.png") no-repeat;}
+.intro{float:left;background:url("../../img/index/intro.png");width:110px;}
+#intro_img{background-position:0px 0px;height:110px}
+#intro_txt{background-position:0px -118px;height:25px;margin-top:40px;}
+.intro_con{float:left;font-size:14px;line-height:22px;padding:20px;height:150px;
+text-align:left;overflow:hidden;text-overflow:ellipsis;width:100%;}
+
+#news_img{background-position:0px -147px;height:110px}
+#n_tl{padding-left:20px;float:left;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;width:180px;
+background:url("../../img/index/p.png")no-repeat;background-position:-50px 0px;font-size:13px}
+
+#n_tl a{color:black;}
+#n_tl a:hover{text-decoration:underline;color:#0088CC}
+
+#n_date{float:right;font-size:12px;margin-right:10px}
+#news_txt{background-position:0px -260px;height:30px;margin-top:40px;}
+.news_list{text-align:left;margin-top:8px;width:280px;}
+
+.morecon{float:left;background:url("../../img/index/p.png");margin-left:50px;margin-top:20px;
+background-position:-4px -74px;width:118px;height:26px;line-height:26px;}
+
+.morecon a{color:black}
+
+#blog_img{background-position:0px -285px;height:110px}
+#blog_txt{background-position:0px -400px;height:25px;margin-top:40px;}
+
+#project{margin:20px 0px;height:48px;background:url("../../img/index/project/w3.png")}
+.pro_item{float:left;}
+#pro_l{background:url("../../img/index/project/w4.png");width:15px;height:48px;}
+#pro_m{padding-top:10px}
+#pro_r{background:url("../../img/index/project/1w.png");width:9px;height:48px;}
+
+#pros_item{float:left;margin-left:30px;width:160px;}

@@ -1,0 +1,49 @@
+<include file="./OA/Tpl/header.html"/>
+<script src="__ROOT__/OA/Common/js/thing/lecture.js"></script>
+
+<div id="content">
+	<if condition="$_SESSION['login']">
+		<include file="./OA/Tpl/manager_person.html"/>
+	<else/>
+		<include file="./OA/Tpl/member_person.html"/>
+	</if>
+	<div class="right add_lecture">
+		<div class="title"><a href="__URL__/lecture">返回>></a>新建讲课记录</div>
+		<input type="hidden" value="<{$list.idmarch_lecture}>" name="idmarch_lecture">
+		<input type="hidden" value="<{$list.lecture_img}>" name="lecture_img">
+		 <!--存储通知公告的idmarch_news,存在说明编辑通知公告，不存在添加通知公告 -->
+
+		 <div class="row"><span class="row_title">讲课图片：</span>
+		 	<div id="lecture_img">
+		 		<if condition="$list.idmarch_lecture eq 0">	<!-- 新建讲课记录 -->
+		 			<img id="show_photo" src="__ROOT__/OA/Common/img/lecture/s_thing_l_no.png" />
+					<img id="add_edit_photo" src="__ROOT__/OA/Common/img/thing_l_add.png"/>
+					<img id="del_photo" style="display:none" src="__ROOT__/OA/Common/img/thing_l_del.png"/>
+				<else/>		<!-- 编辑讲课记录 -->
+					<img id="show_photo" class="edit_img" src="__ROOT__/OA/Common/img/lecture/s_<{$list.lecture_img}>" />
+					<img id="add_edit_photo" src="__ROOT__/OA/Common/img/thing_l_edit.png"/>
+					<img id="del_photo" src="__ROOT__/OA/Common/img/thing_l_del.png"/>
+		 		</if>
+				
+			</div>
+		 </div>
+		<div class="row"><span class="row_title">讲课主题：</span><input name="theme" type="text" value="<{$list.lecture_theme}>"></div>
+		<div class="row"><span class="row_title">讲课人：</span><input name="user" type="text" value="<{$list.lecture_user}>"></div>
+		<div class="textarea"><span class="row_title">内容摘要：</span><textarea name="content"><{$list.lecture_content}></textarea></div>
+		<div class="row"><span class="row_title">讲课类型：</span><select name="sort">
+					<foreach name="sort" item="val">
+						<option <?php if($list["lecture_sort"] == $val["idmarch_sort"]) echo "selected"?> value="<{$val.idmarch_sort}>"><{$val.sort_name}></option>
+					</foreach>
+				</select>
+		</div>
+		<div class="row"><span class="row_title">演示地址：</span><input name="file" type="text" value="<{$list.lecture_file}>"></div>
+		<input type="button" name="add_edit" class="button button_one" value="确定">
+		<input type="button" value="取消" class="button button_two" onClick="location.href='__URL__/lecture'">
+	</div>
+	<div id="upload_lecture_img">
+		<iframe src="__URL__/lecture_upload" style="background:white;" frameborder=0>
+		</iframe>
+	</div>
+	<div style="clear:both"></div>
+</div>
+<include file="./OA/Tpl/fooder.html"/>

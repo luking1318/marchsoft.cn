@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="__ROOT__/Common/css/bootstrap.css">
+<script type="text/javascript" src="__ROOT__/Common/js/jquery.js"></script>
+<script type="text/javascript" src="__ROOT__/OA/Common/js/lecture/index.js"></script>
+</head>
+<body>
+	<input type="hidden" id="url" value="__URL__" >
+	<table class="table table-bordered" id="table">
+		<tr bgcolor="#F5F5F5";>
+			<if condition="$alist==$session"><th width=15px;><input type="checkbox" id="chk" onclick="sel_all()"></th></if>
+			<th width="230px;"><center>标题</center></th><th width="100px;"><center>日期</center></th>
+				<th><center>讲课人</center></th><th width=70px;><center>资料下载</center></th>
+				<if condition="$alist==$session"><th width="70px;"><center>操作</center></th></if>
+		</tr>
+		<volist name="list" id="vo">
+			<tr id="<{$vo['idmarch_lecture']}>@">
+				<if condition="$alist==$session"><td><input name="input" class="td" type="checkbox" id=<{$vo['idmarch_lecture']}>></td></if>			
+				<td>
+					<div style="width:230px;text-overflow:ellipsis; white-space:nowrap; overflow:hidden;">
+						<center><{$vo['lecture_theme']}></center>
+					</div>
+				</td>
+				<td><center><{$vo['lecture_date']}></center></td>
+				<td><center><{$vo['lecture_user']}></center></td>
+				<td><center><a class="btn" href="__ROOT__/Common/uploadfile/<{$vo['lecture_file']|default='111.zip'}>">下载</a></center></td>
+				<if condition="$alist==$session">
+				<td><center><input type="button" value="删除" id="<{$vo['idmarch_lecture']}>" class="btn" onclick="sel_del(this.id)"></center></td>
+				</if>
+			</tr>
+		</volist>
+	</table>
+	
+	<center><div><{$show}></div></center>
+	<if condition="$alist==$session">
+		<input type="button" class="btn btn-danger" value="删除" onclick="del_all()">&nbsp;
+		<input type="button" class="btn btn-primary" value="取消" onclick="sel_cnl()">&nbsp;
+		<a class="btn btn-primary" href="__URL__/add_lect_sel" target="main">添加</a>
+	</if>
+</body>
+</html>

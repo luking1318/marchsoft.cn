@@ -1,0 +1,42 @@
+<include file="./OA/Tpl/header.html"/>
+<script src="__ROOT__/OA/Common/js/thing/news.js"></script>
+
+<div id="content">
+	<include file="./OA/Tpl/thing.html"/>
+	<div style="margin:20px 20px 0px 220px;">
+		<div>
+			<input type="button" name="del_all" value="删除">
+			<a href="__URL__/add_edit_news/type/<{$type}>">	<!-- 1代表新闻3代表大事件 -->
+				<if condition="$type eq 1">
+					新增新闻
+				<else/>
+					新增大笔记
+				</if>
+			</a>
+		</div>
+		<table>
+			<tr>
+				<th><input name="all" type="checkbox">全选</th>
+				<th>标题</th>
+				<th>发布人</th>
+				<th>发布时间</th>
+				<th>操作</th>
+			</tr>
+			<foreach name="list" item="val">
+				<tr>
+					<td><input name="check" type="checkbox" value="<{$val.idmarch_news}>"></td>
+					<td><{$val.news_title}></td>
+					<td><{$val.news_publisher}></td>
+					<td><?php echo substr($val["news_date"],0,10);?></td>
+					<td>
+						<a target="_new" href="__ROOT__/index.php/News/show/nid/<{$val.idmarch_news}>">查看</a>
+						<a href="__URL__/add_edit_news/id/<{$val.idmarch_news}>/type/<{$type}>">编辑</a>
+						&nbsp;<a name="del" value="<{$val.idmarch_news}>">删除</a>
+					</td>
+				</tr>
+			</foreach>
+		</table>
+		<div id="page"><{$page}></div>
+		<div style="clear:both"></div>
+	</div>
+</div>

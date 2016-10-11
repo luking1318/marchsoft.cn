@@ -1,0 +1,189 @@
+@CHARSET "UTF-8";
+body
+{
+    background:url("../../img/knowledge/bg.png") repeat-x;
+    font-size:13px;
+    margin:0px auto;
+    padding:0px;
+	color:#888888;
+}
+a{
+	cursor:pointer;
+}
+#blog{
+	width:100%;
+	background-color:white;
+}
+#center{
+	width:960px;
+	min-height: 550px;
+	margin:0px auto;
+	clear:both;
+}
+#top{		/*知识库导航*/
+	padding-top:25px;
+	padding-bottom:5px;
+	height:35px;
+	font-size:14px;
+	font-weight:bold;
+	text-align:center;
+}
+#top ul{
+	margin-left:0px;
+	list-style-type:none;
+}
+#top ul li{
+	float:left;
+}
+#top ul li a{
+	display:block;
+	height:35px;
+	line-height:35px;
+	width:90px;
+	color:#727272;
+	text-decoration:none;
+	border-bottom:2px solid #727272;
+}
+#top ul li a.active{
+	color:#77c531;
+	border-bottom:2px solid #77c531;
+}
+#content
+{
+	width:100%;
+	opacity:0.9; 
+	border-radius: 8px;
+    background-color:#ffffff;
+	padding-bottom:10px;
+}
+/*成员博客*/
+#popup{
+	float:left;
+	margin-top:-125px;
+	width:240px;
+	height:125px;
+	line-height:125px; 
+	background-color:black;
+	color:white;
+	z-index:1000;
+	-moz-opacity: 0.56; 
+	opacity:.56; 
+	filter: alpha(opacity=56);
+	font-size:18px;
+	font-weight:bold;
+	text-align:center;
+}
+#blog #content .user{
+	width:240px;
+	height:125px;
+	float:left;
+}
+#blog #content .user .float{
+	float:left;
+}
+#blog #content .user .photo{
+	display:table-cell;
+	width:90px;
+	height:125px;
+	vertical-align:middle;
+}
+#blog #content .user .photo img{
+	height:70px;
+	width:70px;
+	border-radius:35px;
+	border:1px solid #D6D6D6;
+}
+#blog #content .user .info{
+	float:left;
+	width:140px;
+	padding-top:40px;
+	font-size:14px;
+}
+#blog #content .user .info .name{
+	display:block;
+	width:90%;
+	height:18px;
+	overflow:hidden;
+	color:#5684A6;
+}
+#blog #content .user .info .class{
+	display:block;
+	margin-top:5px;
+	width:90%;
+	height:18px;
+	overflow:hidden;
+	color:#949494;
+}
+/*知识库*/
+#namesearch{	/*搜索*/
+	height:30px;
+	float:right;
+	margin-right:10px;
+	margin-top:-10px;
+	text-align:right;
+}
+#con_left{
+	height:500px;
+	width:225px;
+	float:left;
+	margin-left:10px;
+	
+}
+
+#con_right{
+	height:auto;
+	width:700px;
+	float:left;
+	margin-left:20px;
+}
+#list_up{
+	height:2px;
+	width:225px;
+	margin-top:10px;
+	background:url("../../img/knowledge/b-line.png") no-repeat;	
+	overflow:hidden;
+	
+}
+#list_down{
+	height:1px;
+	width:225px;
+	background:url("../../img/knowledge/l-line.png") no-repeat;
+	overflow:hidden;
+}
+
+.listitem{
+	height:35px;
+	width:225px;
+	
+	background:url("../../img/knowledge/noselected.png") no-repeat;
+	overflow:hidden;
+	line-height:35px;
+	font-size:14px;
+	text-align:left;
+	padding-left:65px;
+	color:#3C3C3C；
+}
+.listitem_line{
+	width:225px;
+	height:1px;
+	float:left;
+	background:url("../../img/knowledge/l-line.png") no-repeat;
+	overflow:hidden;
+}
+.select{
+	height:35px;
+	width:225px;
+	float:left;
+	color:#1C90D6;
+	background:url("../../img/knowledge/selected.png") no-repeat;
+	overflow:hidden;
+}
+.noselect{
+	height:35px;
+	width:225px;
+	float:left;
+	color:#3C3C3C;
+	background:url("../../img/knowledge/noselected.png") no-repeat;
+	overflow:hidden;
+}
+

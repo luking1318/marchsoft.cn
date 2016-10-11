@@ -1,0 +1,2 @@
+<?php
+return array ( 0 => 'idmarch_lecture', 1 => 'lecture_user', 2 => 'lecture_date', 3 => 'lecture_content', 4 => 'lecture_sort', 5 => 'lecture_file', 6 => 'lecture_img', 7 => 'lecture_theme', '_autoinc' => true, '_pk' => 'idmarch_lecture', ); ?>

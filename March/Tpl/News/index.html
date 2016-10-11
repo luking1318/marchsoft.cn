@@ -1,0 +1,52 @@
+<include file="./March/Common/html/head.html" />
+<!--新闻列表页面-->
+<head>
+	<link href="__ROOT__/March/Common/css/news/news.css" rel="stylesheet">
+</head>
+
+	<div id="nlist">
+		<table id="tb_list">
+			<tr>
+				<td id="n_top" colspan="3"></td>
+			</tr>
+			
+			<tr>
+				<td id="n_left"></td>
+				<td style="background:#F5F5F7">
+					<div id="n_con">
+						<volist name="list" id="ls">
+							<div class="n_list">
+								<div class="n_tl">
+									<a href="__URL__/show/nid/<{$ls[idmarch_news]}>.html" target="_blank"><if condition="$ls.news_stick gt 0"><span style="color:#ca724c">[顶] </span></if><{$ls['news_title']}></a>
+								</div>
+								
+								<div class="n_date">
+									<?php echo substr($ls["news_date"],0,10);?>
+								</div>
+								
+								<div class="n_num">
+									关注:<{$ls['news_num']}>
+								</div>
+								<div style="clear:both"></div>
+							</div>
+						</volist>
+						<div id="page"><{$page}></div>
+					</div>
+				</td>
+				<td id="n_right"></td>
+			</tr>
+			
+			<tr>
+				<td id="n_btm" colspan="3"></td>
+			</tr>
+		</table>
+	</div>
+	
+	<!--右侧图标-->
+	<div class="r-img">
+	</div>
+	
+	<div style="clear:both"></div>
+	
+
+<include file="./March/Common/html/foot.html" />

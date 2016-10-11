@@ -1,0 +1,47 @@
+<include file="./OA/Tpl/header.html"/>
+<script src="__ROOT__/OA/Common/js/thing/notice.js"></script>
+
+<div id="content">
+	<if condition="$_SESSION['login']">
+		<include file="./OA/Tpl/manager_person.html"/>
+	<else/>
+		<include file="./OA/Tpl/member_person.html"/>
+	</if>
+	<div class="thing_add_del">
+		<a href="__URL__/add_edit_notice" class="add"><span>发布通知</span></a>
+		<a name="del_all" href="javascript:void(0)" class="del"><span>删除</span></a>
+	</div>
+	<div class="thing_table thing_notice">
+		<div class="thing_top">
+		</div>
+		<table>
+			<tr>
+				<th width="5%"><input name="all" type="checkbox"></th>
+				<th width="57%">通知内容</th>
+				<th width="25%">执行时间</th>
+				<th width="13%">操作</th>
+			</tr>
+			<foreach name="list" item="val">
+				<tr>
+					<td><input name="check" type="checkbox" value="<{$val.idmarch_news}>"></td>
+					<td><{$val.news_content}></td>
+					<td class="red">
+						<?php echo substr($val["news_date"],5,2)?>月<?php echo substr($val["news_date"],8,2)?>日<?php echo substr($val["news_date"],10,6)?>
+					</td>
+					<td>
+						<a class="img_edit" href="__URL__/add_edit_notice/id/<{$val.idmarch_news}>">
+							<img src="__ROOT__/OA/Common/img/img_edit.png"/>
+						</a>
+						<a class="img_del" name="del" href="javascript:void(0)" value="<{$val.idmarch_news}>">
+							<img src="__ROOT__/OA/Common/img/img_del.png"/>
+						</a>
+					</td>
+				</tr>
+			</foreach>
+		</table>
+		<div id="page"><{$page}></div>
+	</div>
+	<div style="clear:both"></div>
+</div>
+
+<include file="./OA/Tpl/fooder.html"/>

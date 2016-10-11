@@ -1,0 +1,65 @@
+<link rel="stylesheet" href="__ROOT__/OA/Common/css/User.css" />
+<load href="__ROOT__/March/Common/css/Grow/index.css" />
+<include file="./OA/Tpl/header.html"/>
+
+<style>
+   .pic_b {
+		display: block;
+		padding: 0px;
+		margin-bottom: 10px;
+		border: 1px solid #CDD5DA;
+		background-color: #fff;
+		text-decoration: none;
+		
+	}
+	.pic_b img {
+		display: block;
+		padding: 5px;
+		border: 0;
+		width: 280px;
+		vertical-align: bottom;
+	}
+	.pic_b strong {
+		color: #333;
+	}	
+	a:hover{
+		padding:0px;
+		margin:0px;
+		 border: 0px solid #74C1E9;
+		text-decoration: none;
+		color: #4184B4;	
+	}
+	.righ{
+		margin-left:180px;
+		margin-top: 20px;
+}
+</style>
+<script>
+       function ReSizePic(ThisPic){
+		    var RePicWidth = 300; //这里修改为您想显示的宽度值
+		    var TrueWidth = ThisPic.width;    //图片实际宽度
+		    var TrueHeight = ThisPic.height;  //图片实际高度
+		    var Multiple = TrueWidth / RePicWidth;  //图片缩小(放大)的倍数
+		    ThisPic.width = RePicWidth;  //图片显示的可视宽度
+		    ThisPic.height = TrueHeight / Multiple;  //图片显示的可视高度
+		    
+	   }
+</script>
+<div id="content">
+	<include file="./OA/Tpl/suibi_left.html"/>
+	
+	<div class="righ">
+    <div id='container' style="width:auto;height:auto;">
+       <span id="waterFallColumn_0" class="column" style="margin-left:60px;width:332px;"><div  class = "divs"style="border:2px dashed #C3C3C3;border-radius:5px;width:330px;height:140px;background-color:#ffffff;margin-right:10px;margin-top:20px;text-align:center;"><a href="__ROOT__/oa.php/Jotting/jottinglist"><img style="margin-top:30px"src="__ROOT__/OA/Common/img/zengjia.png"></a></div><{$arr[2]}></span> 
+       <span id="waterFallColumn_1" class="column" style="margin-left:10px;width:332px;"><{$arr[0]}><{$arr[3]}></span>
+       <span id="waterFallColumn_2" class="column" style="margin-left:10px;width:332px;"><{$arr[1]}><{$arr[4]}></span> 
+       <span id="waterFallDetect" class="column" style="width:332px;"></span>
+	</div>
+	</div>
+</div>	
+<include file="./OA/Tpl/fooder.html"/>
+
+<input id="HROOT"type="hidden"value="__ROOT__">
+<input type="hidden"id="hidden3"value=<{$list3[0]['count(*)']}>>
+	<input type="hidden"id="hidden4"value=<{$Think.session.sum}>>
+<script src="__ROOT__/OA/Common/js/grow.js" style="text/javascript"></script>

@@ -1,0 +1,31 @@
+#prev{
+	float:left;
+	width: 80px;
+	height: 100px;
+	position:relative;
+	top:80px;
+	left:-20px;
+	z-index: 2;
+	background: url( prev.png ) no-repeat;
+}
+#prev:hover{
+	background: url( prev_point.png ) no-repeat;
+}
+#next{
+	float:right;
+	width: 80px;
+	height: 100px;
+	position:relative;
+	right:20px;
+	top:-200px;
+	z-index: 2;
+	background: url( next.png ) no-repeat;
+}
+#next:hover{
+	background: url( next_point.png ) no-repeat;
+}
+#carousel{
+	float:left; 
+	margin-left:20px;
+	margin-top:-280px;
+}

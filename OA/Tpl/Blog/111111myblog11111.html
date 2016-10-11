@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="__ROOT__/Common/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="__ROOT__/OA/Common/css/course/course.css">
+	<script type="text/javascript" src="__ROOT__/Common/js/jquery.js"></script>
+	<script type="text/javascript" src="__ROOT__/OA/Common/js/bootstrap-tab.js"></script>
+	<script type="text/javascript" src="__ROOT__/OA/Common/js/course/course.js"></script>
+</head>
+<body>
+	<table class="table table-bordered">
+		  <tr>
+		  	 <th align="center">标题</th>
+			 <th width="10%">类型</th>
+		  	 <th width="8%">发布人</th>
+	    	 <th width="12%">发布时间</th>
+			 <th width="6%">编辑</th>
+	         <th width="6%">删除</th>
+	         <th width="6%">查看</th>
+		  </tr>
+		  <volist name="list" id="vo">
+	      <tr>
+			<td><{$vo["article_title"]}></td>
+			<td><{$vo["sort_name"]}></td>
+			<td><{$vo["user_name"]}></td>
+			<td><{$vo["article_time"]}></td>
+		    <td>
+		        <a href="__URL__/edit?type=<{$vo['article_type']}>&id=<{$vo['article_id']}>">
+				   <img style="width:25px; height:25px;" title="编辑" src="__ROOT__/Admin/Common/images/news/edit.png" />
+				</a>
+			</td>
+			<td>
+				<a href="__URL__/del?type=<{$vo['article_type']}>&id=<{$vo['article_id']}>">
+			       <img style="width:25px; height:25px;" title="删除" src="__ROOT__/Admin/Common/images/news/delete.png"  />
+				</a>
+			</td>
+            <td>
+	          <a target="_black" href="__ROOT__/index.php/Knowledge/show/id/<{$vo["article_id"]}>">
+	          	<img style="width:25px; height:25px;" title="查看" src="__ROOT__/Admin/Common/images/news/look.png" />
+	          </a>
+            </td>		
+		 </tr>
+		 </volist>
+		 
+		 <tr>
+		 	<td colspan="7">
+				<input style="width:75px;"  class="btn btn-primary" type="button" value="<{$write}>"  onClick="window.location.href='__URL__/add/addtype/<{$type}>'"/>
+				
+				<span style=" margin-left:200px;"><{$page}></span>
+			</td>
+		 </tr>
+		 <if condition="( $type eq 0)AND( $_SESSION['login'] eq '002')">
+			 <tr>
+				<td colspan="7">
+					<input style="width:75px;"  class="btn btn-primary" type="button" value="统计笔记" onClick="window.location.href='__URL__/countnote'"/>
+				</td>
+			 </tr>
+		 	
+		 </if>
+		
+		  			
+	</table>	
+</body>
+</html>

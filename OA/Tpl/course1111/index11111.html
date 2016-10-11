@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="__ROOT__/Common/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="__ROOT__/OA/Common/css/course/course.css">
+	<script type="text/javascript" src="__ROOT__/Common/js/jquery.js"></script>
+	<script type="text/javascript" src="__ROOT__/OA/Common/js/bootstrap-tab.js"></script>
+	<script type="text/javascript" src="__ROOT__/OA/Common/js/course/course.js"></script>
+</head>
+<body>
+	<input type="hidden" value="__URL__" id="url">
+	<input type="hidden" value="<{$_SESSION['phone']}>" id="session">
+	<div id="div_body">
+		<ul class="nav nav-tabs">
+		  <li class="active"><a href="#home" data-toggle="tab"><b>个人课表</b></a></li>
+		  <li><a href="#profile" data-toggle="tab" ><b>成员课表</b></a></li>
+		</ul>
+ 
+		<div class="tab-content" id="">
+		  <div class="tab-pane active" id="home">
+		  	<table class="table table-bordered" id="table1">
+		  		<tr class="tr_title">
+		  		   <th id="th_jeb">&nbsp;</th><th class="th_day">星期一</th><th class="th_day">星期二</th><th class="th_day">星期三</th>
+		  		   <th class="th_day">星期四</th><th class="th_day">星期五</th>
+		  		</tr>
+		  		<tr>
+		  			<th>第一节</th>
+		  			<td><font class="font1" id="00"><{$list[0][0]}></font><br><input type="text" id="00@" class="inptut1"></td>
+		  			<td><font class="font1" id="01"><{$list[0][1]}></font><br><input type="text" id="01@" class="inptut1"></td>
+		  			<td><font class="font1" id="02"><{$list[0][2]}></font><br><input type="text" id="02@" class="inptut1"></td>
+		  			<td><font class="font1" id="03"><{$list[0][3]}></font><br><input type="text" id="03@" class="inptut1"></td>
+		  			<td><font class="font1" id="04"><{$list[0][4]}></font><br><input type="text" id="04@" class="inptut1"></td>
+		  		</tr>
+		  		</volist>
+		  		<tr>
+		  			<th>第二节</th>
+		  			<td><font id="10" class="font1"><{$list[1][0]}></font><br><input type="text" id="10@" class="inptut1"></td>
+		  			<td><font id="11" class="font1"><{$list[1][1]}></font><br><input type="text" id="11@" class="inptut1"></td>
+		  			<td><font id="12" class="font1"><{$list[1][2]}></font><br><input type="text" id="12@" class="inptut1"></td>
+		  			<td><font id="13" class="font1"><{$list[1][3]}></font><br><input type="text" id="13@" class="inptut1"></td>
+		  			<td><font id="14" class="font1"><{$list[1][4]}></font><br><input type="text" id="14@" class="inptut1"></td>
+		  		</tr>
+		  		<tr>
+		  			<th>第三节</th>
+		  			<td><font id="20" class="font1"><{$list[2][0]}></font><br><input type="text" id="20@" class="inptut1"></td>
+		  			<td><font id="21" class="font1"><{$list[2][1]}></font><br><input type="text" id="21@" class="inptut1"></td>
+		  			<td><font id="22" class="font1"><{$list[2][2]}></font><br><input type="text" id="22@" class="inptut1"></td>
+		  			<td><font id="23" class="font1"><{$list[2][3]}></font><br><input type="text" id="23@" class="inptut1"></td>
+		  			<td><font id="24" class="font1"><{$list[2][4]}></font><br><input type="text" id="24@" class="inptut1"></td>
+		  		</tr>
+		  		<tr>
+		  			<th>第四节</th>
+		  			<td><font id="30" class="font1"><{$list[3][0]}></font><br><input id="30@" type="text" class="inptut1"></td>
+		  			<td><font id="31" class="font1"><{$list[3][1]}></font><br><input id="31@" type="text" class="inptut1"></td>
+		  			<td><font id="32" class="font1"><{$list[3][2]}></font><br><input id="32@" type="text" class="inptut1"></td>
+		  			<td><font id="33" class="font1"><{$list[3][3]}></font><br><input id="33@" type="text" class="inptut1"></td>
+		  			<td><font id="34" class="font1"><{$list[3][4]}></font><br><input id="34@" type="text" class="inptut1"></td>
+		  		</tr>
+		  		<tr>
+		  			<th>第五节</th>
+		  			<td><font id="40" class="font1"><{$list[4][0]}></font><br><input id="40@" type="text" class="inptut1"></td>
+		  			<td><font id="41" class="font1"><{$list[4][1]}></font><br><input id="41@" type="text" class="inptut1"></td>
+		  			<td><font id="42" class="font1"><{$list[4][2]}></font><br><input id="42@" type="text" class="inptut1"></td>
+		  			<td><font id="43" class="font1"><{$list[4][3]}></font><br><input id="43@" type="text" class="inptut1"></td>
+		  			<td><font id="44" class="font1"><{$list[4][4]}></font><br><input id="44@" type="text" class="inptut1"></td>
+		  		</tr>
+		  	</table>
+		  	<div id="div_input">
+		 		 <input type="button" class="btn btn-primary" value="编辑课表" onclick="show_input()">&nbsp;&nbsp;&nbsp;
+		 		 <input type="button" class="btn btn-primary" value="确定" onclick="hide_input()">
+		 	 </div>
+		  </div>
+		  <div class="tab-pane" id="profile" onload="__URL__/member_course">
+		  		<iframe allowtransparency=yes  width=95% height=1000px scrolling=no id="iframe"  
+				src="__URL__/member_course" frameborder=0 name="windows"></iframe>
+				  
+		  </div>
+		</div>
+	</div>
+</body>
+</html>

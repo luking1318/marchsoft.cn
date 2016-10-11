@@ -1,0 +1,40 @@
+<include file="./March/Common/html/head_lecture.html" />
+<!--公告讲座界面 -->
+
+    <div class="zuo"><a href="javascript:;"></a></div>
+    <div class="you"><a href="javascript:;"></a></div>
+
+    <div class="news_rq">
+      <div class="news_rq2"><{$list[0]["lecture_date"]}></div>
+        <div class="news_dian">
+            <foreach name="list" item="val">
+                <div class="inline"></div>
+            </foreach>
+        </div>
+    </div>
+
+    <div class="news" id="news_list">
+        <div id="news_div">
+            <foreach name="list" item="val">
+                <div class="inline" id="<{$val.idmarch_lecture}>" time="<{$val.lecture_date}>">
+                    <div class="news_nr">
+                        <img src="__ROOT__/OA/Common/img/lecture/m_<{$val['lecture_img']|default='no.png'}>" width="250" />
+                        <h2><{$val.lecture_theme}></h2> <!-- 讲课主题 -->
+                        <div class="content">[<b><{$val.lecture_user}></b>]&nbsp;&nbsp;<{$val.lecture_content}></div><!-- 讲课人、讲课内容 -->
+                    </div>
+                </div>
+            </foreach>
+        </div>
+    </div>
+    <div id="haha" style="display:none"><script src="http://s24.cnzz.com/stat.php?id=4285839&web_id=4285839" language="JavaScript"></script>
+    </div>
+
+<input type="hidden" id="lecture_count" value="<{$lecture_count}>"><!-- 当前显示讲课的数量 -->
+
+<!-- 选择一个讲课显示的模态对话框，打开一个视频 -->
+<div id="big" class="modal hide" data-backdrop="static" style="overflow:visible;">
+    <a data-dismiss="modal" aria-hidden="true" style="display:block;width:39px;height:39px;position:absolute;top:-20px;right:-20px;cursor:pointer"><img src="__ROOT__/March/Common/img/lecture/lecture_close.png"/></a>
+    <div class="modal-body">
+        <embed quality="high" width="530" height="400" align="middle" allowScriptAccess="allways" allowFullScreen="true" mode="transparent" type="application/x-shockwave-flash"></embed>
+    </div>
+</div>

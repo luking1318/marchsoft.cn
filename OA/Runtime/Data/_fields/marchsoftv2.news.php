@@ -1,0 +1,2 @@
+<?php
+return array ( 0 => 'idmarch_news', 1 => 'news_title', 2 => 'news_content', 3 => 'news_date', 4 => 'news_publisher', 5 => 'news_type', 6 => 'news_num', 7 => 'active_type', 8 => 'news_stick', '_autoinc' => true, '_pk' => 'idmarch_news', ); ?>

@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="__ROOT__/Common/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="__ROOT__/OA/Common/css/personal/index.css">
+	<script type="text/javascript" src="__ROOT__/Common/js/jquery.js"></script>
+	<script type="text/javascript" src="__ROOT__/OA/Common/js/bootstrap-tab.js"></script>
+</head>
+<body>
+	<div id="div_body">
+		<ul class="nav nav-tabs">
+		  <li class="active"><a href="#home" data-toggle="tab"><b>最新动态</b></a></li>
+		  <li><a href="#profile1" data-toggle="tab" ><b>通知公告</b></a></li>
+		  <li><a href="#profile2" data-toggle="tab" ><b>新闻</b></a></li>
+		  <li><a href="#profile3" data-toggle="tab" ><b>大事记</b></a></li>
+		  <li><a href="#profile4" data-toggle="tab" ><b>笔记</b></a></li>
+		  <li><a href="#profile5" data-toggle="tab" ><b>博客</b></a></li>
+		</ul>
+ 
+		<div class="tab-content">
+		  <div class="tab-pane active" id="home">
+				<table border=0>
+					<volist name="list_all" id="vo">
+						<tr>
+							<td width=400px;><font>
+								<if condition="$vo['news_type'] eq 1"><i class=" icon-comment"></i>&nbsp;</if>
+								<if condition="$vo['news_type'] eq 2"><i class="icon-volume-up"></i>&nbsp;</if>
+								<if condition="$vo['news_type'] eq 3"><i class="icon-flag"></i>&nbsp;</if>
+								</font>
+								<a target="_blank"  href="__ROOT__/index.php/News/show/nid/<{$vo['idmarch_news']}>"><{$vo['news_title']}></a>
+							</td>
+							<td width=100px;><font size=1px; color=#CCC><{$vo['news_date']}></font></td>
+						</tr>
+					</volist> 
+					<tr>
+		  			<td width=400px;></td>
+		  			<td><br><font size=2px><a href="__ROOT__/admin.php/News/newslist/type/1">更多...</a></font></td>
+		  		</tr>
+				</table>
+		  </div>
+		  
+		  <div class="tab-pane" id="profile1">
+		  	<table border=0>
+		  		<volist name="list_notice" id="vo">
+		  			<tr>
+		  				<td width=400px;>
+		  					<i class="icon-volume-up"></i>&nbsp;
+		  					<!--<font>通知公告：</font>-->
+		  					<a target="_blank"  href="__ROOT__/index.php/News/show/nid/<{$vo['idmarch_news']}>"><{$vo['news_title']}></a>
+		  				</td>
+		  				<td width=100px;>
+		  					<font size=1px; color=#ccc><{$vo['news_date']}></font>
+		  				</td>
+		  			</tr>
+		  		</volist>
+		  		<tr>
+		  			<td width=400px;></td>
+		  			<td><br><font size=2px><a href="__ROOT__/admin.php/News/newslist/type/2">更多...</a></font></td>
+		  		</tr>
+		  	</table>
+		  </div>
+		  
+		  <div class="tab-pane" id="profile2" onload="__URL__/">
+		  	<table border=0>
+		  		<volist name="list_news" id="vo">
+		  			<tr>
+		  				<td width=400px;>
+		  					<i class=" icon-comment"></i>&nbsp;
+		  					<!--<font>新闻：</font>-->
+		  					<a target="_blank"  href="__ROOT__/index.php/News/show/nid/<{$vo['idmarch_news']}>"><{$vo['news_title']}></a>
+		  				</td>
+		  				<td width=100px;>
+		  					<font size=1px; color=#ccc><{$vo['news_date']}></font>
+		  				</td>
+		  			</tr>
+		  		</volist>
+		  		<tr>
+		  			<td width=400px;></td>
+		  			<td><br><font size=2px><a href="__ROOT__/admin.php/News/newslist/type/1">更多...</a></font></td>
+		  		</tr>
+		  	</table>
+		  </div>
+		  
+		  <div class="tab-pane" id="profile3">
+		  		<table border=0>
+		  		<volist name="list_imp" id="vo">
+		  			<tr>
+		  				<td width=400px;>
+		  					<i class="icon-flag"></i>&nbsp;
+		  					<!--<font>大事记：</font>-->
+		  					<a target="_blank"  href="__ROOT__/index.php/News/show/nid/<{$vo['idmarch_news']}>"><{$vo['news_title']}></a>
+		  				</td>
+		  				<td width=100px;>
+		  					<font size=1px; color=#ccc><{$vo['news_date']}></font>
+		  				</td>
+		  			</tr>
+		  		</volist>
+		  		<tr>
+		  			<td width=400px;></td>
+		  			<td><br><font size=2px><a href="__ROOT__/admin.php/News/newslist/type/3">更多...</a></font></td>
+		  		</tr>
+		  	</table>
+		  </div>
+		  <div class="tab-pane" id="profile4">
+		  	<table border=0>
+		  		<volist name="list_note" id="vo">
+		  			<tr>
+		  				<td width=400px;>
+		  					<i class="icon-pencil"></i>&nbsp;
+		  					<!--<font>笔记：</font>-->
+		  					<a target="_blank"  href="__ROOT__/index.php/Knowledge/show?id=<{$vo['article_id']}>"><{$vo['article_title']}></a>
+		  				</td>
+		  				<td width=100px;>
+		  					<font size=1px; color=#ccc><{$vo['article_time']}></font>
+		  				</td>
+		  			</tr>
+		  		</volist>
+		  		<tr>
+		  			<td width=400px;></td>
+		  			<td><br><font size=2px><a href="__ROOT__/oa.php/Blog/blog/type/0">更多...</a></font></td>
+		  		</tr>
+		  	</table>
+		  </div>
+		  <div class="tab-pane" id="profile5" onload="__URL__/">
+		  	<table border=0>
+		  		<volist name="list_blog" id="vo">
+		  			<tr>
+		  				<td width=400px;>
+		  					<i class=" icon-user"></i>&nbsp;
+		  					<!--<font>博客：</font>-->
+		  					<a target="_blank"  href="__ROOT__/index.php/Knowledge/show?id=<{$vo['article_id']}>"><{$vo['article_title']}></a>
+		  				</td>
+		  				<td width=100px;>
+		  					<font size=1px; color=#ccc><{$vo['article_time']}></font>
+		  				</td>
+		  			</tr>
+		  		</volist>
+		  		<tr>
+		  			<td width=400px;></td>
+		  			<td><br><font size=2px><a href="__ROOT__/oa.php/Blog/blog/type/1">更多...</a></font></td>
+		  		</tr>
+		  	</table>
+		  </div>
+		  </div>
+		  <script>
+				$(function(){
+					$('[data-toggle="tab"]').mouseenter(function (e) {
+				        e.preventDefault();
+				        $(this).tab('show');
+				    });		
+				});
+		  </script>
+</body>
+</html>

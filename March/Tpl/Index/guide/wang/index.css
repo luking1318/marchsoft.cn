@@ -1,0 +1,117 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+html{
+	height: 100%;
+}
+body{
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	background-color: #7dcad2;
+}
+.home{
+	width: 100%;
+	height: 100%;
+	min-width: 800px;
+	min-height: 600px;
+	position: relative;
+	background-image: url(image/bk.png);
+	background-size: 100% 100%;
+}
+.home img{
+	position: absolute;
+}
+.come{
+    width: 18%;
+    top: 75%;
+    height: 15%;
+    left: 64%;
+    /*animation: come 1s;*/
+    animation: shake 1s infinite;
+    
+}
+@keyframes come
+{
+0% {left: -50%;}
+100% {left: 64%;}
+}
+.runing{
+    width: 52%;
+    height: 54%;
+    left: 23%;
+    top: 6%;
+    z-index: 5;
+    animation : runing 1.5s;
+}
+@keyframes runing
+{
+0% {top: -60%;}
+40% {top: -60%;}
+90% {top: 7%;}
+97% {top: 5%;}
+100% {top: 6%;}
+}
+
+.title{
+    width: 49.5%;
+    height: 27%;
+    left: 24.3%;
+    bottom: 21.5%;
+    z-index: 3;
+    animation : title 1s;
+}
+@keyframes title
+{
+0% {bottom: -30%;}
+100% {bottom: 21.5%;}
+}
+.guave{
+    width: 20%;
+    height: 20%;
+    left: 14%;
+    top: 5%;
+    animation : guave 1s;
+}
+@keyframes guave
+{
+0% {left: -10%;}
+100% {left: 14%;}
+}
+
+@media screen and (max-width: 800px) { /*当屏幕尺寸小于600px时，应用下面的CSS样式*/
+	.home {
+		left: 50%;
+		margin-left: -400px;
+	}
+}
+
+@keyframes shake
+{
+0%   {left:64%;}
+40%  {left:66%;}
+100% {left:64%;}
+}
+
+.background{
+	width: 100%;
+	height: 100%;
+}
+.enterphone{
+	position: absolute;
+	top: 67%;
+    left: 72%;
+    width: 20%;
+    height: 20%;
+	animation: shakeph 2s infinite;
+}
+
+@keyframes shakeph
+{
+0%   {left:72%;}
+25%  {left:76%;}
+50%  {left:75%;}
+80%  {left:76%;}
+100% {left:73%;}
+}

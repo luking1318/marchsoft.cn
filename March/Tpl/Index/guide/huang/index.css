@@ -1,0 +1,141 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+html{
+	height: 100%;
+}
+body{
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	background-color: #7dcad2;
+}
+.home{
+	width: 100%;
+	height: 100%;
+	min-width: 800px;
+	min-height: 600px;
+	position: relative;
+	background-image: url(image/bk.png);
+	background-size: 100% 100%;
+}
+.home img{
+	position: absolute;
+}
+.come{
+	opacity: 0;
+    transform: skew(60deg);
+}
+
+.runing{
+	opacity: 0;
+    transform: translateX(50%);
+}
+.title{
+    width: 49.5%;
+    height: 27%;
+    left: 24.3%;
+    top: 51.5%;
+    z-index: 3;
+    animation: title_act 1s;
+	-moz-animation: title_act 1s;	/* Firefox */
+	-webkit-animation: title_act 1s;	/* Safari 和 Chrome */
+	-o-animation: title_act 1s;	/* Opera */
+}
+
+.guave{
+	opacity: 0;
+    transform: translateY(-50%);
+}
+
+/*动态效果样式*/
+.run_act{
+	top: 1%;
+	left: 24%;
+	z-index: 5;
+    width: 52%;
+    height: 54%;
+    position: absolute;
+    transform: translateX(0);
+	-moz-transition: all 1s ease-in;	/* Firefox 4 */
+	-webkit-transition: all 2s 2s ease-in;	/* Safari 和 Chrome */
+	-o-transition: all 1s ease-in;	/* Opera */
+	transform: translateX(0);
+}
+.guave_act{
+	top: 5%;
+	left: 14%;
+	opacity: 1;
+    width: 20%;
+    height: 20%;
+    position: absolute;
+    transform: translateY(0);
+	-moz-transition: all 1s ease-in;	/* Firefox 4 */
+	-webkit-transition: all 1s 1s ease-in;	/* Safari 和 Chrome */
+	-o-transition: all 1s ease-in;	/* Opera */
+}
+.come_act{
+	top: 68%;
+	left: 64%;
+	opacity: 1;
+    width: 18%;
+    height: 30%;
+    position: absolute;
+    -moz-transition: all 0.5s ease-out;	/* Firefox 4 */
+	-webkit-transition: all 3s 3s ease-out;	/* Safari 和 Chrome */
+	-o-transition: all 0.5s ease-out;	/* Opera */
+	animation: shake 1s infinite;
+	-moz-animation: shake 1s infinite;	/* Firefox */
+	-webkit-animation: shake 1s infinite;	/* Safari 和 Chrome */
+	-o-animation: shake 1s infinite;	/* Opera */
+}
+
+@media screen and (max-width: 800px) { /*当屏幕尺寸小于600px时，应用下面的CSS样式*/
+	.home {
+		left: 50%;
+		margin-left: -400px;
+	}
+}
+
+@-webkit-keyframes shake{
+	0%   {left:64%}
+	40%  {left:66%}
+	100% {left:64%}
+}
+@-o-keyframes shake{
+	0%   {left:64%}
+	40%  {left:66%}
+	100% {left:64%}
+}
+
+@-webkit-keyframes title_act{
+	75%  {transform: scale(1.2)}
+	100% {transform: scale(1.0)}
+}
+@-o-keyframes title_act{
+	75%  {transform: scale(1.2)}
+	100% {transform: scale(1.0)}
+}
+
+.background{
+	width: 100%;
+	height: 100%;
+}
+.enterphone{
+	position: absolute;
+	top: 67%;
+    left: 72%;
+    width: 20%;
+    height: 20%;
+	animation: shakeph 2s infinite;
+}
+
+@keyframes shakeph
+{
+0%   {left:72%;}
+25%  {left:76%;}
+50%  {left:75%;}
+80%  {left:76%;}
+100% {left:73%;}
+}

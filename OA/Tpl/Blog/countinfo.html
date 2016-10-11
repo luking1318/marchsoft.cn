@@ -1,0 +1,37 @@
+<include file="./OA/Tpl/header.html"/>
+
+<div id="content">
+	<div class="left">
+		<a href="__URL__/myblog/type/0"><div id="b_myblog" class="left_img"><img src="__ROOT__/OA/Common/img/b_myblog.png"/><br/>笔记列表</div></a>
+		<a href="__URL__/add_edit/type/0"><div id="b_addblog" class="left_img"><img src="__ROOT__/OA/Common/img/b_addblog.png"/><br/>新增笔记</div></a>
+		<a href="__URL__/blog/type/0"><div id="p_photo" class="left_img"><img src="__ROOT__/OA/Common/img/p_photo.png"/><br/>成员笔记</div></a>
+		<a href="__URL__/countblog"><div id="b_countblog" class="left_img"><img src="__ROOT__/OA/Common/img/b_countblog.png"/><br/>笔记统计</div></a>
+	</div>
+	
+	<img class="adorn_top" src="__ROOT__/OA/Common/img/adorn_top.png"/>
+	<div class="countblog">
+		<table>
+			<tr>
+				<td class="title" colspan="2">
+				笔记统计结果
+				</td>
+			</tr>
+			<tr>
+				<th width="50%">姓名</th>
+				<th width="50%">数量</th>
+			</tr>
+			<volist name="result" id="vo">
+				<tr>
+					<td><{$vo["username"]}></td>
+					<td class="red"><{$vo["amount"]}></td>
+				</tr>
+			</volist>
+		</table>
+		<input type="button" class="button button_one" onClick="window.location.href='__URL__/countblog'" value="返回">
+		<div id="thing_page"><{$page}></div>
+		<div style="clear:both"></div>
+	</div>
+	<div style="clear:both"></div>
+</div>
+
+<include file="./OA/Tpl/fooder.html"/>

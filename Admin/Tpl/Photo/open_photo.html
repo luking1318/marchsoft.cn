@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="__ROOT__/Admin/Common/css/Photo/pho.css">
+	<link rel="stylesheet" type="text/css" href="__ROOT__/Common/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="__ROOT__/Admin/Common/css/Photo/open_pho.css">
+  	<script type="text/javascript" src="__ROOT__/Common/js/jquery.js"></script>
+   	<script charset="utf-8" src="__ROOT__/Common/js/bootstrap.js"></script>
+   	<script charset="utf-8" src="__ROOT__/Admin/Common/js/photo/open_photo.js"></script>
+</head>
+<body>
+	<input type="hidden" id="url" value="__URL__">
+	<div id="div_bo">
+		<center>
+			<h1>相册管理</h1>
+		<div id=div_cen class="table-bordered">
+			<div id="div_top" class="table-bordered">
+				<a  class="btn btn-primary" id="btn" href="__URL__/upload">上传照片</a>
+				<a class="btn btn-primary" id="btn" href="__URL__/index">返回相册</a>
+			</div>
+			<font style=" display:block;margin-top:20px;font-size:20px;"><b><{$title}></b></font>
+			<volist name="list" id="vo">
+				<div class="div_pho" id="<{$vo['idmarch_photo_list']}>@">
+					<img class="img_pho" src="__ROOT__/Common/img/photo/s_<{$vo['photo_name']}>">
+					<a class="a_ope1" id="a_del" href="javascript:del_pho(<{$vo['idmarch_photo_list']}>)">删除</a>
+					<input type="hidden" id="<{$vo['photo_name']}>" value="<{$vo['photo_name']}>">
+					<input type="hidden" id="<{$vo['parent_photo']}>" value="<{$vo['parent_photo']}>">
+					<a class="a_ope1" id="a_oper" href="javascript:set_cover('<{$vo['photo_name']}>','<{$vo['parent_photo']}>')">设为封面</a>
+				</div>
+			</volist>
+		</div>
+		</center>
+		
+	</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<include file="./March/Common/html/head.html" />
+</center>
+
+  <link href="__ROOT__/March/Common/css/knowledge/knowledge.css" rel="stylesheet">
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div id="blog">
+	<div id="center">
+		<div id="top">
+			<ul>
+				<li><a href="__URL__/blog" class="active">成员博客</a></li>
+				<li><a href="__URL__/knowledge">知识库</a></li>
+			</ul>
+		</div>
+		<div id="content">
+			<foreach name="list" item="val">
+				<a href="<{$val.blog}>" target="_blank">
+					<div class="user">
+						<div class="float">
+							<div class="photo">
+								<img src="__ROOT__/Common/img/photo/photo/m_<{$val.avator|default='fengmian.jpg'}>"/>
+							</div>
+						</div>
+						<div class="info">
+							<span class="name"><{$val.user_name}></span>
+							<span class="class"><{$val.class}></span>
+						</div>
+					</div>
+				</a>
+			</foreach>
+			<div style="clear:both"><{$page}></div>
+		</div>
+	</div>
+</div>
+
+<input type="hidden" id="rot" value="__ROOT__/" />
+<include file="./March/Common/html/foot.html" />
+<script src="__ROOT__/March/Common/js/knowledge/knowledge.js" style="text/javascript"></script> 
+</BODY>
+</HTML>

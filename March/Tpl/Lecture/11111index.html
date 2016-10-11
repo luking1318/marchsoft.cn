@@ -1,0 +1,62 @@
+<include file="./March/Common/html/head.html" />
+<!--公告讲座界面 -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script type="text/javascript" src="__ROOT__/Common/js/jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="__ROOT__/Common/css/bootstrap.css">
+	<link href="__ROOT__/March/Common/css/index/contact.css" rel="stylesheet">
+	<link href="__ROOT__/March/Common/css/lecture/index.css" rel="stylesheet">
+</head>
+	<input type="hidden" value="__URL__/content/" id="rot">
+	<div id="div_body_top">
+		<div style="margin-top:10px;float:right;margin-right:20px;">
+			<input type="text" class="input-medium search-query" style="height:30px;width:350px;" id="search_txt">
+  			<button type="button" class="btn" id="btnsearch">搜索</button>
+  		</div>
+  	</div><div style="clear:both;"></div>
+	<div id="div_body">
+		<div id="div_left">
+			<div id="div_top"></div>
+			<ul id="ul_left">
+				<li class="li" id="0" type="none" onclick="show(this.id)">
+					<center><b>
+						<a class="a_left" id="0@" href="__URL__/content/id/0" target="windows">全部</a>
+					</b></center>
+				</li>
+				<volist name="list" id="vo">
+					<li  id="<{$vo['idmarch_sort']}>" class="li" type="none" onclick="show(this.id)">
+						<center><b>
+							<a id="<{$vo['idmarch_sort']}>@" class="a_left" href="__URL__/content/id/<{$vo['idmarch_sort']}>" target="windows">
+								<{$vo['sort_name']}>
+							</a>
+						</b></center>
+					</li>
+				</volist>
+			</ul>	
+			<div id="div_bot"></div>
+		</div>
+			<div id="div_right">
+				<iframe allowtransparency="yes"  width=100% scrolling=no id="iframe" onload="autoHeight();" 
+					src="__URL__/content/id/0" frameborder=0 name="windows"></iframe>
+			</div><div style="clear:both;"></div>
+	</div>
+	<script>
+	$(function(){
+		$("#0").css("background","url('__ROOT__/March/Common/img/photo/hover_li.png') no-repeat");
+		$("#0").css("marginLeft",-3);
+		var obj=document.getElementById("0@");
+		obj.style.color="#FFF";
+		
+	});
+	function show(id){
+		$(".li").css("background","url('__ROOT__/March/Common/img/photo/li.png') no-repeat");
+		$(".a_left").css("color","#000000");
+		var obj=document.getElementById(id);
+		var obja=document.getElementById(id+"@");
+		obj.style.background="url('__ROOT__/March/Common/img/photo/hover_li.png') no-repeat";
+		obj.style.marginLeft="-3";
+		obja.style.color="#FFF";
+	}
+	</script>
+	<script type="text/javascript"  src="__ROOT__/March/Common/js/lecture/index.js"></script>
+<include file="./March/Common/html/foot.html" />

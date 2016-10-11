@@ -1,0 +1,43 @@
+<include file="./OA/Tpl/header.html"/>
+<script src="__ROOT__/OA/Common/js/photo.js"></script>
+
+<div id="content">
+	<if condition="$_SESSION['login']">
+		<include file="./OA/Tpl/manager_person.html"/>
+	<else/>
+		<include file="./OA/Tpl/member_person.html"/>
+	</if>
+	
+	<div class="photo">
+		<div class="img">
+			<img src="__ROOT__/Common/img/photo/photo/m_<{$avator|default='fengmian.jpg'}>">
+		</div>
+		<div class="text">
+			<div class="inner_text">
+				<b>从电脑中选择您喜欢的图片:</b><br>
+				你可以上传：JPG,JPEG,GIF,PNG或BMP文件，文件最大可支持2M。
+			</div>
+			
+			<form action='__URL__/upload' method='POST' enctype='multipart/form-data'>
+				<input type="file" name="file" style="display:none"><br>
+				<input class="l_button button_one" type="button" onclick="fun()" value="上传图片">
+				<input name="save" class="l_button button_two" type="button" value="保存图片">
+			</form>
+		</div>
+	</div>
+	<div style="clear:both"></div>
+</div>
+<include file="./OA/Tpl/fooder.html"/>
+
+<div id="myModal" class="modal hide fade" aria-hidden="true" data-backdrop="static">
+	<div class="modal-header">
+		<button class="close" data-dismiss="modal" aria-hidden="true">×</button>
+		<h1>上传</h1>
+	</div>
+	<div class="modal-body">
+		<h2>正在上传文件,请稍等...</h2>
+	</div>
+	<div class="modal-footer">
+    	<h4>请不要刷新页面</h4>
+	</div>
+</div>

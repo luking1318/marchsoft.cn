@@ -1,0 +1,56 @@
+<include file="./OA/Tpl/header.html"/>
+<script src="__ROOT__/OA/Common/js/data.js"></script>
+
+<div id="content">
+	<div class="left">
+		<div class="title">个人中心</div>
+		<ul class="nav nav-pills nav-stacked">
+			<if condition="$_SESSION['login']"></if>
+				<li><a href="__URL__/thing">>&nbsp;事务管理</a></li>
+			</if>
+			<li class="active"><a href="__URL__/data">>&nbsp;个人资料</a></li>
+			<li><a href="__URL__/course">>&nbsp;课表管理</a></li>
+			<li><a href="__URL__/photo">>&nbsp;修改头像</a></li>
+			<li><a href="__URL__/password">>&nbsp;修改密码</a></li>
+		</ul>
+	</div>
+	<div class="right">
+		<!-- <form action="__URL__/update" method = "post"> -->
+		<div class="add_edit">
+			<div class="rows">
+				登陆账号：　<{$name['user_login']}>
+			</div>
+			<div class="rows">
+				加入时间：　<{$list['level']}>年
+			</div>
+			<div class="rows">
+				姓　　名：　<input type="text" name="user_name" class="text" value="<{$name['user_name']}>">
+			</div>
+			<div class="rows">
+				性　　别：　<input type="radio" name="user_sex" value="男" <if condition="$list[user_sex] == '男'">checked</if>>男　
+				<input type="radio" name="user_sex" value="女" <if condition="$list[user_sex] == '女'">	checked</if>>女
+			</div>
+			<div class="rows">
+				院　　系：　<input type="text" name="department" class="text" value="<{$list['department']}>">
+			</div>
+			<div class="rows">
+				班　　级：　<input type="text" name="class" class="text" value="<{$list['class']}>">
+			</div>
+			<div class="rows">
+				电　　话：　<input type="text" name="user_phone" class="text" value="<{$list['user_phone']}>">
+			</div>
+			<div class="rows">
+				Ｑ　　Ｑ：　<input type="text" name="QQ" class="text" value="<{$list['QQ']}>">
+			</div>
+			<div class="rows">
+				个人博客：　<input type="text" name="blog" class="blog" class="text" value="<{$list['blog']}>">
+			</div>
+			<div class="data_textarea">
+				个人说明：　<textarea name="describe" ><{$list['describe']}></textarea>
+			</div>
+			<input type="button" class="button data_button" name="save" value="保存">
+		</div>
+	</div>
+</div>
+
+<include file="./OA/Tpl/fooder.html"/>

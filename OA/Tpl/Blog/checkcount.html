@@ -1,0 +1,35 @@
+<include file="./OA/Tpl/header.html"/>
+
+<div id="content">
+	<div class="left">
+		<a href="__URL__/myblog/type/0"><div id="b_myblog" class="left_img"><img src="__ROOT__/OA/Common/img/b_myblog.png"/><br/>笔记列表</div></a>
+		<a href="__URL__/add_edit/type/0"><div id="b_addblog" class="left_img"><img src="__ROOT__/OA/Common/img/b_addblog.png"/><br/>新增笔记</div></a>
+		<a href="__URL__/blog/type/0"><div id="p_photo" class="left_img"><img src="__ROOT__/OA/Common/img/p_photo.png"/><br/>成员笔记</div></a>
+		<a href="__URL__/checkcount"><div id="b_countblog" class="left_img"><img src="__ROOT__/OA/Common/img/b_countblog.png"/><br/>笔记统计</div></a>
+	</div>
+	
+	<div class="right">
+		<table>
+			<tr>
+				<th class="first_end"></th>
+			  	<th width="46%">开始时间</th>
+				<th width="46%">结束时间</th>
+				<th width="4%" class="end_two">查看</th>
+				<th class="first_end"></th>
+			</tr>
+			<volist name="list" id="vo">
+		      	<tr>
+		      		<td class="first_end"></td>
+						<td><{$vo["starttime"]}></td>
+						<td><{$vo["endtime"]}></td>
+						<td><a href="__URL__/countinfo/id/<{$vo["result_id"]}>">查看</a></td>
+					<td class="first_end"></td>
+				</tr>
+			</volist>
+		</table>
+		<div id="page"><{$page}></div>
+		<div style="clear:both"></div>
+	</div>
+</div>
+
+<include file="./OA/Tpl/fooder.html"/>

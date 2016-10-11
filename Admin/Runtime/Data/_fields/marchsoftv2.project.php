@@ -1,0 +1,2 @@
+<?php
+return array ( 0 => 'idmarch_project', 1 => 'project_title', 2 => 'project_type', 3 => 'project_company', 4 => 'project_intro', 5 => 'project_user', 6 => 'project_pwd', 7 => 'project_img', 8 => 'project_url', 9 => 'project_lookurl', '_autoinc' => true, '_pk' => 'idmarch_project', ); ?>

@@ -1,0 +1,22 @@
+<include file="./OA/Tpl/header.html"/>
+<script src="__ROOT__/OA/Common/js/thing/lecture.js"></script>
+
+<div id="content">
+	<include file="./OA/Tpl/thing.html"/>
+	<div style="margin:20px 20px 0px 220px;">
+		<a href="__URL__/lecture">返回</a>新建讲课记录<br>
+		<input type="hidden" value="<{$list.idmarch_lecture}>" name="idmarch_lecture"> <!--存储通知公告的idmarch_news,存在说明编辑通知公告，不存在添加通知公告 -->
+		讲课主题：<input name="theme" type="text" value="<{$list.lecture_theme}>"><br>
+		讲课人：<input name="user" type="text" value="<{$list.lecture_user}>"><br>
+		内容摘要：<textarea name="content"><{$list.lecture_content}></textarea><br>
+		讲课类型：<select name="sort">
+					<foreach name="sort" item="val">
+						<option <?php if($list["lecture_sort"] == $val["idmarch_sort"]) echo "selected"?> value="<{$val.idmarch_sort}>"><{$val.sort_name}></option>
+					</foreach>
+				</select><br>
+		演示地址：<input name="file" type="text" value="<{$list.lecture_file}>"><br>
+		<input type="button" name="add_edit" value="确定">
+		<input type="button" value="取消">
+	</div>
+
+</div>

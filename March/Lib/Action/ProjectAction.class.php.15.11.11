@@ -1,0 +1,11 @@
+<?php
+class ProjectAction extends Action {
+
+	public function project(){
+		$project= D('project');
+		$list=$project->select();
+		$this->assign("list",$list);
+		$this->display();
+	}
+}
+?>

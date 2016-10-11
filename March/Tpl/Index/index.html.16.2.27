@@ -1,0 +1,116 @@
+<include file="./March/Common/html/head.html" />
+<input type="hidden" class="nav" value="0">
+	<head>
+		<link href="./March/Common/css/index/index.css" rel="stylesheet">
+		<style>
+			body{padding:0px;margin:0px;
+	background:url("__ROOT__/March/Common/img/index/bg.png");background-repeat:repeat-x;background-color:#FAFCFD;}
+		</style>
+	</head>
+	<!--滚动切换图片-->
+	<iframe height="350px" width="100%" style="background:transparent" allowtransparency="true"  frameborder="0" scrolling="no" src="__URL__/index_rmg"></iframe>
+	
+	<div id="intro_top">
+		<!--简介-->
+		<div class="intro_item">
+			<div class="intro" id="intro_img"></div>
+			<div class="intro" id="intro_txt"></div>
+			<div class="intro_con" style="color:black;font-size:12px;height:130px;padding-left:0px">
+				<{$intro}>
+			</div>
+			<div style="text-align:left;float:left;width:200px;padding-left:20px;">...</div>
+			
+			<div class="morecon">
+				<a href="__ROOT__/index.php/Introduce/introteam.html" target="_blank">详细介绍</a>
+			</div>
+			
+			<div style="clear:both"></div>
+		</div>
+		
+		<!--新闻动态-->
+		<div class="intro_item">
+			<div class="intro" id="news_img"></div>
+			<div class="intro" id="news_txt"></div>
+			<div class="intro_con" style="padding-left:0px;line-height:18px">
+				<!-- 新闻列表 -->
+				<volist name="nlist" id="nl">
+					<div class="news_list">
+						<div id="n_tl">
+							<a href="__ROOT__/index.php/News/show/nid/<{$nl[idmarch_news]}>.html"
+							 title="<{$nl[news_title]}>" target="_blank"><{$nl['news_title']}></a>
+						 </div>
+						 <div id="n_date">
+						 	<?php echo substr($nl["news_date"],0,10); ?><!-- <{$nl[news_date]}> -->
+						 </div>
+						 <div style="clear:both"></div>
+					</div>
+				</volist>
+				
+			</div>
+			<div class="morecon">
+				<a href="__ROOT__/index.php/News.html" target="_blank">更多新闻</a>
+			</div>
+			<div style="clear:both"></div>
+		</div>
+		
+		<!--精华博客-->
+		<div class="intro_item" style="background:none">
+			<div class="intro" id="blog_img"></div>
+			<div class="intro" id="blog_txt"></div>
+			<div class="intro_con" style="width:100%">
+				<!-- 新闻列表 -->
+				<volist name="blog" id="nl">
+					<div class="news_list">
+						<div id="n_tl">
+							<a href="__ROOT__/index.php/Knowledge/show/id/<{$nl[article_id]}>.html"
+							 title="<{$nl[article_title]}>" target="_blank"><{$nl['article_title']}></a>
+						 </div>
+						 <div id="n_date">
+						 	<{$nl[news_date]}>
+						 </div>
+						 <div style="clear:both"></div>
+					</div>
+				</volist>
+			</div>
+			
+			<div class="morecon">
+				<a href="__ROOT__/index.php/Knowledge/knowledge.html" target="_blank">全部博客</a>
+			</div>
+			
+			<div style="clear:both"></div>
+		</div>
+		
+		<div style="clear:both"></div>
+	
+	</div>
+	
+	<div id="project">
+		<div class="pro_item" id="pro_l"></div>
+		<div class="pro_item" id="pro_m"><img src="__ROOT__/March/Common/img/index/project/txt.png"></div>
+		<div class="pro_item" id="pro_r" style="float:right"></div>
+		<div class="pro_item" id="pro_more" style="float:right">
+			<a href="__ROOT__/index.php/Project/project.html" target="_blank">
+				<img src="__ROOT__/March/Common/img/index/project/w2.png">
+			</a>
+		</div>
+	</div>
+	
+	<div id="pro_show" class="row-fluid">
+		<ul class="thumbnails">
+		<volist name="project" id="pro">
+			<li class="span4.5" style="float:left;display:inline-block;margin-left:30px;">
+			 <a href="<{$pro[project_url]}>" target="_blank" class="thumbnail" title="<{$pro[project_title]}>">
+		     <div style="background:url(<{$pro[project_img]}>);background-size: 100%; width:290px;height:80%;"></div>
+		    </a>
+		   </li>
+		</volist>
+		</ul>
+		<div style="clear:both"></div>
+	</div>
+	
+	
+  </div>
+	
+<include file="./March/Common/html/foot.html" />
+ </BODY>
+</HTML>

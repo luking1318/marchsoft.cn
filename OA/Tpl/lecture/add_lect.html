@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="__ROOT__/Common/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="__ROOT__/OA/Common/css/personal/edit_photo.css">
+<script type="text/javascript" src="__ROOT__/Common/js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="__ROOT__/Common/js/DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="__ROOT__/OA/Common/js/lecture/index.js"></script>
+<style type="text/css">
+	#add_title{position:absolute;top:0px;Z-index:1000; width:100%;height:100%;display:none; 
+	background-color:#ccc; filter:alpha(opacity=55); -moz-opacity: 0.55; opacity: 0.55;}
+</style>
+</head>
+<body>
+	<div id="div_body">
+		<input type="hidden" id="url" value="__URL__">
+		<div><font><b><big>添加讲课</big></b></font></div>
+		<hr width=800px; align="left">
+		<div id="div_table" style="width:700px;">
+			<form action="__URL__/add_lect" method="POST" enctype='multipart/form-data' onsubmit="return sub();">
+				<table>
+					<tr>
+						<td><font>讲课主题：</font></td>
+						<td><input type="text" id="theme" name="lecture_theme" maxLength=20 onblur="hide(this.id,'font0')">&nbsp;
+						<font id="font0" style="display:none;" color=red>*不能为空！</font></td>
+					</tr>
+					<tr>
+						<td><font>讲课人：</font></td>
+						<td><input type="text" id="lect_user" name="lecture_user" onblur="hide(this.id,'font1')">&nbsp;
+						<font id="font1" style="display:none" color=red>*不能为空！</font></td>
+					</tr>
+					<tr>
+						<td><font>讲课概况：</font></td>
+						<td><input type="text" style="width:400px;" id="content" name="lecture_content" maxlength=200 onblur="hide(this.id,'font2')">&nbsp;
+						<font id="font2" style="display:none" color=red>*不能为空！</font></td>
+					</tr>
+					<tr>
+						<td><font>讲课类型：</font></td>
+						<td>
+							<select id="sel" name="lecture_sort" readonly=yes>
+								<volist name="list" id="vo">
+									<option value="<{$vo['idmarch_sort']}>"><{$vo['sort_name']}></option>
+								</volist>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td><font>讲课时间：</font></td>
+						<td>
+							<input id="newstime" name="lecture_date" type="text" readonly="true" style="width:100px;"
+							 onblur="hide(this.id,'font3')" onClick="WdatePicker()"/>&nbsp;
+						<font id="font3" style="display:none" color=red>*不能为空！</font></td>
+					</tr>
+					<tr>
+						<td><font>上传课件：</font></td>
+						<td><input type="file" name="lecture_file" id="file">&nbsp;
+					</tr>
+					<tr>
+						<td></td>
+						<td><input type="submit" value="提交" class="btn btn-primary">&nbsp;
+							<a href="__URL__/index" class="btn btn-primary">返回</a>
+						</td>
+					</tr>
+				</table>
+			</form>	
+		</div>
+	</div>
+	<div id="add_title"><font><b>讲课添加中...</b></font></div>
+</body>
+</html>

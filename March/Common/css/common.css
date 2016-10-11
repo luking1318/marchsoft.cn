@@ -1,0 +1,29 @@
+a{text-decoration:none;color:#394749;cursor: pointer;}
+a:hover{text-decoration:underline;color:#04263D}
+
+#main{margin:0px auto;width:1002px;}
+#logo{width:429px;height:124px;background:url("../img/index/logo3.png");float:left;}
+#march_top{height:163px;}
+#search{background:url("../img/index/search.jpg") no-repeat;width:450px;height:124px;float:left;margin-left:120px;
+position:relative;}
+#search_div{position:absolute;top:65px;left:100px;}
+#search_inp{height:23px;background:none;border:0px;width:150px;color:white;}
+#search_btn{margin-left:5px;width:75px;height:25px;border:0px;background:url("../img/index/search_btn.png") no-repeat}
+
+#login{float:right;text-align:right;margin-top:15px;font-size: 12px;}
+#login a{color:white;text-decoration: none}
+#login a:hover{color:#89c417;}
+#login span.count{color:#89c417;}
+#login img{margin:0px 5px 0px 20px;}
+
+#nav{float:left;width:100%;height:35px;}
+.nav_item{float:left;height:35px;line-height:40px;padding:0px 28px;background:right url("../img/index/nav.png")no-repeat}
+.nav_item a{text-decoration:none;color:#000;font-weight:bold;font-size:15px;}
+.nav_item a:hover{text-decoration:none;}
+
+.curnav{color:#04263D}
+
+#foot{background:url("../img/index/foot.png");height:106px;}
+
+#bk_r{background:url("../img/news/n_con_bg.png");padding-bottom:20px}
+

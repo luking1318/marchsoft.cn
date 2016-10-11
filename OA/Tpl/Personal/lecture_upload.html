@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="text/javascript" src="__ROOT__/Common/js/jquery.js"></script>
+	</head>
+	<body>
+		选择图片<a name="close" id="close" href="javascript:void(0);">关闭</a>
+		<form action="__URL__/lecture_upload_img" method="post" enctype="multipart/form-data">
+			<center>
+				<input name="file" type="file"><br>
+				<input type="hidden" name="idmarch_lecture"><!-- 内容为空说明新增讲课记录,不为空说明编辑讲课记录 -->
+				<input type="hidden" name="lecture_img"><!-- 内容为空说明新增图片,不为空说明更换图片 -->
+				<a name="upload" class="upload" href="javascript:void(0);">上传图片</a>
+			</center>
+		</form>
+	</body>
+</html>
+<script type="text/javascript">
+	$(function(){
+		$("input[name='idmarch_lecture']").val($("input[name='idmarch_lecture']",parent.document).val());	//把父窗体的讲课主键往iframe中赋值
+		$("input[name='lecture_img']").val($("input[name='lecture_img']",parent.document).val());	//把父窗体的讲课图像名称往iframe中的隐藏标签赋值
+		
+		$("[name='upload']").click(function(){
+			var file = $("input[name='file']").val();
+			if(file == ""){
+				parent.alert("请选择文件");
+			}else{
+				var arr = file.split(".");
+				var extend = arr[arr.length-1];
+				if(extend == "jpg" || extend == "gif" || extend == "png" || extend == "jpeg" || extend == "bmp"){
+					$("form").submit();
+				}else{
+					parent.alert("文件类型不正确");
+				}
+			}
+		});
+		$("[name='close']").click(function(){	//关闭iframe外面的div
+			$("#upload_lecture_img",parent.document).css("display","none");
+		});
+	});
+</script>
+<style type="text/css">
+<!--
+#close{
+	float:right;
+}
+form{
+	margin-top:15px;
+	padding-top:15px;
+	border-top:1px solid #ccc;
+}
+a{
+	display: block;
+	width:60px;
+	line-height:20px;
+	text-decoration: none;
+	text-align: center;
+	margin-top: 10px;
+	border:1px solid #888;
+	background-color: #ebebeb;
+	font-size: 0.8em;
+	color:black;
+}
+-->
+</style>

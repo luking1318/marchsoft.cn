@@ -1,0 +1,49 @@
+<include file="./OA/Tpl/header.html"/>
+<script src="__ROOT__/OA/Common/js/data.js"></script>
+
+<div id="content">
+	<if condition="$_SESSION['login']">
+		<include file="./OA/Tpl/manager_person.html"/>
+	<else/>
+		<include file="./OA/Tpl/member_person.html"/>
+	</if>
+
+	<div class="right p_data">
+		<!-- <form action="__URL__/update" method = "post"> -->
+		<div class="rows">
+			<span class="title">登陆账号：</span><{$name['user_login']}>
+		</div>
+		<div class="rows">
+			<span class="title">加入时间：</span><{$list['level']}>年
+		</div>
+		<div class="rows">
+			<span class="title">姓名：</span><input type="text" name="user_name" class="text" value="<{$name['user_name']}>">
+		</div>
+		<div class="rows">
+			<span class="title">性别：</span><input type="radio" name="user_sex" value="男" <if condition="$list[user_sex] == '男'">checked</if>>男　
+			<input type="radio" name="user_sex" value="女" <if condition="$list[user_sex] == '女'">checked</if>>女
+		</div>
+		<div class="rows">
+			<span class="title">院系：</span><input type="text" name="department" class="text" value="<{$list['department']}>">
+		</div>
+		<div class="rows">
+			<span class="title">班级：</span><input type="text" name="class" class="text" value="<{$list['class']}>">
+		</div>
+		<div class="rows">
+			<span class="title">电话：</span><input type="text" name="user_phone" class="text" value="<{$list['user_phone']}>">
+		</div>
+		<div class="rows">
+			<span class="title">ＱＱ：</span><input type="text" name="QQ" class="text" value="<{$list['QQ']}>">
+		</div>
+		<div class="rows">
+			<span class="title">个人博客：</span><input type="text" name="blog" class="blog" class="text" value="<{$list['blog']}>">
+		</div>
+		<div class="rows">
+			<span class="title">个人说明：</span><textarea name="describe" ><{$list['describe']}></textarea>
+		</div>
+		<input type="button" class="button button_one" name="save" value="保存">
+	</div>
+	<div style="clear:both"></div>
+</div>
+
+<include file="./OA/Tpl/fooder.html"/>

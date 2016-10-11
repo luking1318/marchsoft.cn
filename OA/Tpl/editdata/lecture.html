@@ -1,0 +1,37 @@
+<include file="./OA/Tpl/header.html"/>
+<script src="__ROOT__/OA/Common/js/thing/lecture.js"></script>
+
+<div id="content">
+	<include file="./OA/Tpl/thing.html"/>
+	<div style="margin:20px 20px 0px 220px;">
+		<input name="del_all" type="button" value="删除">&nbsp;<a href="__URL__/add_edit_lecture">上传讲课记录</a>
+		<table>
+			<tr>
+				<th><input type="checkbox" name="all"></th>
+				<th>讲课主题</th>
+				<th>讲课人</th>
+				<th>内容摘要</th>
+				<th>讲课类型</th>
+				<th>时间</th>
+				<th>操作</th>
+			</tr>
+			<foreach name="list" item="val">
+				<tr>
+					<td><input type="checkbox" name="check" value="<{$val.idmarch_lecture}>"></td>
+					<td><{$val.lecture_theme}></td>
+					<td><{$val.lecture_user}></td>
+					<td><{$val.lecture_content}></td>
+					<td><{$val.sort_name}></td>
+					<td><{$val.lecture_date}></td>
+					<td>
+						<a>查看</a>
+						<a href="__URL__/add_edit_lecture/id/<{$val.idmarch_lecture}>">编辑</a>
+						<a name="del"value="<{$val.idmarch_lecture}>">删除</a>
+					</td>
+				</tr>
+			</foreach>
+		</table>
+		<div id="page"><{$page}></div>
+		<div style="clear:both"></div>
+	</div>
+</div>

@@ -1,0 +1,24 @@
+#div_center{
+	width:100%;height:auto; min-height:400px;}
+body{
+	padding:0px;margin:0px auto;background:url("../../img/photo/bg.jpg") repeat-x; background-color:#F7F7F7;}
+#div_pont{
+	height:94px;width:100%;background:url("../../img/photo/bg_cen_sty.jpg") repeat-x;margin-top:3px;}
+#div_photo{
+	margin-top:20px;height:auto;}
+#div_frame{
+	float:left;margin-top:10px;width:180px;margin-left:19px;}
+.table-bordered{
+	width:200px;height:200px;}
+#a_return{
+	display:block;height:28px;background:url("../../img/photo/return.png");display:block;float:left;width:100px;}
+#a_return:hover{
+	background:url("../../img/photo/return_1.png");}
+#div_line{
+	width:98%;height:3px;background:url("../../img/photo/line.jpg") repeat-x;}
+#div_return,#div_line,#font_fon,.div_pho_show{
+	margin-left:20px;}
+#font_fon{
+	float:left;margin-top:30px;margin-bottom:10px;display:block;background:url(../../img/photo/sanyue.png);height:20px;width:80px;}
+#iframe{
+	margin-top:-10px;}

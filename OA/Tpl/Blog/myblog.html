@@ -1,0 +1,45 @@
+<include file="./OA/Tpl/header.html"/>
+<script src="__ROOT__/OA/Common/js/blog.js"></script>
+<div id="content">
+	<include file="./OA/Tpl/blog_left.html"/>
+	<div class="right">
+		<table>
+			<tr>
+				<th class="first_end"></th>
+			  	<th width="44%">标题</th>
+				<th width="10%">类型</th>
+			  	<th width="10%">发布人</th>
+		    	<th width="12%">发布时间</th>
+		    	<th width="8%">查看</th>
+				<th width="8%">编辑</th>
+		        <th width="4%" class="end_two">删除</th>
+		        <th class="first_end"></th>
+			</tr>
+			<volist name="list" id="vo">
+			    <tr>
+			    	<td class="first_end"></td>
+					<td><{$vo["article_title"]}></td>
+					<td><{$vo["sort_name"]}></td>
+					<td><{$vo["user_name"]}></td>
+					<td><{$vo["article_time"]}></td>
+		            <td>
+			          <a class="img_show" target="_new" href="__ROOT__/index.php/Knowledge/show/id/<{$vo["article_id"]}>"><img src="__ROOT__/OA/Common/img/img_show.png"/></a>
+		            </td>
+				    <td>
+				        <a class="img_edit" href="__URL__/add_edit?type=<{$vo['article_type']}>&id=<{$vo['article_id']}>"><img src="__ROOT__/OA/Common/img/img_edit.png"/></a>
+					</td>
+					<td>
+						<a class="img_del" name="del" href="#" id="<{$vo['article_id']}>" type="<{$vo['article_type']}>"><img src="__ROOT__/OA/Common/img/img_del.png"/></a>
+					</td>
+			 		<td class="first_end"></td>
+				</tr>
+			</volist>
+		</table>
+		<div id="page"><{$page}></div>
+		<div style="clear:both"></div>
+	</div>
+	<div style="clear:both"></div>
+	<input type="hidden" id="article_id">	<!-- 选择行博客或笔记的主键 -->
+</div>
+
+<include file="./OA/Tpl/fooder.html"/>
