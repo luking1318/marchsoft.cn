@@ -6,6 +6,20 @@ class PrizeAction extends Action{
 
 	public function index(){
             $mc = M('prize_don');
+
+            $s1=$mc ->order('don_num desc')->find();//一次捐赠最高的
+            $s2=$mc ->group('don_name')->select();
+            $name = "";//累计捐赠最高的名字
+            $n = 0;//累计捐赠最高的钱数
+            for($i=0;$i<count($s2);$i++){
+            	$s=$mc ->where('don_name="'.$s2[$i]['don_name'].'"')->sum('don_num');
+            	if($s>$n){
+            		$name=$s2[$i]['don_name'];
+            		$n=$s;
+            	}
+            }
+
+
             $clist = $mc->limit(10)->select();
             $this->assign('clist',$clist);
 		$this->display();
