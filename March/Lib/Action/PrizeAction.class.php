@@ -19,9 +19,11 @@ class PrizeAction extends Action{
             		$n=$s;
             	}
             }
+            $this->assign("name",$name);
+            $this->assign("n",$n);
+            $this->assign("s1",$s1);
 
-
-            $clist = $mc->limit(10)->select();
+            $clist = $mc->limit(6)->select();
             $this->assign('clist',$clist);
 		$this->display();
 	}

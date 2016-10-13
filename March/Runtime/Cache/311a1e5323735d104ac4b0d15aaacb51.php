@@ -124,6 +124,7 @@
 				<?php if(!$clist): ?><div class="zenglist">暂无</div><?php endif; ?>
 				<?php if(is_array($clist)): foreach($clist as $key=>$vo): ?><div class="zenglist"><?php echo ($vo['don_name']); ?>： <?php echo ($vo['don_mark']); ?></div><?php endforeach; endif; ?>
 			</div>
+<<<<<<< HEAD
 			<div class="erwei">
 				<div class="title">
 					<h3>捐赠我们</h3>
@@ -132,6 +133,27 @@
 				<h3>手机支付宝扫描二维码支付</h3>
 				<h4>&nbsp;您的帮助是对我们最大的支持和动力！</h4>
 			</div>
+=======
+			<img title="支付宝二维码"  src="__ROOT__/March/Common/img/prize/erwei.jpg">
+			<h3>手机支付宝扫描二维码支付</h3>
+			<h4>&nbsp;您的帮助是对我们最大的支持和动力！</h4>
+		</div>
+		<div class="zeng">
+			<div class="title">
+				<h3>捐赠墙</h3>
+				<a  href="prize.html" >更多>></a>
+			</div>
+			<?php if(!$clist): ?><div class="zenglist">暂无</div><?php endif; ?>
+			
+			<?php if(is_array($clist)): foreach($clist as $key=>$vo): ?><div class="zenglist"><?php echo ($vo['don_name']); ?>： <?php echo ($vo['don_mark']); ?></div><?php endforeach; endif; ?>
+			<div class="zenglist best">
+				<p>单次最高:<?php echo ($s1['don_name']); ?>一次捐献￥<?php echo ($s1['don_num']); ?></p>
+			</div>
+			<div class="zenglist best">
+				<p>累计最高:<?php echo ($name); ?>总共捐献￥<?php echo ($n); ?></p>
+			</div>
+		</div>
+>>>>>>> fd9cf1ee0a2fd8d95512d667627e56dcd7853f09
 		</div>
 
 

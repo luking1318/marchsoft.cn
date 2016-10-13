@@ -57,9 +57,14 @@ body
  	border-bottom: 1px solid #D4D4D4;
     	background-color: #FBFBFB;
  }
- .title h3{
+ .title h3,.title a{
   	margin-top: 10px;
   	margin-left: 10px;
+  	/*float: left;*/
+  	display: inline-block;
+  }
+  .title a{
+  	margin-left: 150px;
   }
 .zeng {
 	border: 1px solid #D4D4D4;
@@ -82,6 +87,9 @@ body
     	overflow: hidden;
     	text-overflow: ellipsis;
     	white-space: nowrap;
+}
+.best  p{
+	color:#FF9F32;
 }
 
 
