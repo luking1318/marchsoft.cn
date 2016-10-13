@@ -23,13 +23,21 @@
 		<div class="zeng">
 			<div class="title">
 				<h3>捐赠墙</h3>
+				<a  href="prize.html" >更多>></a>
 			</div>
 			<if condition="!$clist">
 			<div class="zenglist">暂无</div>
 			</if>
+			
 			<foreach name="clist" item="vo">
 				<div class="zenglist"><{$vo['don_name']}>： <{$vo['don_mark']}></div>
 			</foreach>
+			<div class="zenglist best">
+				<p>单次最高:<{$s1['don_name']}>一次捐献￥<{$s1['don_num']}></p>
+			</div>
+			<div class="zenglist best">
+				<p>累计最高:<{$name}>总共捐献￥<{$n}></p>
+			</div>
 		</div>
 		</div>
 
