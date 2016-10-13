@@ -1,6 +1,7 @@
 <?php 
 /**
-* 
+* 三月奖项
+*
 */
 class PrizeAction extends Action{
 

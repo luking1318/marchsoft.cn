@@ -117,28 +117,21 @@
 <div class="conbody">
 	<div class="conmain">
 		<div class="rightcon">
-		<div class="logo">
-			<div class="title">
-				<h3>三月软件</h3>
+			<div class="zeng">
+				<div class="title">
+					<h3>捐赠墙</h3>
+				</div>
+				<?php if(!$clist): ?><div class="zenglist">暂无</div><?php endif; ?>
+				<?php if(is_array($clist)): foreach($clist as $key=>$vo): ?><div class="zenglist"><?php echo ($vo['don_name']); ?>： <?php echo ($vo['don_mark']); ?></div><?php endforeach; endif; ?>
 			</div>
-			<img title="三月软件"  src="__ROOT__/March/Common/img/prize/logo.png">
-			<h1>三月软件工作室</h1>
-		</div>
-		<div class="erwei">
-			<div class="title">
-				<h3>捐赠我们</h3>
+			<div class="erwei">
+				<div class="title">
+					<h3>捐赠我们</h3>
+				</div>
+				<img title="支付宝二维码"  src="__ROOT__/March/Common/img/prize/erwei.jpg">
+				<h3>手机支付宝扫描二维码支付</h3>
+				<h4>&nbsp;您的帮助是对我们最大的支持和动力！</h4>
 			</div>
-			<img title="支付宝二维码"  src="__ROOT__/March/Common/img/prize/erwei.jpg">
-			<h3>手机支付宝扫描二维码支付</h3>
-			<h4>&nbsp;您的帮助是对我们最大的支持和动力！</h4>
-		</div>
-		<div class="zeng">
-			<div class="title">
-				<h3>捐赠墙</h3>
-			</div>
-			<?php if(!$clist): ?><div class="zenglist">暂无</div><?php endif; ?>
-			<?php if(is_array($clist)): foreach($clist as $key=>$vo): ?><div class="zenglist"><?php echo ($vo['don_name']); ?>： <?php echo ($vo['don_mark']); ?></div><?php endforeach; endif; ?>
-		</div>
 		</div>
 
 

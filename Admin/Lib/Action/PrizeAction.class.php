@@ -1,4 +1,8 @@
 <?php
+/**
+* 三月奖项
+*
+*/
 class PrizeAction extends BaseAction {
 
 	//添加项目

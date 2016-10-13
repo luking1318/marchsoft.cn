@@ -33,18 +33,7 @@ body
 	width: 280px;
 }
 /*right*/
-.rightcon .logo{
-	margin-bottom: 20px;
-	width: 100%;
-	padding-bottom: 26px;
-	border: 1px solid #D4D4D4;
-	text-align: center;
-}
- .logo img{
- 	margin-top: 10px;
- 	width: 170px;
- 	margin-bottom: 20px;
- }
+
 
  .rightcon .erwei{
  	border: 1px solid #D4D4D4;
