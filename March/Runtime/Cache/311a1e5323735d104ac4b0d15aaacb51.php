@@ -153,20 +153,20 @@
 
 			<div class="t1 don">
 				<h4>卓越奖获得者</h4>
-				<a target="_blank" class="pria" href="prizers.html">更多>></a>
+				<a target="_blank" class="pria" href="prizers.html?ses=1">更多>></a>
 				<!-- <div class="none">
 					<h2>暂无</h2>
 				</div> -->
 				<div class="zuolist">
 						<div class="zuodv">
 							<p class="prip zuo1" ><strong><br>一<br>等<br>奖<br>获<br>得<br>者</strong></p>
-							<a href="prizer/id/1.html"><img src="__ROOT__/Admin/Public/Upload/image/prize/1.jpg">
-							<h3>杨亚东</h3></a>
+							<a href="prizer/id/<?php echo ($first['prize_id']); ?>.html"><img src="<?php echo ($first['prize_img']); ?>">
+							<h3><?php echo ($first['prize_name']); ?></h3></a>
 						</div>
 						<div class="zuodv">
 							<p class="prip zuo2" ><strong><br>二<br>等<br>奖<br>获<br>得<br>者</strong></p>
-							<a href="prizer/id/2.html"><img src="__ROOT__/Admin/Public/Upload/image/prize/2.jpg">
-							<h3>冷恩鑫</h3></a>
+							<a href="prizer/id/<?php echo ($second['prize_id']); ?>.html"><img src="<?php echo ($second['prize_img']); ?>">
+							<h3><?php echo ($second['prize_name']); ?></h3></a>
 						</div>
 				</div>
 			</div>
@@ -176,7 +176,7 @@
 				<p>新锐奖学金每年定额发放给3名学生，标准为每人每年1000元。奖励对象面向河南科技学院全日制本科大学一年级在校生，计算机专业兴趣浓厚，软件编程能力突出，对行业技术敏感，具备一定的项目开发及管理实战经验者。</p>
 			</div>
 			<div class="t1 don">
-				<a target="_blank" class="pria" href="prizers.html">更多>></a>
+				<a target="_blank" class="pria" href="prizers.html?ses=1">更多>></a>
 				<h4>卓越奖获得者</h4>
 				<div class="none">
 					<h2>暂未开始</h2>

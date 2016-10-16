@@ -19,10 +19,17 @@ class PrizeAction extends BaseAction {
     	else{
     		$info=$this->up();
     	} 	
-        $pro= D('prize');
+            $pro= D('prize');
 	    $pro->prize_name=$_POST['name'];
-	    $pro->prize_con=$_POST['con'];
-	    $pro->prize_num=$_POST['num'];
+	    $pro->prize_kind=$_POST['kind'];
+	    $pro->prize_ses=$_POST['ses'];
+                    $pro->prize_class=$_POST['class'];
+                    $pro->prize_col=$_POST['col'];
+                    $pro->prize_maj=$_POST['maj'];
+                    $pro->prize_tel=$_POST['tel'];
+                    $pro->prize_email=$_POST['email'];
+                    $pro->prize_stucon=$_POST['stucon'];
+                    $pro->prize_procon=$_POST['procon'];
 	    $pro->proze_time=date("Y-M-D h:i:s",time());
 	    $pro->prize_img="__ROOT__/Admin/Public/Upload/image/prize/".$info[0]['savename'];
 	    $mode=$pro->add();
@@ -76,6 +83,7 @@ class PrizeAction extends BaseAction {
     		$imagemode=0;
     	$this->assign("content",$con[0]);
     	$this->assign("imagemode",$imagemode);
+            // dump($con);
     	$this->display('editprize');
     }
     
@@ -94,9 +102,16 @@ class PrizeAction extends BaseAction {
     	}
     	$id=$_GET['id'];	
     	$pro= D('prize');
-	     $pro->prize_name=$_POST['name'];
-                    $pro->prize_con=$_POST['con'];
-                    $pro->prize_num=$_POST['num'];
+	   $pro->prize_name=$_POST['name'];
+        $pro->prize_kind=$_POST['kind'];
+        $pro->prize_ses=$_POST['ses'];
+                    $pro->prize_class=$_POST['class'];
+                    $pro->prize_col=$_POST['col'];
+                    $pro->prize_maj=$_POST['maj'];
+                    $pro->prize_tel=$_POST['tel'];
+                    $pro->prize_email=$_POST['email'];
+                    $pro->prize_stucon=$_POST['stucon'];
+                    $pro->prize_procon=$_POST['procon'];
 	    if($mode == 1)
 	      $data['prize_img']="__ROOT__/Admin/Public/Upload/image/prize/".$info[0]['savename'];
     	$pro->where('prize_id='.$id)->save($data);   
