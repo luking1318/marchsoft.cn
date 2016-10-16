@@ -18,10 +18,10 @@
 			</p>
 			<p>
 				奖&nbsp;&nbsp;&nbsp;项: <select id="projecttype" name="num" type="text" style="width:150px; margin-right:50px;" maxlength="20">
-					<?php if($content['prize_num'] == 1): ?><option value="1">新锐奖学金</option>
-					<?php else: ?><option value="0">卓越奖学金</option><?php endif; ?>
-					<option value="0">卓越奖学金</option>
-					<option value="1">新锐奖学金</option>
+					<?php if($content['prize_num'] == 1): ?><option value="1">卓越奖学金</option>
+					<option value="0">新锐奖学金</option>
+					<?php else: ?><option value="0">新锐奖学金</option>
+					<option value="1">卓越奖学金</option><?php endif; ?>
 				</select>
 			</p>
 			<P>

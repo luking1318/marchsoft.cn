@@ -47,11 +47,11 @@ body
  }
 
  .rightcon .erwei{
- 	border: 1px solid #D4D4D4;
- 	width: 100%;
- 	text-align: center;
- 	padding-bottom: 20px;
- 	margin-bottom: 26px;
+	border: 1px solid #D4D4D4;
+	width: 100%;
+	text-align: center;
+	padding-bottom: 20px;
+	margin-bottom: 26px;
  }
  .erwei img{
  	margin-top: 10px;
@@ -90,14 +90,14 @@ body
 .zeng .zenglist{
 	font-size: 16px;
 	font-family: "Century Gothic","Microsoft yahei";
-    	color: #323232;
+	color: #323232;
 	margin: 0 10px 6px;
-    	padding-bottom: 6px;
-    	line-height: 1.8;
-    	border-bottom: 1px dashed #D4D4D4;
-    	overflow: hidden;
-    	text-overflow: ellipsis;
-    	white-space: nowrap;
+	padding-bottom: 6px;
+	line-height: 1.8;
+	border-bottom: 1px dashed #D4D4D4;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 .best  p{
 	color:#FF9F32;

@@ -113,30 +113,360 @@
 
 </center>
 
-  <link href="__ROOT__/March/Common/css/prize/tt.css" rel="stylesheet">
-   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-   <div class="asd">
- 
-	<div class="all">
-<center>
-<div>
-	<img class="time" src="__ROOT__/March/Common/img/prize/1.png" alt="">
-</div>
-<div class="l">
-	<img src="__ROOT__/March/Common/img/prize/2.png" alt="">
-</div>
-<div class="p">
-	<img class="prize c" src="__ROOT__/March/Common/img/prize/5.jpg" alt="">
-	<p class="content c">新锐奖学金每年定额发放给3名学生，标准为每人每年1000元。奖励对象面向河南科技学院全日制本科大学一年级在校生，计算机专业兴趣浓厚，软件编程能力突出，对行业技术敏感，具备一定的项目开发及管理实战经验者。</p><br/>ddd
-	<img class="b1" src="__ROOT__/March/Common/img/prize/3.png" alt="">
-	<img class="prize c" src="__ROOT__/March/Common/img/prize/6.jpg" alt="">
-	<p class="content c">励志奖学金每年定额发放给1名学生，标准为每人每年5000元。奖励对象面向河南科技学院全日制本科所有在校生，计算机专业实力过硬，软件编程能力优秀，行业技术视野开阔，具备优越的项目开发及管理能力者。</p>
-	<img class="b2" src="__ROOT__/March/Common/img/prize/3.png" alt="">
-</div>
-</center>
-</div>
-	 </div>
+  <!-- <link href="__ROOT__/March/Common/css/prize/tt.css" rel="stylesheet"> -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <!-- <link rel="stylesheet" href="__ROOT__/March/Common/css/prize/bootstrap.min.css"> -->
+   <link href="__ROOT__/March/Common/css/prize/prize.css" rel="stylesheet">
+    <link rel="stylesheet" href="__ROOT__/March/Common/css/prize/font-awesome.min.css">
+    <link rel="stylesheet" href="__ROOT__/March/Common/css/prize/material-cards.css">
+    <link rel="stylesheet" href="__ROOT__/March/Common/css/prize/bootstrap.min.css">
+    <style type="text/css">
+.material-card.mc-active .mc-content {
+    padding-top: 23.6em !important;
+    /*height:400px;*/
+    height: 112%;
+}
+.material-card.mc-active .mc-footer {
+    top: calc(100% - -41px);
+    left: 16px;
+    right: 0;
+    height: 22px;
+    padding-top: 15px;
+    padding-left: 25px;
+}
+.con{
+    width: 1002px;
+    /*position: relative;*/
+    margin: 0 auto;
+    border: 2px solid #888888;
+    margin-top:20px; 
+}
+.col-md-4 {
+    width: 27%;
+}
+.btn-toolbar {
+    margin-top: 0px;
+    margin-bottom: 9px;
+}
+</style>
 
+<!-- </head> -->
+<!-- <body> -->
+
+<div class="conbody">
+<div class="conmain">
+<div class="btn-toolbar" role="toolbar">
+    <div class="btn-group">
+        <button type="button" class="btn btn-default">2016</button>
+        <button type="button" class="btn btn-default">2017</button>
+        <button type="button" class="btn btn-default">2018</button>
+    </div>
+</div>
+<h3>卓越奖获得者</h3>
+    <div class="htmleaf-container">
+        <br>
+        <section class="container">
+
+            <div class="row active-with-click">
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <article class="material-card Red">
+                        <h2>
+                            <span>Christopher Walken</span>
+                            <strong>
+                                <i class="fa fa-fw fa-star"></i>
+                                The Deer Hunter
+                            </strong>
+                        </h2>
+                        <div class="mc-content">
+                            <div class="img-container">
+                                <img class="img-responsive" src="__ROOT__/March/Common/img/prize/aFirst.jpg">
+                            </div>
+                            <div class="mc-description">
+                                He has appeared in more than 100 films and television shows, including The Deer Hunter, Annie Hall, The Prophecy trilogy, The Dogs of War ...
+                            </div>
+                        </div>
+                        <a class="mc-btn-action">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                        <div class="mc-footer">
+                            <h4>
+                                Social
+                            </h4>
+                           <!--  <a class="fa fa-fw fa-facebook"></a>
+                            <a class="fa fa-fw fa-twitter"></a>
+                            <a class="fa fa-fw fa-linkedin"></a>
+                            <a class="fa fa-fw fa-google-plus"></a> -->
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <article class="material-card Pink">
+                        <h2>
+                            <span>Sean Penn</span>
+                            <strong>
+                                <i class="fa fa-fw fa-star"></i>
+                                Mystic River
+                            </strong>
+                        </h2>
+                        <div class="mc-content">
+                            <div class="img-container">
+                                <img class="img-responsive" src="__ROOT__/March/Common/img/prize/aFirst.jpg">
+                            </div>
+                            <div class="mc-description">
+                                He has won two Academy Awards, for his roles in the mystery drama Mystic River (2003) and the biopic Milk (2008). Penn began his acting career in television with a brief appearance in a 1974 episode of Little House on the Prairie ...
+                            </div>
+                        </div>
+                        <a class="mc-btn-action">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                        <div class="mc-footer">
+                            <h4>
+                                Social
+                            </h4>
+                            <!-- <a class="fa fa-fw fa-facebook"></a>
+                            <a class="fa fa-fw fa-twitter"></a>
+                            <a class="fa fa-fw fa-linkedin"></a>
+                            <a class="fa fa-fw fa-google-plus"></a> -->
+                        </div>
+                    </article>
+                </div>
+                <!-- <div class="col-md-4 col-sm-6 col-xs-12">
+                    <article class="material-card Purple">
+                        <h2>
+                            <span>Clint Eastwood</span>
+                            <strong>
+                                <i class="fa fa-fw fa-star"></i>
+                                Million Dollar Baby
+                            </strong>
+                        </h2>
+                        <div class="mc-content">
+                            <div class="img-container">
+                                <img class="img-responsive" src="__ROOT__/March/Common/img/prize/aFirst.jpg">
+                            </div>
+                            <div class="mc-description">
+                                He rose to international fame with his role as the Man with No Name in Sergio Leone's Dollars trilogy of spaghetti Westerns during the 1960s ...
+                            </div>
+                        </div>
+                        <a class="mc-btn-action">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                        <div class="mc-footer">
+                            <h4>
+                                Social
+                            </h4>
+                            <a class="fa fa-fw fa-facebook"></a>
+                            <a class="fa fa-fw fa-twitter"></a>
+                            <a class="fa fa-fw fa-linkedin"></a>
+                            <a class="fa fa-fw fa-google-plus"></a> 
+                        </div>
+                    </article>
+                </div>-->
+                <!--</div>-->
+                <!-- <div class="row active-with-hover"> -->
+               <!--  <div class="col-md-4 col-sm-6 col-xs-12">
+                    <article class="material-card Deep-Purple">
+                        <h2>
+                            <span>Dustin Hoffman</span>
+                            <strong>
+                                <i class="fa fa-fw fa-star"></i>
+                                Kramer vs. Kramer
+                            </strong>
+                        </h2>
+                        <div class="mc-content">
+                            <div class="img-container">
+                                <img class="img-responsive" src="__ROOT__/March/Common/img/prize/aFirst.jpg">
+                            </div>
+                            <div class="mc-description">
+                                He has been known for his versatile portrayals of antiheroes and vulnerable characters.[3] He won the Academy Award for Kramer vs. Kramer in 1979 ...
+                            </div>
+                        </div>
+                        <a class="mc-btn-action">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                        <div class="mc-footer">
+                            <h4>
+                                Social
+                            </h4>
+                            <a class="fa fa-fw fa-facebook"></a>
+                            <a class="fa fa-fw fa-twitter"></a>
+                            <a class="fa fa-fw fa-linkedin"></a>
+                            <a class="fa fa-fw fa-google-plus"></a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <article class="material-card Indigo">
+                        <h2>
+                            <span>Edward Norton</span>
+                            <strong>
+                                <i class="fa fa-fw fa-star"></i>
+                                American History X
+                            </strong>
+                        </h2>
+                        <div class="mc-content">
+                            <div class="img-container">
+                                <img class="img-responsive" src="__ROOT__/March/Common/img/prize/aFirst.jpg">
+                            </div>
+                            <div class="mc-description">
+                                He has been nominated for three Academy Awards for his work in the films Primal Fear, American History X and Birdman. He also starred in other roles ...
+                            </div>
+                        </div>
+                        <a class="mc-btn-action">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                        <div class="mc-footer">
+                            <h4>
+                                Social
+                            </h4>
+                            <a class="fa fa-fw fa-facebook"></a>
+                            <a class="fa fa-fw fa-twitter"></a>
+                            <a class="fa fa-fw fa-linkedin"></a>
+                            <a class="fa fa-fw fa-google-plus"></a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <article class="material-card Blue">
+                        <h2>
+                            <span>Michael Caine</span>
+                            <strong>
+                                <i class="fa fa-fw fa-star"></i>
+                                Educated Rita
+                            </strong>
+                        </h2>
+                        <div class="mc-content">
+                            <div class="img-container">
+                                <img class="img-responsive" src="__ROOT__/March/Common/img/prize/aFirst.jpg">
+                            </div>
+                            <div class="mc-description">
+                                English actor and author. Renowned for his distinctive working class cockney accent, Caine has appeared in over 115 films and is regarded as a British ...
+                            </div>
+                        </div>
+                        <a class="mc-btn-action">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                        <div class="mc-footer">
+                            <h4>
+                                Social
+                            </h4>
+                            <a class="fa fa-fw fa-facebook"></a>
+                            <a class="fa fa-fw fa-twitter"></a>
+                            <a class="fa fa-fw fa-linkedin"></a>
+                            <a class="fa fa-fw fa-google-plus"></a>
+                        </div>
+                    </article>
+                </div> -->
+
+
+
+            </div>
+        </section>
+    </div>
+    <hr style="height:1px;border:none;border-top:1px dashed #0066CC;" />
+    <h3>新锐奖获得者</h3>
+     <div class="htmleaf-container">
+        <br>
+        <section class="container">
+
+            <div class="row active-with-click">
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <article class="material-card Red">
+                        <h2>
+                            <span>Christopher Walken</span>
+                            <strong>
+                                <i class="fa fa-fw fa-star"></i>
+                                The Deer Hunter
+                            </strong>
+                        </h2>
+                        <div class="mc-content">
+                            <div class="img-container">
+                                <img class="img-responsive" src="__ROOT__/March/Common/img/prize/aFirst.jpg">
+                            </div>
+                            <div class="mc-description">
+                                He has appeared in more than 100 films and television shows, including The Deer Hunter, Annie Hall, The Prophecy trilogy, The Dogs of War ...
+                            </div>
+                        </div>
+                        <a class="mc-btn-action">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                        <div class="mc-footer">
+                            <h4>
+                                Social
+                            </h4>
+                           <!--  <a class="fa fa-fw fa-facebook"></a>
+                            <a class="fa fa-fw fa-twitter"></a>
+                            <a class="fa fa-fw fa-linkedin"></a>
+                            <a class="fa fa-fw fa-google-plus"></a> -->
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <article class="material-card Red">
+                        <h2>
+                            <span>Christopher Walken</span>
+                            <strong>
+                                <i class="fa fa-fw fa-star"></i>
+                                The Deer Hunter
+                            </strong>
+                        </h2>
+                        <div class="mc-content">
+                            <div class="img-container">
+                                <img class="img-responsive" src="__ROOT__/March/Common/img/prize/aFirst.jpg">
+                            </div>
+                            <div class="mc-description">
+                                He has appeared in more than 100 films and television shows, including The Deer Hunter, Annie Hall, The Prophecy trilogy, The Dogs of War ...
+                            </div>
+                        </div>
+                        <a class="mc-btn-action">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                        <div class="mc-footer">
+                            <h4>
+                                Social
+                            </h4>
+                           <!--  <a class="fa fa-fw fa-facebook"></a>
+                            <a class="fa fa-fw fa-twitter"></a>
+                            <a class="fa fa-fw fa-linkedin"></a>
+                            <a class="fa fa-fw fa-google-plus"></a> -->
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <article class="material-card Pink">
+                        <h2>
+                            <span>Sean Penn</span>
+                            <strong>
+                                <i class="fa fa-fw fa-star"></i>
+                                Mystic River
+                            </strong>
+                        </h2>
+                        <div class="mc-content">
+                            <div class="img-container">
+                                <img class="img-responsive" src="__ROOT__/March/Common/img/prize/aFirst.jpg">
+                            </div>
+                            <div class="mc-description">
+                                He has won two Academy Awards, for his roles in the mystery drama Mystic River (2003) and the biopic Milk (2008). Penn began his acting career in television with a brief appearance in a 1974 episode of Little House on the Prairie ...
+                            </div>
+                        </div>
+                        <a class="mc-btn-action">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                        <div class="mc-footer">
+                            <h4>
+                                Social
+                            </h4>
+                            <!-- <a class="fa fa-fw fa-facebook"></a>
+                            <a class="fa fa-fw fa-twitter"></a>
+                            <a class="fa fa-fw fa-linkedin"></a>
+                            <a class="fa fa-fw fa-google-plus"></a> -->
+                        </div>
+                    </article>
+                </div>
+                 </div>
+        </section>
+    </div>
+    </div>
+</div>
 <input type="hidden" id="rot" value="__ROOT__/" />
 	</div>
 	 </center>
@@ -154,7 +484,32 @@
   <script src="__ROOT__/March/Common/js/common.js" style="text/javascript"></script>
   <script src="__ROOT__/March/Common/js/login.js" style="text/javascript"></script>
 
-<script src="__ROOT__/March/Common/js/jquery-1.4.3.min.js" style="text/javascript"></script> 
-<script src="__ROOT__/March/Common/js/prize/Scholarship.js" style="text/javascript"></script> 
+<script src="__ROOT__/March/Common/js/prize/jquery.min.js" type="text/javascript"></script>
+ <script src="__ROOT__/March/Common/js/prize/jquery.material-cards.min.js"></script>
+<script type="text/javascript">
+        $(function () {
+            $('.material-card').materialCard({
+                icon_close: 'fa-chevron-left',
+                icon_open: 'fa-thumbs-o-up',
+                icon_spin: 'fa-spin-fast',
+                card_activator: 'click'
+            });
+            $("button").click(function(){
+                $("button").css({'background-color':'white','color':'black'});
+                $(this).css({'background-color':'#2196f3','color':'white'});
+            });
+
+            //        $('.active-with-click .material-card').materialCard();
+
+            // window.setTimeout(function () {
+            //     $('.material-card:eq(1)').materialCard('open');
+            // }, 2000);
+
+            // $('.material-card').on('shown.material-card show.material-card hide.material-card hidden.material-card', function (event) {
+            //     console.log(event.type, event.namespace, $(this));
+            // });
+        });
+    </script>
+</script>
 </BODY>
 </HTML>
