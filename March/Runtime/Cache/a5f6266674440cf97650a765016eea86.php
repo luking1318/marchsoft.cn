@@ -111,82 +111,112 @@
 		});	
 	</script>
 
-</center>
-<link href="__ROOT__/March/Common/css/prize/prize.css" rel="stylesheet">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<div class="conbody">
-	<div class="conmain">
-		<div class="rightcon">
-			<div class="prize mod">
-				<div class="title">
-					<h3>三月奖项</h3>
-				</div>
-				<p>三月奖项是三月奖项三月奖项三月奖项三月奖项三月奖项三月奖项三月奖项三月奖项三月奖项三月奖项三月奖项三月奖项三月奖项三月奖项三月奖项</p>
+<input type="hidden" class="nav" value="0">
+	<head>
+		<link href="/March/Common/css/index/index.css" rel="stylesheet">
+		<style>
+			body{padding:0px;margin:0px;
+	background:url("__ROOT__/March/Common/img/index/bg.png");background-repeat:repeat-x;background-color:#FAFCFD;}
+		</style>
+	</head>
+	<!--滚动切换图片-->
+	<iframe height="350px" width="100%" style="background:transparent" allowtransparency="true"  frameborder="0" scrolling="no" src="__URL__/index_rmg"></iframe>
+	
+	<div id="intro_top">
+		<!--简介-->
+		<div class="intro_item">
+			<div class="intro" id="intro_img"></div>
+			<div class="intro" id="intro_txt"></div>
+			<div class="intro_con" style="color:black;font-size:12px;height:130px;padding-left:0px">
+				<?php echo ($intro); ?>
 			</div>
-			<div class="zeng mod">
-				<div class="title">
-					<h3>捐赠墙</h3>
-					<a target="_blank"  href="prize.html" >更多>></a>
-				</div>
-				<?php if(!$clist): ?><div class="zenglist">暂无</div><?php endif; ?>
-				<div class="zenglist best">累计最高:<?php echo ($name); ?>总共捐献￥<?php echo ($n); ?></div>
-				<div class="zenglist best">单次最高:<?php echo ($s1['don_name']); ?>一次捐献￥<?php echo ($s1['don_num']); ?></div>
-				<?php if(is_array($clist)): foreach($clist as $key=>$vo): ?><div class="zenglist list"><?php echo ($vo['don_name']); ?>： <?php echo ($vo['don_mark']); ?></div><?php endforeach; endif; ?>
+			<div style="text-align:left;float:left;width:200px;padding-left:20px;">...</div>
+			
+			<div class="morecon">
+				<a href="__ROOT__/index.php/Introduce/introteam.html" target="_blank">详细介绍</a>
 			</div>
-			<div class="erwei mod">
-				<div class="title">
-					<h3>捐赠我们</h3>
-				</div>
-				<img title="支付宝二维码"  src="__ROOT__/March/Common/img/prize/erwei.jpg">
-				<h3>手机支付宝扫描二维码支付</h3>
-				<h4>&nbsp;您的帮助是对我们最大的支持和动力！</h4>
-			</div>
+			
+			<div style="clear:both"></div>
 		</div>
-
-
-		<div class="leftcon">
-			<div class="t1 pri">
-				<h4>卓越奖学金</h4>
-				<img src="__ROOT__/March/Common/img/prize/2.jpg">
-				<p>卓越奖学金每年定额发放给1名学生，标准为每人每年5000元。奖励对象面向河南科技学院全日制本科所有在校生，计算机专业实力过硬，软件编程能力优秀，行业技术视野开阔，具备优越的项目开发及管理能力者。<br><a target="_blank" href="http://xxgcxy.hist.edu.cn/info/1100/2978.htm">申报详情</a></p>
+		
+		<!--新闻动态-->
+		<div class="intro_item">
+			<div class="intro" id="news_img"></div>
+			<div class="intro" id="news_txt"></div>
+			<div class="intro_con" style="padding-left:0px;line-height:18px">
+				<!-- 新闻列表 -->
+				<?php if(is_array($nlist)): $i = 0; $__LIST__ = $nlist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$nl): $mod = ($i % 2 );++$i;?><div class="news_list">
+						<div id="n_tl">
+							<a href="__ROOT__/index.php/News/show/nid/<?php echo ($nl[idmarch_news]); ?>.html"
+							 title="<?php echo ($nl[news_title]); ?>" target="_blank"><?php echo ($nl['news_title']); ?></a>
+						 </div>
+						 <div id="n_date">
+						 	<?php echo substr($nl["news_date"],0,10); ?><!-- <?php echo ($nl[news_date]); ?> -->
+						 </div>
+						 <div style="clear:both"></div>
+					</div><?php endforeach; endif; else: echo "" ;endif; ?>
+				
 			</div>
-
-			<div class="t1 don">
-				<h4>卓越奖获得者</h4>
-				<a target="_blank" class="pria" href="prizers.html?ses=1">更多>></a>
-				<!-- <div class="none">
-					<h2>暂无</h2>
-				</div> -->
-				<div class="zuolist">
-						<div class="zuodv">
-							<p class="prip zuo1" ><strong><br>一<br>等<br>奖<br>获<br>得<br>者</strong></p>
-							<a target="_blank"  href="prizer/id/<?php echo ($first['prize_id']); ?>.html"><img src="<?php echo ($first['prize_img']); ?>">
-							<h3><?php echo ($first['prize_name']); ?></h3></a>
-						</div>
-						<div class="zuodv">
-							<p class="prip zuo2" ><strong><br>二<br>等<br>奖<br>获<br>得<br>者</strong></p>
-							<a target="_blank"  href="prizer/id/<?php echo ($second['prize_id']); ?>.html"><img src="<?php echo ($second['prize_img']); ?>">
-							<h3><?php echo ($second['prize_name']); ?></h3></a>
-						</div>
-				</div>
+			<div class="morecon">
+				<a href="__ROOT__/index.php/News.html" target="_blank">更多新闻</a>
 			</div>
-			<div class="t1 pri">
-				<h4>新锐奖学金</h4>
-				<img src="__ROOT__/March/Common/img/prize/1.jpg">
-				<p>新锐奖学金每年定额发放给3名学生，标准为每人每年1000元。奖励对象面向河南科技学院全日制本科大学一年级在校生，计算机专业兴趣浓厚，软件编程能力突出，对行业技术敏感，具备一定的项目开发及管理实战经验者。</p>
-			</div>
-			<div class="t1 don">
-				<a target="_blank" class="pria" href="prizers.html?ses=1">更多>></a>
-				<h4>卓越奖获得者</h4>
-				<div class="none">
-					<h2>暂未开始</h2>
-				</div>
-			</div>
+			<div style="clear:both"></div>
 		</div>
-		<div class="clear"> </div>
+		
+		<!--精华博客-->
+		<div class="intro_item" style="background:none">
+			<div class="intro" id="blog_img"></div>
+			<div class="intro" id="blog_txt"></div>
+			<div class="intro_con" style="width:100%">
+				<!-- 新闻列表 -->
+				<?php if(is_array($blog)): $i = 0; $__LIST__ = $blog;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$nl): $mod = ($i % 2 );++$i;?><div class="news_list">
+						<div id="n_tl">
+							<a href="__ROOT__/index.php/Knowledge/show/id/<?php echo ($nl[article_id]); ?>.html"
+							 title="<?php echo ($nl[article_title]); ?>" target="_blank"><?php echo ($nl['article_title']); ?></a>
+						 </div>
+						 <div id="n_date">
+						 	<?php echo ($nl[news_date]); ?>
+						 </div>
+						 <div style="clear:both"></div>
+					</div><?php endforeach; endif; else: echo "" ;endif; ?>
+			</div>
+			
+			<div class="morecon">
+				<a href="__ROOT__/index.php/Knowledge/knowledge.html" target="_blank">全部博客</a>
+			</div>
+			
+			<div style="clear:both"></div>
+		</div>
+		
+		<div style="clear:both"></div>
+	
 	</div>
-</div>
-<input type="hidden" id="rot" value="__ROOT__/" />
+	
+	<div id="project">
+		<div class="pro_item" id="pro_l"></div>
+		<div class="pro_item" id="pro_m"><img src="__ROOT__/March/Common/img/index/project/txt.png"></div>
+		<div class="pro_item" id="pro_r" style="float:right"></div>
+		<div class="pro_item" id="pro_more" style="float:right">
+			<a href="__ROOT__/index.php/Project/project.html" target="_blank">
+				<img src="__ROOT__/March/Common/img/index/project/w2.png">
+			</a>
+		</div>
+	</div>
+	
+	<div id="pro_show" class="row-fluid">
+		<ul class="thumbnails">
+		<?php if(is_array($project)): $i = 0; $__LIST__ = $project;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$pro): $mod = ($i % 2 );++$i;?><li class="span4.5" style="float:left;display:inline-block;margin-left:30px;">
+			 <a href="javascript:void(0);" class="thumbnail" title="<?php echo ($pro[project_title]); ?>">
+		     <div style="background:url(<?php echo ($pro[project_img]); ?>);background-size: 100%; width:290px;height:456px;"></div>
+		    </a>
+		   </li><?php endforeach; endif; else: echo "" ;endif; ?>
+		</ul>
+		<div style="clear:both"></div>
+	</div>
+	
+	
+  </div>
+	
 	</div>
 	 </center>
 
@@ -203,7 +233,5 @@
   <script src="__ROOT__/March/Common/js/common.js" style="text/javascript"></script>
   <script src="__ROOT__/March/Common/js/login.js" style="text/javascript"></script>
 
-<script src="__ROOT__/March/Common/js/jquery-1.4.3.min.js" style="text/javascript"></script> 
-<script src="__ROOT__/March/Common/js/prize/Scholarship.js" style="text/javascript"></script> 
-</BODY>
+ </BODY>
 </HTML>

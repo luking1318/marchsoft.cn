@@ -21,7 +21,7 @@
 			</p>
 			<p>
 				分&nbsp;&nbsp;&nbsp;类: <select id="projecttype" name="kind" type="text" style="width:110px; " maxlength="20">
-					<?php if($content['prize_num'] == 1): ?><option value="1">卓越二等奖</option>
+					<?php if($content['prize_kind'] == 1): ?><option value="1">卓越二等奖</option>
 					<option value="0">卓越一等奖</option>
 					<?php else: ?><option value="0">卓越一等奖</option>
 					<option value="1">卓越二等奖</option><?php endif; ?>

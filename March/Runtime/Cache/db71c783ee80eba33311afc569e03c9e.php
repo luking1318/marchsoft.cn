@@ -187,7 +187,7 @@
                         </h2>
                         <div class="mc-content">
                             <div class="img-container">
-                               <a href="prizer.html?id=<?php echo ($first['prize_id']); ?>"><img class="img-responsive" src="<?php echo ($first['prize_img']); ?>"></a> 
+                               <a  target="_blank"  href="prizer.html?id=<?php echo ($first['prize_id']); ?>"><img class="img-responsive" src="<?php echo ($first['prize_img']); ?>"></a> 
                             </div>
                             <div class="mc-description">
                              <p>姓 &nbsp;&nbsp;名:&nbsp;&nbsp;<?php echo ($first['prize_name']); ?></p>
@@ -215,7 +215,7 @@
                         </h2>
                         <div class="mc-content">
                             <div class="img-container">
-                               <a href="prizer.html?id=<?php echo ($second['prize_id']); ?>"> <img class="img-responsive" src="<?php echo ($second['prize_img']); ?>"></a>
+                               <a  target="_blank"  href="prizer.html?id=<?php echo ($second['prize_id']); ?>"> <img class="img-responsive" src="<?php echo ($second['prize_img']); ?>"></a>
                             </div>
                             <div class="mc-description">
                                 <p>姓 &nbsp;&nbsp;名:&nbsp;&nbsp;<?php echo ($second['prize_name']); ?></p>
