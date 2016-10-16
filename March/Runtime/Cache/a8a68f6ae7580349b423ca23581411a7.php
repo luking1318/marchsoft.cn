@@ -149,7 +149,7 @@
 			<div class="t1 don">
 				<h4>卓越奖获得者</h4>
 				<div class="none">
-					<h2>暂未开始</h2>
+					<h2><?php echo ($id); ?></h2>
 				</div>
 			</div>
 		</div>

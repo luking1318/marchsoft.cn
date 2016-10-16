@@ -7,6 +7,9 @@ body
     padding:0px;
     color:#888888;
 }
+p{
+	text-overflow: ellipsis;
+}
 .conbody{
 	background:#e7e7e4;
 	width: 100%;
@@ -39,6 +42,7 @@ body
 	width: 100%;
 	margin-bottom: 20px;
  	padding-bottom: 20px;
+ 	overflow: hidden;
 }
 .rightcon .prize{
 
@@ -55,6 +59,7 @@ body
     	letter-spacing: 1px;
     	font-size: 16px;
     	margin-top: 10px;
+    	max-height: 320px;
 }
 
 .rightcon .erwei{
@@ -114,6 +119,7 @@ body
 
 /*left*/
 .t1{
+	overflow: hidden;
 	width: 100%;
 	border: 1px solid #cccccc;
 	border-radius: 5px;
@@ -150,7 +156,9 @@ body
 	letter-spacing: 2px;
 	background: #1289c8;
 }
-
+.don{
+	position: relative;
+}
 .don h4{
 	width: 200px;
 	margin: 0 0 0 30px;
@@ -174,44 +182,72 @@ body
 	width: 85%;
 	margin: 0 auto;
 }
-
 .zuolist .zuodv{
-	display: inline-block;
-}
-.xinlist .xindv{
 	display: inline-block;
 }
 .zuodv{
 	position: relative;
-	border: 1px solid #ccc;
+	margin: 0 20px;
+	width: 40%;
+	height: 250px;
+}
+.pria{
+	position: absolute;
+	top: 5px;
+	font-size: 14px;
+	right: 10px;
+}
+.zuodv .zuo1{
+	background: #ef5e59;
+}
+.zuodv .zuo2{
+	background: #FF9F32;
+}
+.prip {
+	width: 32px;
+    	height: 162px;
+    	font-size: 16px;
+    	line-height: 21px;
+    	text-align: center;
+    	color: white;
+    	border-radius: 16px;
+	position: absolute;
+	top: 0px;
+}
+.zuodv h3{
+	position: absolute;
+	text-align: center;
+	display: inline-block;
+	width: 180px;
+	color: white;
+	background: #40b9dc;
+	bottom: 0px;
+	right: 0px;
+}
+.zuodv p{
+	
+}
+.zuodv img{
+	position: absolute;
+	border-radius: 3px;
+	right: 0px;
+	top: 0px;
+	width: 180px;
+	height: 250px;
+}
+
+.xinlist .xindv{
+	display: inline-block;
 }
 .xindv{
 	position: relative;
 	border: 1px solid #ccc;
-}
-
-.zuodv h3{
-	position: absolute;
-	display: inline-block;
-	bottom: 0px;
-	left: 10px;
 }
 .xindv h3{
 	position: absolute;
 	display: inline-block;
 	bottom: 0px;
 	left: 10px;
-}
-.zuodv p{
-	position: absolute;
-	display: inline-block;
-	top: 59px;
-	right: 10px;
-	width: 86px;
-}
-.zuodv img{
-	width: 180px;
-	height: 250px;
 }
 .xindv img{
 	width: 180px;

@@ -31,7 +31,7 @@ class PrizeAction extends Action{
             $this->assign("xinp",$xinp);
 		$this->display();
 	}
-	public function ff(){
+	public function prizers(){
 		$this->display();
 	}
 
@@ -60,6 +60,7 @@ class PrizeAction extends Action{
 
 	public function prizer() {
 		$id = $_GET['id'];
+		$this->assign("id",$id);
 		$this->display();
 	}
 

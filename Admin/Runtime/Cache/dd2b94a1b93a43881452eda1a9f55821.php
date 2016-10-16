@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>添加项目</title>
+<title>编辑项目</title>
 <script type="text/javascript" charset="utf-8" src="__ROOT__/Common/js/editor/kindeditor.js"></script>
 <script type="text/javascript" charset="utf-8" src="__ROOT__/Common/js/DatePicker/WdatePicker.js"></script>
 <script type="text/javascript" charset="utf-8" src="__ROOT__/Admin/Common/js/don/adddon.js"></script>
@@ -11,20 +11,22 @@
 </head>
 <body>
      <div id="con"> 
-		  <h2 align="center">添加捐献</h2>捐献编辑
-		  <form name="form1" action="__URL__/submit" method="post" onSubmit="return check();" enctype="multipart/form-data">
+		  <h2 align="center">编辑项目</h2>
+		  <form name="form1" action="__URL__/editsubmit/id/<?php echo ($content['don_id']); ?>" method="post" onSubmit="return check();" enctype="multipart/form-data">
 		    <p>
-			    姓&nbsp;&nbsp;&nbsp;名: <input id="projecttitle" name="name" type="text" style="width:405px;" maxlength="50"/>
+			    姓&nbsp;&nbsp;&nbsp;名: <input id="projecttitle" name="name" type="text" style="width:405px;" maxlength="50" value="<?php echo ($content['don_name']); ?>"/>
 			</p>
 			<p>
-				金&nbsp;&nbsp;&nbsp;额: <input id="projecttype" name="num" type="text" style="width:150px; margin-right:50px;" maxlength="20"/>
+				金&nbsp;&nbsp;&nbsp;额: <input id="projecttype" name="num" type="text" style="width:150px; margin-right:50px;" maxlength="20" value="<?php echo ($content['don_num']); ?>" />
 				<span id="connull" style="color:red; margin-left:10px;  ">(请输入捐献金额,可写二位小数)</span>
 			</p>
 			<p>
 				<div style="width:800px;  height:200px;">
 					<div style="height:200px; width:48px; float:left;">赠&nbsp;&nbsp;&nbsp;语:</div>
 					<div style="width:600px; height:200px; float:left;">
-							<textarea id='content_1' name="con" style="width:600px;height:200px; "> </textarea>
+							<textarea id='content_1' name="con" style="width:600px;height:200px; ">
+							<?php echo ($content['don_mark']); ?>
+							 </textarea>
 					 </div>
 				</div>
 			</p>
