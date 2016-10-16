@@ -33,56 +33,61 @@ body
 	width: 280px;
 }
 /*right*/
-.rightcon .logo{
-	margin-bottom: 20px;
-	width: 100%;
-	padding-bottom: 26px;
-	border: 1px solid #D4D4D4;
-	text-align: center;
-}
- .logo img{
- 	margin-top: 10px;
- 	width: 170px;
- 	margin-bottom: 20px;
- }
 
- .rightcon .erwei{
+.rightcon .mod{
 	border: 1px solid #D4D4D4;
 	width: 100%;
-	text-align: center;
-	padding-bottom: 20px;
-	margin-bottom: 26px;
- }
- .erwei img{
+	margin-bottom: 20px;
+ 	padding-bottom: 20px;
+}
+.rightcon .prize{
+
+}
+.prize .title{
+
+}
+.prize p{
+	text-indent: 2em;
+	width: 80%;
+	margin: 0 auto;
+	word-break: break-word;
+	line-height: 25px;
+    	letter-spacing: 1px;
+    	font-size: 16px;
+    	margin-top: 10px;
+}
+
+.rightcon .erwei{
+ 	text-align: center;
+}
+.erwei img{
+
  	margin-top: 10px;
  	width: 210px;
  	margin-bottom: 10px;
- }
- .erwei h4{
+}
+.erwei h4{
  	color: #5195C3;
- }
-.title{
+}
+.rightcon .title{
 	text-align: left;
  	height: 34px;
  	width: 100%;
  	border-bottom: 1px solid #D4D4D4;
     	background-color: #FBFBFB;
- }
- .title h3,.title a{
-  	margin-top: 10px;
+}
+.rightcon .title h3{
+  	line-height: 37px;
   	margin-left: 10px;
-  	/*float: left;*/
   	display: inline-block;
-  }
-  .title a{
-  	margin-left: 150px;
-  }
+}
+.rightcon .title a{font-size: 14px;
+  	line-height: 37px;
+  	margin-right: 10px;
+  	float: right;
+}
 .zeng {
-	border: 1px solid #D4D4D4;
- 	width: 100%;
  	min-height: 200px;
- 	padding-bottom: 20px;
- 	margin-bottom: 20px;
 }
 .zeng .title{
 	margin-bottom: 8px;
@@ -90,7 +95,6 @@ body
 .zeng .zenglist{
 	font-size: 16px;
 	font-family: "Century Gothic","Microsoft yahei";
-	color: #323232;
 	margin: 0 10px 6px;
 	padding-bottom: 6px;
 	line-height: 1.8;
@@ -99,8 +103,12 @@ body
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
-.best  p{
+.list{
+	color: #323232;
+}
+.best{
 	color:#FF9F32;
+	z-index: 100px;
 }
 
 
@@ -110,7 +118,7 @@ body
 	border: 1px solid #cccccc;
 	border-radius: 5px;
 	margin-bottom: 20px;
-	padding: 30px 0;
+	padding: 10px 0;
 }
 .pri{
 	position: relative;
@@ -125,12 +133,13 @@ body
 	line-height: 25px;
 	letter-spacing: 1px;
 	font-size: 16px;
-	top: 77px;
+	top: 69px;
 	right: 63px;
+	text-indent: 2em;
 }
 .pri h4{
 	position: absolute;
-	top: 24px;
+	top: 20px;
 	right: 65px;
 	margin: 0;
 	padding: 10 30;
@@ -161,6 +170,54 @@ body
 	height: 70px;
 	border-bottom: 1px dashed #8BC34A;
 }
+.zuolist{
+	width: 85%;
+	margin: 0 auto;
+}
+
+.zuolist .zuodv{
+	display: inline-block;
+}
+.xinlist .xindv{
+	display: inline-block;
+}
+.zuodv{
+	position: relative;
+	border: 1px solid #ccc;
+}
+.xindv{
+	position: relative;
+	border: 1px solid #ccc;
+}
+
+.zuodv h3{
+	position: absolute;
+	display: inline-block;
+	bottom: 0px;
+	left: 10px;
+}
+.xindv h3{
+	position: absolute;
+	display: inline-block;
+	bottom: 0px;
+	left: 10px;
+}
+.zuodv p{
+	position: absolute;
+	display: inline-block;
+	top: 59px;
+	right: 10px;
+	width: 86px;
+}
+.zuodv img{
+	width: 180px;
+	height: 250px;
+}
+.xindv img{
+	width: 180px;
+	height: 250px;
+}
+
 
 .tit h4{
 	margin: 0;

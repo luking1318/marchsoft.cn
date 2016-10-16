@@ -136,7 +136,6 @@
 }
 .con{
     width: 1002px;
-    /*position: relative;*/
     margin: 0 auto;
     border: 2px solid #888888;
     margin-top:20px; 

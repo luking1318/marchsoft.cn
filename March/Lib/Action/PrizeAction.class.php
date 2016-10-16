@@ -1,12 +1,12 @@
 <?php 
 /**
-* 
+* 三月奖项
+*
 */
 class PrizeAction extends Action{
 
 	public function index(){
             $mc = M('prize_don');
-
             $s1=$mc ->order('don_num desc')->find();//一次捐赠最高的
             $s2=$mc ->group('don_name')->select();
             $name = "";//累计捐赠最高的名字
@@ -21,9 +21,14 @@ class PrizeAction extends Action{
             $this->assign("name",$name);
             $this->assign("n",$n);
             $this->assign("s1",$s1);
-
             $clist = $mc->limit(6)->select();
             $this->assign('clist',$clist);
+
+            $mp = M('prize');
+            $zuop = $mp->where('prize_num = 1')->limit(2)->select();
+            $this->assign("zuop",$zuop);
+            $xinp =  $mp->where('prize_num = 0')->limit(3)->select();
+            $this->assign("xinp",$xinp);
 		$this->display();
 	}
 	public function ff(){
@@ -50,8 +55,12 @@ class PrizeAction extends Action{
 			->select();
 		$this->assign("page",$show);
 		$this->assign("list",$news_list);
-
 		$this->display('prize');
+	}
+
+	public function prizer() {
+		$id = $_GET['id'];
+		$this->display();
 	}
 
 
