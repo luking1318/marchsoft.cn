@@ -32,7 +32,20 @@ class PrizeAction extends Action{
 		$this->display();
 	}
 	public function ff(){
+		$ses = $_GET['ses'];
+		$mc = D("prize");
+		$s2=$mc ->group('prize_ses')->select();
+		$first=$mc->where('prize_ses='.$ses.' and prize_kind=0')->find();
+		$second=$mc->where('prize_ses='.$ses.' and prize_kind=1')->find();
+		$three=$mc->where('prize_ses='.$ses.' and prize_kind=3')->select();
+		// dump($s2);
+		$this->assign('num',count($s2)+1);
+		$this->assign("first",$first);
+		$this->assign("second",$second);
+		 $this->assign("three",$three);
+		 // dump($second);
 		$this->display();
+		
 	}
 
 	public function prize(){
@@ -60,6 +73,10 @@ class PrizeAction extends Action{
 
 	public function prizer() {
 		$id = $_GET['id'];
+	    	$news= D('prize');
+	    	$con=$news->where('prize_id='.$id)->select();
+	    	$this->assign("content",$con[0]);
+	    	// dump($con);
 		$this->display();
 	}
 

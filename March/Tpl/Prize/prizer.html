@@ -2,6 +2,80 @@
 </center>
 <link href="__ROOT__/March/Common/css/prize/prize.css" rel="stylesheet">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+	.leftcon{
+		/*height: 100%;*/
+		width: 622px;
+		background: rgb(36,36,38);
+		border-radius: 5px;
+		padding: 40px;
+		overflow: hidden;
+		margin-bottom: 20px;
+	}
+	.Ptop{
+		color: rgb(196,178,0);
+	}
+	.Ptwo{
+		width: 100%;
+	}
+	
+	/*.Psec{
+		display: inline-block;
+		margin-top: 45px;
+		height: 350px;
+		
+	}*/
+	.Psec1 {
+		position: absolute;
+		width:180px; 
+		height:180px; 
+		border-radius:50%; 
+		overflow:hidden;
+		border: 3px solid rgb(196,178,0);
+		margin-left: 45px;
+		margin-top: 20px;
+	}
+	.Psec1 img{
+		width:180px; 
+		height:180px; 
+	}
+	.Psec2{
+		width: 280px;
+		overflow: hidden;
+		margin-top: 30px;
+		margin-left: 315px;
+	}
+	.Psec2 p{
+		color: rgb(196,178,0);
+		font-size: 18px;
+		line-height: 30px;
+		white-space: nowrap;
+	}
+	.Ptop2 {
+		margin-top: 30px;
+		color: rgb(196,178,0);
+	}
+	.Ptop2 h1{
+		text-align: right;
+	}
+	.Ptwo2{
+		color: white;
+		line-height:1.5em;
+		min-height: 300px;
+		padding:20px 40px; 
+	}
+	.Ptop3 {
+
+		margin-top: 30px;
+		color: rgb(196,178,0);
+	}
+	.Ptwo3{
+		color: white;
+		line-height:1.5em;
+		min-height: 300px;
+		padding:20px 40px; 
+	}
+</style>
 <div class="conbody">
 	<div class="conmain">
 		<div class="rightcon">
@@ -38,12 +112,42 @@
 
 
 		<div class="leftcon">
-			<div class="t1 don">
-				<h4>卓越奖获得者</h4>
-				<div class="none">
-					<h2>暂未开始</h2>
+			<!-- <div class="t1 don"> -->
+			<div class="Ptop">
+				<h1>个人基本信息</h1>
+				<img src="__ROOT__/March/Common/img/prize/a1.png">
+			</div>
+			<div class="Ptwo">
+				<!-- <div class="Psec "> -->
+				<div  class="Psec1">
+				    <img src="<{$content['prize_img']}>">
+				</div>
+				<!-- </div> -->
+				<div  class="Psec2">
+				    <p>姓 &nbsp;&nbsp;名:<font color="white">&nbsp;&nbsp;<{$content['prize_name']}></font></p>
+				    <p>班 &nbsp;&nbsp;级:<font color="white">&nbsp;&nbsp;<{$content['prize_class']}></font></p>
+				    <p>学 &nbsp;&nbsp;院:<font color="white">&nbsp;&nbsp;<{$content['prize_col']}></font></p>
+				    <p>专 &nbsp;&nbsp;业:<font color="white">&nbsp;&nbsp;<{$content['prize_maj']}></font></p>
+				    <p>电 &nbsp;&nbsp;话:<font color="white">&nbsp;&nbsp;<{$content['prize_tel']}></font></p>
+				    <p>E-mail:<font color="white">&nbsp;&nbsp;<{$content['prize_email']}></font></p>	
 				</div>
 			</div>
+			<div class="Ptop2">
+				<h1>个人学习经历</h1>
+				<img src="__ROOT__/March/Common/img/prize/a2.png">
+			</div>
+			<div class="Ptwo2">
+				<{$content['prize_stucon']}>
+			</div>
+			<div class="Ptop3">
+				<h1>项目经历</h1>
+				<img src="__ROOT__/March/Common/img/prize/a1.png">
+			</div>
+			<div class="Ptwo3">
+				<{$content['prize_procon']}>
+			</div>
+				
+			<!-- </div> -->
 		</div>
 		<div class="clear"> </div>
 	</div>

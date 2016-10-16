@@ -6,6 +6,7 @@
 <script type="text/javascript" charset="utf-8" src="__ROOT__/Common/js/editor/kindeditor.js"></script>
 <script type="text/javascript" charset="utf-8" src="__ROOT__/Common/js/DatePicker/WdatePicker.js"></script>
 <script type="text/javascript" charset="utf-8" src="__ROOT__/Admin/Common/js/prize/addprize.js"></script>
+<script type="text/javascript" charset="utf-8" src="__ROOT__/Admin/Common/js/prize/a.js"></script>
 <link rel="stylesheet" type="text/css" charset="utf-8" href="__ROOT__/Admin/Common/css/prize/addprize.css" />
 <link rel="stylesheet" type="text/css" charset="utf-8" href="__ROOT__/Common/css/bootstrap.css" />
 </head>
@@ -13,17 +14,26 @@
      <div id="con"> 
 		  <h2 align="center">编辑项目</h2>
 		  <form name="form1" action="__URL__/editsubmit/id/<?php echo ($content['prize_id']); ?>" method="post" onSubmit="return check();" enctype="multipart/form-data">
-		    <p>
-			    姓&nbsp;&nbsp;&nbsp;名: <input id="projecttitle" name="name" type="text" style="width:405px;" maxlength="50" value="<?php echo ($content['prize_name']); ?>"/>
+		  	<p>
+			    姓&nbsp;&nbsp;&nbsp;名: <input id="projecttitle" name="name" type="text" style="width:100px;" maxlength="50" value="<?php echo ($content['prize_name']); ?>"/>
+			      班&nbsp;&nbsp;&nbsp;级: <input id="projecttitle" name="class" type="text" style="width:100px;" maxlength="50" value="<?php echo ($content['prize_class']); ?>"/>
+			      学&nbsp;&nbsp;&nbsp;院: <input id="projecttitle" name="col" type="text" style="width:100px;" maxlength="50" value="<?php echo ($content['prize_col']); ?>"/>
 			</p>
 			<p>
-				奖&nbsp;&nbsp;&nbsp;项: <select id="projecttype" name="num" type="text" style="width:150px; margin-right:50px;" maxlength="20">
-					<?php if($content['prize_num'] == 1): ?><option value="1">卓越奖学金</option>
-					<option value="0">新锐奖学金</option>
-					<?php else: ?><option value="0">新锐奖学金</option>
-					<option value="1">卓越奖学金</option><?php endif; ?>
+				分&nbsp;&nbsp;&nbsp;类: <select id="projecttype" name="kind" type="text" style="width:110px; " maxlength="20">
+					<?php if($content['prize_num'] == 1): ?><option value="1">卓越二等奖</option>
+					<option value="0">卓越一等奖</option>
+					<?php else: ?><option value="0">卓越一等奖</option>
+					<option value="1">卓越二等奖</option><?php endif; ?>
 				</select>
+				专&nbsp;&nbsp;&nbsp;业: <input id="projecttitle" name="maj" type="text" style="width:100px;" maxlength="50" value="<?php echo ($content['prize_maj']); ?>"/>
+				电&nbsp;&nbsp;&nbsp;话: <input id="projecttitle" name="tel" type="text" style="width:100px;" maxlength="50" value="<?php echo ($content['prize_tel']); ?>"/>
 			</p>
+			<p>
+				邮&nbsp;&nbsp;&nbsp;箱: <input id="projecttitle" name="email" type="text" style="width:100px;" maxlength="50" value="<?php echo ($content['prize_email']); ?>"/>
+				届&nbsp;&nbsp;&nbsp;数: <input id="projecttitle" name="ses" type="text" style="width:100px;" maxlength="50" value="<?php echo ($content['prize_ses']); ?>"/>
+			</p>
+			
 			<P>
 				图&nbsp;&nbsp;&nbsp;片: <input type="file" name="picture" style="margin-left:10px;"/>
 				<input type="hidden" value="<?php echo ($imagemode); ?>" name="imagemode"/>
@@ -31,18 +41,23 @@
 					<a target="_blank" href="<?php echo ($content['prize_img']); ?>" >点击查看</a><?php endif; ?>
 				<?php if($imagemode == 0): ?><span id="connull" style="color:red; margin-left:10px; margin-right:20px;  ">(上传图片格式：png jpg jpef.)</span>
 					<a target="_blank" href="<?php echo ($content['prize_img']); ?>" >点击查看</a><?php endif; ?>
-				
 			</p>
 			<p>
 				<div style="width:800px;  height:200px;">
-					<div style="height:200px; width:48px; float:left;">信&nbsp;&nbsp;&nbsp;息:</div>
+					<div style="height:200px; width:48px; float:left;">学习经历:</div>
 					<div style="width:600px; height:200px; float:left;">
-							<textarea id='content_1' name="con" style="width:600px;height:200px; ">
-							<?php echo ($content['prize_con']); ?>
-							 </textarea>
+							<textarea id='content_1' name="stucon" style="width:600px;height:200px; "> <?php echo ($content['prize_stucon']); ?></textarea>
 					 </div>
 				</div>
+				<div style="width:800px;  height:200px;">
+					<div style="height:200px; width:48px; float:left;">项目经历:</div>
+					<div style="width:600px; height:200px; float:left;">
+							<textarea id='content_2' name="procon" style="width:600px;height:200px; "> <?php echo ($content['prize_procon']); ?></textarea>
+					 </div>
+				</div>
+				
 			</p>
+		
 			<p>
 			     <input class="btn btn-primary" type="submit" value="提交" style=" margin-left:50px; margin-top:5px; ">
 				 <span id="connull" style="color:red; margin-left:20px; visibility:hidden; ">请仔细检查填写的内容！内容不能为空！</span>

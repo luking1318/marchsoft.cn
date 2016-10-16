@@ -147,6 +147,12 @@
     margin-top: 0px;
     margin-bottom: 9px;
 }
+.mei {
+    min-height: 300px;
+    text-align: center;
+    font-size: 36px;
+    letter-spacing: 5px;
+}
 </style>
 
 <!-- </head> -->
@@ -156,12 +162,15 @@
 <div class="conmain">
 <div class="btn-toolbar" role="toolbar">
     <div class="btn-group">
-        <button type="button" class="btn btn-default">2016</button>
-        <button type="button" class="btn btn-default">2017</button>
-        <button type="button" class="btn btn-default">2018</button>
+<?php $__FOR_START__=1;$__FOR_END__=($num);for($i=$__FOR_START__;$i < $__FOR_END__;$i+=1){ ?><a  href="ff?ses=<?php echo ($i); ?>" class="btn btn-default">第<?php echo ($i); ?>届</a><?php } ?>
     </div>
 </div>
 <h3>卓越奖获得者</h3>
+
+<?php if(($first) == NULL): ?><div class="mei">暂无</div>
+
+<?php else: ?> 
+
     <div class="htmleaf-container">
         <br>
         <section class="container">
@@ -170,301 +179,104 @@
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <article class="material-card Red">
                         <h2>
-                            <span>Christopher Walken</span>
+                            <span><?php echo ($first['prize_name']); ?></span>
                             <strong>
                                 <i class="fa fa-fw fa-star"></i>
-                                The Deer Hunter
+                                卓越奖一等奖
                             </strong>
                         </h2>
                         <div class="mc-content">
                             <div class="img-container">
-                                <img class="img-responsive" src="__ROOT__/March/Common/img/prize/aFirst.jpg">
+                               <a href="prizer.html?id=<?php echo ($first['prize_id']); ?>"><img class="img-responsive" src="<?php echo ($first['prize_img']); ?>"></a> 
                             </div>
                             <div class="mc-description">
-                                He has appeared in more than 100 films and television shows, including The Deer Hunter, Annie Hall, The Prophecy trilogy, The Dogs of War ...
+                             <p>姓 &nbsp;&nbsp;名:&nbsp;&nbsp;<?php echo ($first['prize_name']); ?></p>
+                    <p>班 &nbsp;&nbsp;级:&nbsp;&nbsp;<?php echo ($first['prize_class']); ?></p>
+                    <p>学 &nbsp;&nbsp;院:&nbsp;&nbsp;<?php echo ($first['prize_col']); ?></p>
+                    <p>专 &nbsp;&nbsp;业:&nbsp;&nbsp;<?php echo ($first['prize_maj']); ?></p>
+                    <p>电 &nbsp;&nbsp;话:&nbsp;&nbsp;<?php echo ($first['prize_tel']); ?></p>
                             </div>
                         </div>
                         <a class="mc-btn-action">
                             <i class="fa fa-bars"></i>
                         </a>
                         <div class="mc-footer">
-                            <h4>
-                                Social
-                            </h4>
-                           <!--  <a class="fa fa-fw fa-facebook"></a>
-                            <a class="fa fa-fw fa-twitter"></a>
-                            <a class="fa fa-fw fa-linkedin"></a>
-                            <a class="fa fa-fw fa-google-plus"></a> -->
                         </div>
                     </article>
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <article class="material-card Pink">
                         <h2>
-                            <span>Sean Penn</span>
+                            <span><?php echo ($second['prize_name']); ?></span>
                             <strong>
                                 <i class="fa fa-fw fa-star"></i>
-                                Mystic River
+                                卓越奖二等奖
                             </strong>
                         </h2>
                         <div class="mc-content">
                             <div class="img-container">
-                                <img class="img-responsive" src="__ROOT__/March/Common/img/prize/aFirst.jpg">
+                               <a href="prizer.html?id=<?php echo ($second['prize_id']); ?>"> <img class="img-responsive" src="<?php echo ($second['prize_img']); ?>"></a>
                             </div>
                             <div class="mc-description">
-                                He has won two Academy Awards, for his roles in the mystery drama Mystic River (2003) and the biopic Milk (2008). Penn began his acting career in television with a brief appearance in a 1974 episode of Little House on the Prairie ...
+                                <p>姓 &nbsp;&nbsp;名:&nbsp;&nbsp;<?php echo ($second['prize_name']); ?></p>
+                                <p>班 &nbsp;&nbsp;级:&nbsp;&nbsp;<?php echo ($second['prize_class']); ?></p>
+                                <p>学 &nbsp;&nbsp;院:&nbsp;&nbsp;<?php echo ($second['prize_col']); ?></p>
+                                <p>专 &nbsp;&nbsp;业:&nbsp;&nbsp;<?php echo ($second['prize_maj']); ?></p>
+                                <p>电 &nbsp;&nbsp;话:&nbsp;&nbsp;<?php echo ($second['prize_tel']); ?></p>
                             </div>
                         </div>
                         <a class="mc-btn-action">
                             <i class="fa fa-bars"></i>
                         </a>
                         <div class="mc-footer">
-                            <h4>
-                                Social
-                            </h4>
-                            <!-- <a class="fa fa-fw fa-facebook"></a>
-                            <a class="fa fa-fw fa-twitter"></a>
-                            <a class="fa fa-fw fa-linkedin"></a>
-                            <a class="fa fa-fw fa-google-plus"></a> -->
                         </div>
                     </article>
                 </div>
-                <!-- <div class="col-md-4 col-sm-6 col-xs-12">
-                    <article class="material-card Purple">
-                        <h2>
-                            <span>Clint Eastwood</span>
-                            <strong>
-                                <i class="fa fa-fw fa-star"></i>
-                                Million Dollar Baby
-                            </strong>
-                        </h2>
-                        <div class="mc-content">
-                            <div class="img-container">
-                                <img class="img-responsive" src="__ROOT__/March/Common/img/prize/aFirst.jpg">
-                            </div>
-                            <div class="mc-description">
-                                He rose to international fame with his role as the Man with No Name in Sergio Leone's Dollars trilogy of spaghetti Westerns during the 1960s ...
-                            </div>
-                        </div>
-                        <a class="mc-btn-action">
-                            <i class="fa fa-bars"></i>
-                        </a>
-                        <div class="mc-footer">
-                            <h4>
-                                Social
-                            </h4>
-                            <a class="fa fa-fw fa-facebook"></a>
-                            <a class="fa fa-fw fa-twitter"></a>
-                            <a class="fa fa-fw fa-linkedin"></a>
-                            <a class="fa fa-fw fa-google-plus"></a> 
-                        </div>
-                    </article>
-                </div>-->
-                <!--</div>-->
-                <!-- <div class="row active-with-hover"> -->
-               <!--  <div class="col-md-4 col-sm-6 col-xs-12">
-                    <article class="material-card Deep-Purple">
-                        <h2>
-                            <span>Dustin Hoffman</span>
-                            <strong>
-                                <i class="fa fa-fw fa-star"></i>
-                                Kramer vs. Kramer
-                            </strong>
-                        </h2>
-                        <div class="mc-content">
-                            <div class="img-container">
-                                <img class="img-responsive" src="__ROOT__/March/Common/img/prize/aFirst.jpg">
-                            </div>
-                            <div class="mc-description">
-                                He has been known for his versatile portrayals of antiheroes and vulnerable characters.[3] He won the Academy Award for Kramer vs. Kramer in 1979 ...
-                            </div>
-                        </div>
-                        <a class="mc-btn-action">
-                            <i class="fa fa-bars"></i>
-                        </a>
-                        <div class="mc-footer">
-                            <h4>
-                                Social
-                            </h4>
-                            <a class="fa fa-fw fa-facebook"></a>
-                            <a class="fa fa-fw fa-twitter"></a>
-                            <a class="fa fa-fw fa-linkedin"></a>
-                            <a class="fa fa-fw fa-google-plus"></a>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <article class="material-card Indigo">
-                        <h2>
-                            <span>Edward Norton</span>
-                            <strong>
-                                <i class="fa fa-fw fa-star"></i>
-                                American History X
-                            </strong>
-                        </h2>
-                        <div class="mc-content">
-                            <div class="img-container">
-                                <img class="img-responsive" src="__ROOT__/March/Common/img/prize/aFirst.jpg">
-                            </div>
-                            <div class="mc-description">
-                                He has been nominated for three Academy Awards for his work in the films Primal Fear, American History X and Birdman. He also starred in other roles ...
-                            </div>
-                        </div>
-                        <a class="mc-btn-action">
-                            <i class="fa fa-bars"></i>
-                        </a>
-                        <div class="mc-footer">
-                            <h4>
-                                Social
-                            </h4>
-                            <a class="fa fa-fw fa-facebook"></a>
-                            <a class="fa fa-fw fa-twitter"></a>
-                            <a class="fa fa-fw fa-linkedin"></a>
-                            <a class="fa fa-fw fa-google-plus"></a>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <article class="material-card Blue">
-                        <h2>
-                            <span>Michael Caine</span>
-                            <strong>
-                                <i class="fa fa-fw fa-star"></i>
-                                Educated Rita
-                            </strong>
-                        </h2>
-                        <div class="mc-content">
-                            <div class="img-container">
-                                <img class="img-responsive" src="__ROOT__/March/Common/img/prize/aFirst.jpg">
-                            </div>
-                            <div class="mc-description">
-                                English actor and author. Renowned for his distinctive working class cockney accent, Caine has appeared in over 115 films and is regarded as a British ...
-                            </div>
-                        </div>
-                        <a class="mc-btn-action">
-                            <i class="fa fa-bars"></i>
-                        </a>
-                        <div class="mc-footer">
-                            <h4>
-                                Social
-                            </h4>
-                            <a class="fa fa-fw fa-facebook"></a>
-                            <a class="fa fa-fw fa-twitter"></a>
-                            <a class="fa fa-fw fa-linkedin"></a>
-                            <a class="fa fa-fw fa-google-plus"></a>
-                        </div>
-                    </article>
-                </div> -->
-
-
-
             </div>
         </section>
-    </div>
+    </div><?php endif; ?>
     <hr style="height:1px;border:none;border-top:1px dashed #0066CC;" />
     <h3>新锐奖获得者</h3>
+    <?php if($three == null): ?><div class="mei">暂无</div>
+
+<?php else: ?> 
+
      <div class="htmleaf-container">
         <br>
         <section class="container">
-
             <div class="row active-with-click">
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <article class="material-card Red">
+            <?php if(is_array($three)): $i = 0; $__LIST__ = $three;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="col-md-4 col-sm-6 col-xs-12">
+                    <article class="material-card Blue">
                         <h2>
-                            <span>Christopher Walken</span>
+                            <span><?php echo ($vo['prize_name']); ?></span>
                             <strong>
                                 <i class="fa fa-fw fa-star"></i>
-                                The Deer Hunter
+                                新锐奖
                             </strong>
                         </h2>
                         <div class="mc-content">
                             <div class="img-container">
-                                <img class="img-responsive" src="__ROOT__/March/Common/img/prize/aFirst.jpg">
+                                <img class="img-responsive" src="<?php echo ($vo['prize_img']); ?>">
                             </div>
                             <div class="mc-description">
-                                He has appeared in more than 100 films and television shows, including The Deer Hunter, Annie Hall, The Prophecy trilogy, The Dogs of War ...
+                                <p>姓 &nbsp;&nbsp;名:&nbsp;&nbsp;<?php echo ($vo['prize_name']); ?></p>
+                                <p>班 &nbsp;&nbsp;级:&nbsp;&nbsp;<?php echo ($vo['prize_class']); ?></p>
+                                <p>学 &nbsp;&nbsp;院:&nbsp;&nbsp;<?php echo ($vo['prize_col']); ?></p>
+                                <p>专 &nbsp;&nbsp;业:&nbsp;&nbsp;<?php echo ($vo['prize_maj']); ?></p>
+                                <p>电 &nbsp;&nbsp;话:&nbsp;&nbsp;<?php echo ($vo['prize_tel']); ?></p>
                             </div>
                         </div>
                         <a class="mc-btn-action">
                             <i class="fa fa-bars"></i>
                         </a>
                         <div class="mc-footer">
-                            <h4>
-                                Social
-                            </h4>
-                           <!--  <a class="fa fa-fw fa-facebook"></a>
-                            <a class="fa fa-fw fa-twitter"></a>
-                            <a class="fa fa-fw fa-linkedin"></a>
-                            <a class="fa fa-fw fa-google-plus"></a> -->
                         </div>
                     </article>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <article class="material-card Red">
-                        <h2>
-                            <span>Christopher Walken</span>
-                            <strong>
-                                <i class="fa fa-fw fa-star"></i>
-                                The Deer Hunter
-                            </strong>
-                        </h2>
-                        <div class="mc-content">
-                            <div class="img-container">
-                                <img class="img-responsive" src="__ROOT__/March/Common/img/prize/aFirst.jpg">
-                            </div>
-                            <div class="mc-description">
-                                He has appeared in more than 100 films and television shows, including The Deer Hunter, Annie Hall, The Prophecy trilogy, The Dogs of War ...
-                            </div>
-                        </div>
-                        <a class="mc-btn-action">
-                            <i class="fa fa-bars"></i>
-                        </a>
-                        <div class="mc-footer">
-                            <h4>
-                                Social
-                            </h4>
-                           <!--  <a class="fa fa-fw fa-facebook"></a>
-                            <a class="fa fa-fw fa-twitter"></a>
-                            <a class="fa fa-fw fa-linkedin"></a>
-                            <a class="fa fa-fw fa-google-plus"></a> -->
-                        </div>
-                    </article>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <article class="material-card Pink">
-                        <h2>
-                            <span>Sean Penn</span>
-                            <strong>
-                                <i class="fa fa-fw fa-star"></i>
-                                Mystic River
-                            </strong>
-                        </h2>
-                        <div class="mc-content">
-                            <div class="img-container">
-                                <img class="img-responsive" src="__ROOT__/March/Common/img/prize/aFirst.jpg">
-                            </div>
-                            <div class="mc-description">
-                                He has won two Academy Awards, for his roles in the mystery drama Mystic River (2003) and the biopic Milk (2008). Penn began his acting career in television with a brief appearance in a 1974 episode of Little House on the Prairie ...
-                            </div>
-                        </div>
-                        <a class="mc-btn-action">
-                            <i class="fa fa-bars"></i>
-                        </a>
-                        <div class="mc-footer">
-                            <h4>
-                                Social
-                            </h4>
-                            <!-- <a class="fa fa-fw fa-facebook"></a>
-                            <a class="fa fa-fw fa-twitter"></a>
-                            <a class="fa fa-fw fa-linkedin"></a>
-                            <a class="fa fa-fw fa-google-plus"></a> -->
-                        </div>
-                    </article>
-                </div>
-                 </div>
+                </div><?php endforeach; endif; else: echo "" ;endif; ?>
+            </div>
         </section>
     </div>
-    </div>
+    </div><?php endif; ?>
 </div>
 <input type="hidden" id="rot" value="__ROOT__/" />
 	</div>
@@ -493,10 +305,10 @@
                 icon_spin: 'fa-spin-fast',
                 card_activator: 'click'
             });
-            $("button").click(function(){
-                $("button").css({'background-color':'white','color':'black'});
-                $(this).css({'background-color':'#2196f3','color':'white'});
-            });
+            // $("button").click(function(){
+            //     $("button").css({'background-color':'white','color':'black'});
+            //     $(this).css({'background-color':'#2196f3','color':'white'});
+            // });
 
             //        $('.active-with-click .material-card').materialCard();
 
