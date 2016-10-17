@@ -118,7 +118,7 @@
 	.leftcon{
 		/*height: 100%;*/
 		width: 622px;
-		background: rgb(36,36,38);
+		background: #052b44;
 		border-radius: 5px;
 		padding: 40px;
 		overflow: hidden;

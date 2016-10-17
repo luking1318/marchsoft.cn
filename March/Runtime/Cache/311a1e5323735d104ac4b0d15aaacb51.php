@@ -117,11 +117,19 @@
 <div class="conbody">
 	<div class="conmain">
 		<div class="rightcon">
-			<div class="prize mod">
+			<!-- <div class="prize mod">
 				<div class="title">
 					<h3>三月奖项</h3>
 				</div>
 				<p>三月软件奖学金是由三月软件小组毕业生于2016年3月创立，三月软件奖学金旨在鼓励软件开发技术优秀的在校大学生，帮助其获得更好的发展，设有卓越奖学金和新锐奖学金，每年评选一次。卓越奖学金每年10月颁发，新锐奖学金每年3月颁发。</p>
+			</div> -->
+			<div class="erwei mod">
+				<div class="title">
+					<h3>捐赠我们</h3>
+				</div>
+				<img title="支付宝二维码"  src="__ROOT__/March/Common/img/prize/erwei.jpg">
+				<h3>手机支付宝扫描二维码支付</h3>
+				<h4>&nbsp;您的帮助是对我们最大的支持和动力！</h4>
 			</div>
 			<div class="zeng mod">
 				<div class="title">
@@ -133,27 +141,20 @@
 				<div class="zenglist best">单次最高:<?php echo ($s1['don_name']); ?>一次捐献￥<?php echo ($s1['don_num']); ?></div>
 				<?php if(is_array($clist)): foreach($clist as $key=>$vo): ?><div class="zenglist list"><?php echo ($vo['don_name']); ?>： <?php echo ($vo['don_mark']); ?></div><?php endforeach; endif; ?>
 			</div>
-			<div class="erwei mod">
-				<div class="title">
-					<h3>捐赠我们</h3>
-				</div>
-				<img title="支付宝二维码"  src="__ROOT__/March/Common/img/prize/erwei.jpg">
-				<h3>手机支付宝扫描二维码支付</h3>
-				<h4>&nbsp;您的帮助是对我们最大的支持和动力！</h4>
-			</div>
+			
 		</div>
 
 
 		<div class="leftcon">
-			<div class="t1 pri">
-				<h4>卓越奖学金</h4>
-				<img src="__ROOT__/March/Common/img/prize/2.jpg">
-				<p>卓越奖学金每年定额发放给1名学生，标准为每人每年5000元。奖励对象面向河南科技学院全日制本科所有在校生，计算机专业实力过硬，软件编程能力优秀，行业技术视野开阔，具备优越的项目开发及管理能力者。<br><a target="_blank" href="http://xxgcxy.hist.edu.cn/info/1100/2978.htm">申报详情</a></p>
+			<div class="t1 pri jieshao">
+				<h4>三月奖项</h4>
+				<div class="jiet">
+					三月软件奖学金是由三月软件小组毕业生于2016年3月创立，三月软件奖学金旨在鼓励软件开发技术优秀的在校大学生，帮助其获得更好的发展，设有卓越奖学金和新锐奖学金，每年评选一次。卓越奖学金每年10月颁发，新锐奖学金每年3月颁发。
+				</div>
 			</div>
-
 			<div class="t1 don">
-				<h4>卓越奖获得者</h4>
-				<a target="_blank" class="pria" href="prizers.html?ses=1">更多>></a>
+				<h4>第一届卓越奖获得者</h4>
+				<!-- <a target="_blank" class="pria" href="prizers.html?ses=1">更多>></a> -->
 				<!-- <div class="none">
 					<h2>暂无</h2>
 				</div> -->
@@ -171,12 +172,19 @@
 				</div>
 			</div>
 			<div class="t1 pri">
+				<h4>卓越奖学金</h4>
+				<img src="__ROOT__/March/Common/img/prize/2.jpg">
+				<p>卓越奖学金每年定额发放给1名学生，标准为每人每年5000元。奖励对象面向河南科技学院全日制本科所有在校生，计算机专业实力过硬，软件编程能力优秀，行业技术视野开阔，具备优越的项目开发及管理能力者。<br><a target="_blank" href="http://xxgcxy.hist.edu.cn/info/1100/2978.htm">申报详情</a></p>
+			</div>
+
+			
+			<div class="t1 pri">
 				<h4>新锐奖学金</h4>
 				<img src="__ROOT__/March/Common/img/prize/1.jpg">
 				<p>新锐奖学金每年定额发放给3名学生，标准为每人每年1000元。奖励对象面向河南科技学院全日制本科大学一年级在校生，计算机专业兴趣浓厚，软件编程能力突出，对行业技术敏感，具备一定的项目开发及管理实战经验者。</p>
 			</div>
 			<div class="t1 don">
-				<a target="_blank" class="pria" href="prizers.html?ses=1">更多>></a>
+				<!-- <a target="_blank" class="pria" href="prizers.html?ses=1">更多>></a> -->
 				<h4>卓越奖获得者</h4>
 				<div class="none">
 					<h2>暂未开始</h2>
