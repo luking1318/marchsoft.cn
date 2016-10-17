@@ -3,11 +3,15 @@
 <head>
 	<link href="__ROOT__/March/Common/css/prize/sprize.css" rel="stylesheet">
 </head>
+</center>
 <style type="text/css">
 	.mark{
 		max-width: 80%;
 	}
 </style>
+<div id="all" align="center">
+	
+
 	<div id="nlist">
 		<div class="ndiv">
 			<div class="ti" align="left">
@@ -20,10 +24,10 @@
 		<table id="tb_list">
 			<volist name="list" id="ls">
 				<tr>
-				<td class="don">￥<{$ls['don_num']}></td>
-				<td><{$ls['don_name']}></td>
+				<td class="don" style="width: 13%">￥<{$ls['don_num']}></td>
+				<td style="width: 13%"><{$ls['don_name']}></td>
 				<td class="mark"><{$ls['don_mark']}></td>
-				<td align="right"><?php echo substr($ls["don_time"],0,10);?></td>
+				<td align="right" style="width: 20%"><?php echo substr($ls["don_time"],0,10);?></td>
 				</tr>
 			</volist>
 			<tr>
@@ -32,6 +36,6 @@
 			</tr>
 		</table>
 	</div>
-	
-</center>
+</div>
+
 <include file="./March/Common/html/foot.html" />

@@ -298,13 +298,13 @@
 <script src="__ROOT__/March/Common/js/prize/jquery.min.js" type="text/javascript"></script>
  <script src="__ROOT__/March/Common/js/prize/jquery.material-cards.min.js"></script>
 <script type="text/javascript">
-        $(function () {
-            $('.material-card').materialCard({
-                icon_close: 'fa-chevron-left',
-                icon_open: 'fa-thumbs-o-up',
-                icon_spin: 'fa-spin-fast',
-                card_activator: 'click'
-            });
+        // $(function () {
+        //     $('.material-card').materialCard({
+        //         icon_close: 'fa-chevron-left',
+        //         icon_open: 'fa-thumbs-o-up',
+        //         icon_spin: 'fa-spin-fast',
+        //         card_activator: 'click'
+        //     });
             // $("button").click(function(){
             //     $("button").css({'background-color':'white','color':'black'});
             //     $(this).css({'background-color':'#2196f3','color':'white'});
