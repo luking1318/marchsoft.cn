@@ -118,6 +118,24 @@ p{
 
 
 /*left*/
+.jieshao{
+
+	height: 200px;
+}
+.jieshao h4{
+	right: 281px !important;
+}
+.jieshao .jiet{
+	width: 600px;
+	position: absolute;
+	line-height: 25px;
+	letter-spacing: 1px;
+	font-size: 16px;
+	top: 77px;
+	color: #05304d;
+	right: 63px;
+	text-indent: 2em;
+}
 .t1{
 	overflow: hidden;
 	width: 100%;
@@ -146,7 +164,7 @@ p{
 .pri h4{
 	position: absolute;
 	top: 20px;
-	right: 65px;
+	right: 115px;
 	margin: 0;
 	padding: 10 30;
 	display: inline-block;
