@@ -3,7 +3,11 @@
 <head>
 	<link href="__ROOT__/March/Common/css/prize/sprize.css" rel="stylesheet">
 </head>
-
+<style type="text/css">
+	.mark{
+		max-width: 80%;
+	}
+</style>
 	<div id="nlist">
 		<div class="ndiv">
 			<div class="ti" align="left">
@@ -18,7 +22,7 @@
 				<tr>
 				<td class="don">￥<{$ls['don_num']}></td>
 				<td><{$ls['don_name']}></td>
-				<td><{$ls['don_mark']}></td>
+				<td class="mark"><{$ls['don_mark']}></td>
 				<td align="right"><?php echo substr($ls["don_time"],0,10);?></td>
 				</tr>
 			</volist>

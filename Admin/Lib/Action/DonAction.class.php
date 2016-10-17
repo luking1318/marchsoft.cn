@@ -15,7 +15,7 @@ class DonAction extends BaseAction {
 	    $pro->don_name=$_POST['name'];
 	    $pro->don_mark=$_POST['con'];
 	    $pro->don_num=$_POST['num'];
-	    $pro->don_time=date("Y-M-D h:i:s",time());
+	    $pro->don_time=date("Y-m-d h:i:s",time());
 	    
 	    $mode=$pro->add();
         if($mode)

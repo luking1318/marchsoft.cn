@@ -21,7 +21,7 @@ class PrizeAction extends Action{
             $this->assign("name",$name);
             $this->assign("n",$n);
             $this->assign("s1",$s1);
-            $clist = $mc->limit(6)->select();
+            $clist = $mc->limit(6)->order("don_time DESC")->select();
             $this->assign('clist',$clist);
 
             $mc = D("prize");
@@ -89,7 +89,7 @@ class PrizeAction extends Action{
             $this->assign("name",$name);
             $this->assign("n",$n);
             $this->assign("s1",$s1);
-            $clist = $mc->limit(6)->select();
+            $clist = $mc->limit(6)->order("don_time DESC")->select();
             $this->assign('clist',$clist);
 		$id = $_GET['id'];
 	    	$news= D('prize');

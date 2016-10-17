@@ -115,7 +115,11 @@
 <head>
 	<link href="__ROOT__/March/Common/css/prize/sprize.css" rel="stylesheet">
 </head>
-
+<style type="text/css">
+	.mark{
+		max-width: 80%;
+	}
+</style>
 	<div id="nlist">
 		<div class="ndiv">
 			<div class="ti" align="left">
@@ -129,7 +133,7 @@
 			<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ls): $mod = ($i % 2 );++$i;?><tr>
 				<td class="don">￥<?php echo ($ls['don_num']); ?></td>
 				<td><?php echo ($ls['don_name']); ?></td>
-				<td><?php echo ($ls['don_mark']); ?></td>
+				<td class="mark"><?php echo ($ls['don_mark']); ?></td>
 				<td align="right"><?php echo substr($ls["don_time"],0,10);?></td>
 				</tr><?php endforeach; endif; else: echo "" ;endif; ?>
 			<tr>
