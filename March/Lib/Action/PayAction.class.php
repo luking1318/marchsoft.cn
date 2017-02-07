@@ -3,9 +3,9 @@
 * 三月捐款
 *
 */
-import('ORG.Util.Alibuy');
-import("ORG.Util.AlipayNotify");
-import("ORG.Util.AlipaySubmit");
+import('ORG.Alipay.Alibuy');
+import("ORG.Alipay.lib.AlipayNotify");
+import("ORG.Alipay.lib.AlipaySubmit");
 header("content-type:text/html;charset=utf-8");
 class PayAction extends Action {
 	public function index(){
@@ -56,7 +56,7 @@ class PayAction extends Action {
 		    }else{
 		    	$this->error('错误');
 		    }
-	        // var_dump($args);
+	        // var_dump(C('alipay'));
 	    }
 	    // 同步跳转
 	    public function returnurl(){
