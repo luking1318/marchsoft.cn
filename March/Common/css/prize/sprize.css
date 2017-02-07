@@ -20,6 +20,14 @@ body{background:url("../../img/news/bg.png") repeat-x #F5F5F7;}
 	width: 95%;
 	
 }
+.mark{
+	/*max-width: 80%;*/
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.name,.don,.right {
+	width: 13%;
+}
 .ti {
 	width: 50%;
 	/*display: inline-block;*/
@@ -29,7 +37,7 @@ body{background:url("../../img/news/bg.png") repeat-x #F5F5F7;}
 .ti h2{
 	color: #05314f;
 }
-.tb_list td{
+#tb_list td{
 	height: 60px;
 	overflow: hidden;
 	text-overflow: ellipsis;

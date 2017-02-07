@@ -1,0 +1,33 @@
+<include file="./March/Common/html/head.html" />
+</center>
+<meta name="viewport" content="width=device-width, maximum-scale=1.0"/>
+<link href="__ROOT__/March/Common/css/pay/pay.css" rel="stylesheet">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="__ROOT__/March/Common/css/prize/prize.css" rel="stylesheet">
+<div class="body">
+			<input class="back" type="button" value="返回">
+			<form action="/index.php/Pay/dobuy" method="post" target="_blank">
+				<div class="top">
+					<img class="img" src="/March/Common/img/prize/logo.png" alt="">
+					<div class="title">
+						<h3 class="title-up">捐赠三月</h3>
+						<p class="title-down"><b>·&nbsp;</b>三月，一路有你&nbsp;<b>·</b></p>
+					</div>
+				</div>
+				<div><input type="text" maxlength="10" name="name" required="" placeholder="姓名" id="sss"></div>
+				<div><input type="text" pattern="^(([1-9]\d{0,9})|0)(\.\d{1,2})?$" required="" name="total" placeholder="金额" id=""></div>
+				<div><input type="tel" name="" required="" pattern="^1[3|5|7|8]\d{9}" placeholder="电话" id=""></div>
+				<div class="content"><textarea name="content" maxlength="200" id="" required="" placeholder="留言(200字以内)"></textarea></div>
+				<div><input class="submit" type="submit" value="一路有我"></div>
+			<input type="hidden" name="__hash__" value="ce61de4b7c9343aaa6bdc6ae52498221_9dbdcf777e8b65efbeb810cf290afacf"></form>
+		</div>
+		<input type="hidden" id="rot" value="__ROOT__/" />
+<include file="./March/Common/html/foot.html" />
+<script src="__ROOT__/March/Common/js/jquery-1.4.3.min.js" style="text/javascript"></script> 
+<script type="text/javascript">
+	$(".back").click(function(){
+		location.href="__ROOT__/index.php/Index/home";
+	});
+</script>
+</BODY>
+</HTML>

@@ -1,0 +1,79 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>三月软件工作室</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link href="__ROOT__/March/Common/css/pay/pay.css" rel="stylesheet">
+</head>
+<body> -->
+<include file="./March/Common/html/head.html" />
+</center>
+<meta name="viewport" content="width=device-width, maximum-scale=1.0"/>
+<link href="__ROOT__/March/Common/css/pay/pay.css" rel="stylesheet">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="__ROOT__/March/Common/css/prize/prize.css" rel="stylesheet">
+<!-- <div class="conbody"> -->
+	<!-- <div class="conmain"> -->
+		<!-- <div class="rightcon"> -->
+		<div class="body">
+			<input class="back" type="button" value="返回">
+	<form>
+		<div class="top">
+			<img class="img" src="__ROOT__/March/Common/img/prize/logo.png" alt="">
+			<div class="title">
+				<h3 class="title-up">捐赠三月</h3>
+				<p class="title-down"><b>·&nbsp;</b>三月，一路有你&nbsp;<b>·</b></p>
+			</div>
+		</div>
+		<p class="tag">已收到捐款累计：</p>
+		<h1 align="center">￥2,010,876.90</h1>
+		<p class="tag">目前捐款最高：</p>
+		<h3 align="center"><{$name}>共奉献了￥<{$n}></h3>
+		<p class="tag">最新捐款：</p>
+		<p class="tag" align="right" style="margin-top: -35px;"><a href="__ROOT__/index.php/Prize/prize.html">查看更多</a></p>
+		<table>
+		<tbody>
+			<foreach name="clist" item="vo">
+				<tr>
+					<td><b><{$vo['don_name']}>：</b></td>
+					<td><p><{$vo['don_mark']}></p></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><p>(并奉献了<{$vo['don_num']}>点心意)</p></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="right"><small style="font-size:12px"><{$vo['don_time']}></small></td>
+				</tr>
+				<tr>
+					<td colspan="2"><hr></td>
+				</tr>
+			</foreach>
+			
+			</tbody>
+		</table>
+		<div class="foot">
+			<input class="pay" type="button" value="我要捐款">
+		</div>
+	</form>
+		</div>
+	<!-- </div> -->
+		<!-- <div class="clear"> </div> -->
+	<!-- </div> -->
+<!-- </div> -->
+<!-- </body>
+</html> -->
+<input type="hidden" id="rot" value="__ROOT__/" />
+<include file="./March/Common/html/foot.html" />
+<script src="__ROOT__/March/Common/js/jquery-1.4.3.min.js" style="text/javascript"></script> 
+<script type="text/javascript">
+	$(".back").click(function(){
+		location.href="__ROOT__/index.php/Index/home";
+	});
+	$(".pay").click(function(){
+		location.href="__ROOT__/index.php/Pay/pay.html";
+	});
+</script>
+</BODY>
+</HTML>

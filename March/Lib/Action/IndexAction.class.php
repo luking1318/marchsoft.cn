@@ -8,7 +8,8 @@ class IndexAction extends Action {
 
 
 	public function index(){
-		$this->display('guide/huang/index');
+		// $this->display('guide/huang/index');
+		$this->home();
 	}
 
 

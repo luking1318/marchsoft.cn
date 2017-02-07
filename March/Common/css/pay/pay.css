@@ -1,0 +1,152 @@
+/** {
+	margin: 0;
+	padding: 0;
+	font-family: -apple-system, "SF UI Text", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Zen Hei", sans-serif;
+}*/
+.img {
+	width: 50px;
+	height: 50px;
+	float: left;
+}
+.body {
+	margin: 0;
+	padding: 0;
+	font-family: -apple-system, "SF UI Text", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Zen Hei", sans-serif;
+	background: #F0F0F2;
+	/*height: 100%;*/
+	color: black;
+}
+
+.back {
+	width: 70px;
+	background: #fff;
+}
+.title-up {
+	letter-spacing: 3px;
+	padding-top: 3px; 
+	color: black;
+}
+.title {
+	width: 125px;
+	text-align: right;
+	white-space: nowrap;
+}
+.title-down{
+	font-size: 12px;
+	white-space: nowrap;
+}
+form div {
+	width: 205px;
+	height: 40px;
+	margin:auto;
+	margin-top: 20px;
+	/*overflow: hidden;*/
+}
+.top {
+	width: 205px;
+	height: 60px;
+}
+input {
+	margin: 0;
+	height: 37px;
+	padding: 10px;
+	border-radius: 10px;
+	border: 1px solid gray; 
+	width: 200px;
+}
+textarea{
+	padding: 10px;
+	border-radius: 10px;
+	border: 1px solid gray;
+	height: 100px;
+	width: 200px;
+}
+.content {
+	height: 120px;
+	width: 200px;
+}
+.submit {
+	width: 205px!important;
+	background: #29b6f6;
+	color: white;
+	letter-spacing: 3px;
+	font-size: 16px;
+	font-weight: 500;
+	border: 1px solid #29b6f6;
+}
+.foot {
+	width: 150px;
+}
+.pay {
+	padding: 5px;
+	width: 150px!important;
+	background: #29b6f6;
+	color: white;
+	letter-spacing: 3px;
+	font-size: 14px;
+	font-weight: 500;
+	border: 1px solid #29b6f6;
+}
+.tag {
+	width: 300px;
+	margin: auto;
+	white-space: nowrap;
+	line-height: 35px;
+}
+table {
+	max-width: 260px;
+	margin: auto;
+	/*background-color: #bfb8bf;*/
+	padding: 5px;
+	overflow: hidden;
+}
+table tr td b {
+	width: 60px;
+	white-space: nowrap;
+	text-overflow:ellipsis;
+	overflow: hidden; 
+}
+table tr td p {
+	margin: 0;
+	/*padding: 0;*/
+	text-overflow:ellipsis;
+	overflow: hidden; 
+	height: 25px;
+	max-width: 200px;
+	line-height: 25px;
+	white-space: nowrap;
+}
+@media screen and (min-device-width: 801px) {  
+ 	.img {
+ 		display: none;
+ 	}
+ 	.title {
+ 		width: 150px;
+ 		text-align: center;
+ 	}
+ 	/*.back {
+ 		display: none;
+ 	}*/
+ 	form div {
+ 		margin-top: 30px;
+ 	}
+ 	form {
+ 		margin-bottom: 100px;
+ 	}
+ 	.body {
+ 		/*height: 800px;*/
+ 		background: white;
+ 	}
+ }  
+@media screen and (max-device-width: 800px) {  
+	center {
+		display: none;
+	}
+	body {
+		background: #F0F0F2!important;
+	}
+	#foot {
+		display: none;
+	}
+ }  
+ 

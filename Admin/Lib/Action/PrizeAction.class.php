@@ -30,7 +30,7 @@ class PrizeAction extends BaseAction {
                     $pro->prize_email=$_POST['email'];
                     $pro->prize_stucon=$_POST['stucon'];
                     $pro->prize_procon=$_POST['procon'];
-	    $pro->proze_time=date("Y-M-D h:i:s",time());
+	    $pro->prize_time=date("Y-m-d H:i:s");
 	    $pro->prize_img="__ROOT__/Admin/Public/Upload/image/prize/".$info[0]['savename'];
 	    $mode=$pro->add();
         if($mode)
