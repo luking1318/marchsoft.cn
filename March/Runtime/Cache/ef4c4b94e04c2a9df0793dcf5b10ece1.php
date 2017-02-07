@@ -139,7 +139,7 @@
 			</div>
 		</div>
 		<p class="tag">已收到捐款累计：</p>
-		<h1 align="center">￥2,010,876.90</h1>
+		<h1 align="center">￥<?php echo ($sum); ?></h1>
 		<p class="tag">目前捐款最高：</p>
 		<h3 align="center"><?php echo ($name); ?>共奉献了￥<?php echo ($n); ?></h3>
 		<p class="tag">最新捐款：</p>

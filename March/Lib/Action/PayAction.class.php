@@ -10,6 +10,7 @@ header("content-type:text/html;charset=utf-8");
 class PayAction extends Action {
 	public function index(){
 		$mc = M('prize_don');
+		$sum = $mc->sum('don_num');//累计捐赠
 		// $s1=$mc ->order('don_num desc')->find();//一次捐赠最高的
 		$s2=$mc ->group('don_name')->select();
 		$name = "";//累计捐赠最高的名字
@@ -23,6 +24,7 @@ class PayAction extends Action {
 		}
 		$this->assign("name",$name);
 		$this->assign("n",$n);
+		$this->assign("sum",$sum);
 		// $this->assign("s1",$s1);
 		$clist = $mc->limit(3)->order("don_time DESC")->select();
 		$this->assign('clist',$clist);

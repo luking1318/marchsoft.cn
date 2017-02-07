@@ -113,89 +113,51 @@
 
 <!--新闻列表页面-->
 <head>
-	<!-- <link href="__ROOT__/March/Common/css/prize/sprize.css" rel="stylesheet"> -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<link rel="stylesheet" type="text/css" media="screen and (min-width: 801px)"  href="__ROOT__/March/Common/css/prize/sprize.css" /> 
-	<!-- <link rel="stylesheet" type="text/css" media="screen and (min-width: 801px)"  href="__ROOT__/March/Common/css/prize/sprize.css" />  -->
+	<link href="__ROOT__/March/Common/css/news/news.css" rel="stylesheet">
 </head>
-</center>
-<style type="text/css">
-	
-	@media screen and (max-device-width: 800px) {  
-		center {
-			display: none;
-		}
-		body {
-			background: white;
-		}
-		#foot {
-			display: none;
-		}
-		#all {
-			/*font-size: 2em;*/
-			/*min-width: 400px;*/
-			background: white;
-		}
-		.ndiv,#tb_list {
-			width: 300px;
-		}
-		.ti {
-			width: 150px;
-			float: left;
-		}
-		.ti h2,.ti a{
-			line-height:50px;
-		}
-		#tb_list td{
-			height: 60px;
-			overflow: hidden;
-			text-overflow: ellipsis;
-		}
-		#tb_list td{
-			line-height: 50px;
-			border-bottom: 1px dashed #888888;
-		}
-		.don {
-			color: #0088cc;
-		}
-		.last{
-			border-bottom:none!important;
-		}
-		#page{margin:20px;float:right}
-		#page .current{font-weight:bold;padding:1px 5px;background:blue;
-		background-position:0px -20px;width:19px;height:19px;color:#fff}
-		#page a{font-weight:bold;color:#414142}
-		#page a:hover{text-decoration:none;padding:2px 2px;background:blue;
-		background-position:0px -20px;color:#fff}
-		#up,#next{float:left;width:19px;height:16px}
-		#link{float:left}
-		#next{background-position:0px -44px;margin-left:10px}
-	 }  
-</style>
-<div id="all" align="center">
+
 	<div id="nlist">
-		<div class="ndiv">
-			<div class="ti" align="left">
-				<h2 >捐赠列表</h2>
-			</div>
-			<div class="ti" align="right">
-				<a href="../Pay/pay">我要捐赠</a>
-			</div>
-		</div>
 		<table id="tb_list">
-			<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ls): $mod = ($i % 2 );++$i;?><tr>
-				<td class="don">￥<?php echo ($ls['don_num']); ?></td>
-				<td class="name"><?php echo ($ls['don_name']); ?></td>
-				<td class="mark"><div style="min-width:100px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;color: red" > <?php echo ($ls['don_mark']); ?>adsfasdfasd</div></td>
-				<td align="right"><?php echo substr($ls["don_time"],0,10);?></td>
-				</tr><?php endforeach; endif; else: echo "" ;endif; ?>
 			<tr>
-			<td colspan="4" class="last">
-			<div id="page"><?php echo ($page); ?></div></td>
+				<td id="n_top" colspan="3"></td>
+			</tr>
+			
+			<tr>
+				<td id="n_left"></td>
+				<td style="background:#F5F5F7">
+					<div id="n_con">
+						<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ls): $mod = ($i % 2 );++$i;?><div class="n_list">
+								<div class="n_tl">
+									<a href="__URL__/show/nid/<?php echo ($ls[idmarch_news]); ?>.html" target="_blank"><?php if($ls["news_stick"] > 0): ?><span style="color:#ca724c">[顶] </span><?php endif; echo ($ls['news_title']); ?></a>
+								</div>
+								
+								<div class="n_date">
+									<?php echo substr($ls["news_date"],0,10);?>
+								</div>
+								
+								<div class="n_num">
+									关注:<?php echo ($ls['news_num']); ?>
+								</div>
+								<div style="clear:both"></div>
+							</div><?php endforeach; endif; else: echo "" ;endif; ?>
+						<div id="page"><?php echo ($page); ?></div>
+					</div>
+				</td>
+				<td id="n_right"></td>
+			</tr>
+			
+			<tr>
+				<td id="n_btm" colspan="3"></td>
 			</tr>
 		</table>
 	</div>
-</div>
+	
+	<!--右侧图标-->
+	<div class="r-img">
+	</div>
+	
+	<div style="clear:both"></div>
+	
 
 	</div>
 	 </center>

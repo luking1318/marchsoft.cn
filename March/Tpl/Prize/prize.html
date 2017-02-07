@@ -75,7 +75,7 @@
 				<tr>
 				<td class="don">￥<{$ls['don_num']}></td>
 				<td class="name"><{$ls['don_name']}></td>
-				<td class="mark"><{$ls['don_mark']}></td>
+				<td class="mark"><div style="max-width:100px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;color: red" > <{$ls['don_mark']}></div></td>
 				<td align="right"><?php echo substr($ls["don_time"],0,10);?></td>
 				</tr>
 			</volist>

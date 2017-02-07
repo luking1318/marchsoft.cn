@@ -20,11 +20,17 @@ body{background:url("../../img/news/bg.png") repeat-x #F5F5F7;}
 	width: 95%;
 	
 }
-.mark{
-	/*max-width: 80%;*/
+/*.mark{
 	overflow: hidden;
 	text-overflow: ellipsis;
-}
+	color: red;
+}*/
+/*.mark p{
+	width: 60px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space:nowrap; 
+}*/
 .name,.don,.right {
 	width: 13%;
 }
